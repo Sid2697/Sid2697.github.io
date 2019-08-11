@@ -56,7 +56,7 @@
 
 <h2>1. Introduction</h2>
 <!--TODO: Hyperlink references to the reference section.-->
-<p class="just">Geometry Processing is involved with efficient acquisition, representation, optimization, editing, and
+<p class="just">Geometry Processing is involved with the efficient acquisition, representation, optimization, editing, and
 simulation of geometric objects.
 There is a large boost in the availability of 3D data due to the decreasing prices of geometry acquisition devices,
 like 3D laser scanners (Fig.1), LiDAR (Light Detection and Ranging) scanners. Geometry processing is playing an important role in a large range of
@@ -94,19 +94,19 @@ up to 330 meters. The laser scanner throws a laser beam on to the object and cal
 <p class="just">Fig.3 shows the basic structure of a 3D laser scanner. The mirror rotates on its axis to form a 3D scan of the surroundings
 The tripod is used to keep the scanner stable while scanning. And it has various indicator lights for indication various
 operations (their function changes with various manufacturers).</p>
-<p>Fig.1 is an example of point cloud obtained using Faro Focus 3D X 330 HDR scanner.</p>
+<p>Fig.1 is an example of a point cloud obtained using Faro Focus 3D X 330 HDR scanner.</p>
 <h3>2.2 Point Cloud Registration</h3>
-<p class="just">As it can be seen in Fig.1, a single scan of an object does not contains entire information of the object. There are
-some missing places in the final single scan of the object. This is a well known issue and plays an essential role in
+<p class="just">As it can be seen in Fig.1, a single scan of an object does not contain entire information of the object. There are
+some missing places in the final single scan of the object. This is a well-known issue and plays an essential role in
     many practical applications, such as 3D reconstruction and mapping, object pose estimation, LiDAR SLAM and others.
     To overcome this issue more than one scan of an object is
 obtained from different orientations. Then all the scans are stitched together to form the true 3D scan of the object.
 In order to perform the 'stitching' various algorithms are used. These algorithms are used to estimate the relative
-transformation (combination of rotation and translation) between the point clouds. </p>
-<p class="just">The most common method is Iterative Closest Point (ICP)<sup>[6]</sup> algorithm for solving the point
-    cloud registration problem. It works by estimating point correspondences and performing least squares optimization.
+transformation (a combination of rotation and translation) between the point clouds. </p>
+<p class="just">The most common method is the Iterative Closest Point (ICP)<sup>[6]</sup> algorithm for solving the point
+    cloud registration problem. It works by estimating point correspondences and performing least-squares optimization.
 There are several versions of the ICP available, we used the one defined by [6]. Using ICP we wish to find a rigid
-transformation that optimally aligns the two sets in least squares sense<sup>[7]</sup>.</p>
+transformation that optimally aligns the two sets in the least-squares sense<sup>[7]</sup>.</p>
 <p class="just">We seek to find a Rotation <i>R</i> and translation vector <b>t</b> such that </p>
 <p align="center"><img src="http://latex.codecogs.com/svg.latex?(R, \mathbf{t}) = \sum_{i=1}^{n}w_{i}\left \| (R\mathbf{p_{i}}+\mathbf{t})-\mathbf{q}_{i} \right \|^2" border="0"/></p>
 <p class="just">where <i>w<sub>i</sub></i> > 0 are weights for each point pair.</p>
@@ -125,7 +125,8 @@ transformation that optimally aligns the two sets in least squares sense<sup>[7]
     <li>Optimal translation is calculated as <p align="center"><img src="http://latex.codecogs.com/svg.latex?\mathbf{t} = \overline{\mathbf{q}} - R\overline{\mathbf{p}} " border="0"/></li>
 </ol>
 <p class="just"> The above steps are repeated until an optimal result is obtained. We implemented the above algorithms
-    in Python <a href="https://github.com/Sid2697/3D"><b>(code)</b></a> and obtained following results on a chair and bunny data set.</p>
+    in Python and obtained the following results on a chair and bunny data set. The code developed is available here
+<a href="https://github.com/Sid2697/3D"><i>https://github.com/Sid2697/3D.</i></a></p>
 <div style="display:flex">
      <div style="flex:1;padding-right:5px;padding-left:35px;align:center;">
                    <img src="files/Chairs.gif" alt="ICP on chair GIF" style="width:300px;height:300px;">
@@ -138,14 +139,50 @@ transformation that optimally aligns the two sets in least squares sense<sup>[7]
      </div>
 </div>
 <h3>2.3 Point Cloud Completion</h3>
-<p class="just"></p>
-<h2>3. Methodology</h2>
-<p>This will describe the way in which I solved the problem. </p>
-<h2>4. Results</h2>
-<p>This section will show the results of all the methods including ICP, surface reconstruction, cloud completion, mesh preparation</p>
-<h2>5. Conclusion</h2>
+<p class="just">The data collected from 3D scanners are often incomplete which leads to a loss in semantic and geometric
+information. For example, as shown in Fig.6 the cars in the LiDAR scan are barely recognizable as the data points are
+very sparse due to sensor resolution and occlusion.</p>
+<p align="center"><img src="IIT_files/Incomplete_cloud.png" alt="Incomplete point clouds image" style="width:600px;"></p>
+<p align="center">Fig.6: Cars are hardly recognisable due to sparsity of data <a href="https://www.cs.cmu.edu/~wyuan1/pcn/">(source)</a>.</p>
+<p class="just">The task here is to predict the full shape of the object from the incomplete scan as shown in Fig.6
+acquired by LiDAR. This leads to applications like scene understanding, robot manipulation, and manipulation of completed
+shapes. Previous works like [9] include encoder-decoder network, here the encoder encodes the input to embedding, and the decoder
+generates the point cloud from the embedding. [8] learn to generate point cloud as manifold using a series of
+folding operations on the Euclidean plane. [10] assume the point clouds of the 3D object is on a 2-manifold space that locally
+resembles the Euclidean plane. The decoder proposed by them learns a set of deformations from euclidean plane to the object
+point cloud.</p>
+<p class="just">Going through all the methods like PCN [8], AtlasNet [10], Scan2Mesh [11], and TopNet [12] I wondered what will happen
+if we try an encoder-decoder architecture consisting of only fully-connected layers. So, I designed an auto-encoder
+with all the fully-connected layers and no convolution layers. The code developed is available here
+    <a href="https://github.com/Sid2697/Fill_missing"><i>https://github.com/Sid2697/Fill_missing.</i></a>
+The architecture of the encoder was as follows it consisted of fully-connected layers which took 2048 cloud points as input
+and decreased it to 1024 -> 512 -> 256 -> 128 -> 64. In this encoded code with 64 points was obtained which was further
+feed into the decoder which would up-sample it back to 2048 points by 64 -> 128 -> 256 -> 512 -> 1024 -> 2048. In this way,
+ a smaller and more point cloud was retrieved. Fig.7 shows the architecture.</p>
+<!--TODO: Add a network architecture figure.-->
+<p><b>TODO: INSERT THE ARCHITECTURE IMAGE HERE</b></p>
+<p>The data set used for training was obtained from <a href="http://completion3d.stanford.edu">here</a>.</p>
+<p class="just">Two types of losses were used to train the network (in two different experiments). First Euclidean distance
+was used, and in the second one, Chamfer distance<sup>[13]</sup> was used. Fig.8 shows results obtained using Euclidean distance.
+Fig.9 shows the results using Chamfer distance<sup>[13]</sup>.</p>
+<p align="center" ><img src="IIT_files/Euclidean.svg" alt="Euclidean distance results"></p>
+<p align="center" >Fig.8 Results using Euclidean distance, the network is not able to generalize on the shapes well and
+not able to get a sense of the global shape of the point cloud. But it still gives decent shapes despite simple
+execution.</p>
+<p align="center" ><img src="IIT_files/Chamfer.svg" alt="Chamfer distance results"></p>
+<p align="center">Fig.9 Results using Chamfer distance, here it can be seen the network is learning much better as
+compared to Euclidean distance. The network seems to learn the global structure from the input shapes.</p>
+<p class="just">The above two experiments concluded that we can use a simple fully-connected linear neural network to solve
+a complex problem like cloud completion. Out of the two loss functions used Chamfer distance proved to be a better one
+(by visual inspection of results). Whereas Euclidean distance proved to be more computationally easy to compute.
+Although the above experiments did not yield the desired results, this attempt was proof that we can use simple fully-connected
+neural networks for cloud completion task. If successful they will prove to be very useful for applications using less
+computational resources like robots using Raspberry Pi.</p>
+<h2>3. Extras</h2>
+<p>This section will contain the extra information like papers read and their summaries.</p>
+<h2>4. Conclusion</h2>
 <p>This will conclude the work giving some insights.</p>
-<h2>6. References</h2>
+<h2>5. References</h2>
 <ol>
     <li>https://kieffmoon.wordpress.com/unit-66/applications-of-3d/</li>
     <li>https://graphics.uni-bielefeld.de/research/</li>
@@ -154,5 +191,17 @@ transformation that optimally aligns the two sets in least squares sense<sup>[7]
     <li>https://www.engineering.com/AdvancedManufacturing/ArticleID/12390/Quality-Basics-How-Does-3D-Laser-Scanning-Work.aspx</li>
     <li>P. Besl and N. D. McKay. A method for registration of 3-D shapes. IEEE Transactions on Pattern Analysis and Machine Intelligence, 14(2):239–256, Feb 1992.</li>
     <li>https://igl.ethz.ch/projects/ARAP/svd_rot.pdf</li>
+    <li>W. Yuan and D. Held. PCN : Point Completion Network. International Conference on 3D Vision (3DV), 2018.</li>
+    <li>H. Fan, H. Su, and L. Guibas. A Point Set Generation Net- work for 3D Object Reconstruction from a Single Image.
+        IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017.</li>
+    <li>T. Groueix, M. Fisher, V. G. Kim, B. C. Russell, and M. Aubry. AtlasNet: A Papier-M\ˆach\’e Approach to Learning
+        3D Surface Generation. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.</li>
+    <li>Angela Dai, Matthias Niebner. Scan2Mesh From Unstructured Range Scans to 3D Meshes. In IEEE Conference on Computer
+    Vision and Pattern Recognition (CVPR) 2019.</li>
+    <li>Lyne P. Tchapmi, Vineet Kosaraju, Hamid Rezatofighi, Ian Reid and Silvio Savarese. TopNet: Structural Point Cloud Decoder.
+    In IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2019.</li>
+    <li>H.G. Barrow, J.M. Tenenbaum, R.C. Bolles, H.C. Wolf., Parametric correspondence and chamfer matching: Two new
+        techniques for image matching. Proceedings of the Fifth International Joint Conference on Artificial
+        Intelligence, Cambridge, Massachusetts, 1977, pp. 659 – 663.</li>
 </ol>
 </html>
