@@ -12,10 +12,10 @@
             font-size: 14px
             padding: 30px;
         }
-        h1 {
-        margin-left: 215px;
+        .just{
+        text-align: justify;
         }
-        h2 {
+        h2, h3{
         margin-left: 35px;
         margin-right: 35px;
         }
@@ -30,42 +30,82 @@
     </style>
     <title>IIT Gandhinagar Report - Siddhant Bansal</title>
 </head>
-<body>
-<table><tr>
-    <th><img src="IIT_files/IIT_logo.png" alt="IIT-GN Logo" width="100" height="100"></th>
-    <th><h1>3D Modelling and Geometry Processing</h1></th>
-</tr></table>
+<p>
+<h1 align="center">3D Modelling and Geometry Processing</h1>
 <p align="center"><a href="https://sid2697.github.io">Siddhant Bansal</a> <br> Indian Institute of Technology, Gandhinagar <br> siddhant.b@iitgn.ac.in</p>
 <h2>About</h2>
-<p>This webpage contains information of all the work done at IIT-Gandhinagar.</p>
+<p class="just">This webpage contains information of all the work done at IIT-Gandhinagar.</p>
 <h2>Abstract</h2>
-<p>Creation of a pipeline that takes in 3D point clouds and gives out a complete 3D geometric model is a pretty vast
+<p class="just">Creation of a pipeline that takes in 3D point clouds and gives out a complete 3D geometric model is a pretty vast
     topic which includes various currently focused research concepts like Rigid and Non-Rigid Point Cloud Registration,
     3D object recognition, and Point Cloud Completion. These generated 3D models find various applications in the domain
     of 3D Computer Vision, 3D Graphics, architecture simulation, games graphics, animated movies and 3D documentation
-    of objects, and many other renowned fields. This research projects aims at using various digital geometry processing
+    of objects, and many other renowned fields. This research project aims at using various digital geometry processing
     approaches for preserving and restoring cultural heritage. </p>
 
-<p>Task here is to develop an end-to-end pipeline which begins with <b>acquisition</b> of 2.5D point clouds using a long
-    range laser scanner followed by <b>point cloud registration</b> to obtain a complete 3D point cloud and if the point
+<p class="just">Task here is to develop an end-to-end pipeline which begins with <b>acquisition</b> of 2.5D point clouds using a
+    long-range laser scanner followed by <b>point cloud registration</b> to obtain a complete 3D point cloud and if the point
     cloud is incomplete then applying point cloud completion algorithms for completing the point clouds, conversion of
     point cloud to mesh, the <b>mesh</b> is then converted to <b>surface</b> and finally a complete 3D model is obtained
     which can be 3D printed. My work was focused on understanding and applying various point cloud registration
     and point cloud completion methods.</p>
 
-<h2>Introduction</h2>
-<p>This will introduce the task that I have to do.(Here I'll explain what 3D modelling is and how it is used in various processes)</p>
-<h2>Pipeline Constructed</h2>
-<p>Will describe the pipeline for completing the task.</p>
-<h2>My Approach</h2>
-<p>Here I'll describe how I approached to complete the above mentioned pipeline.</p>
-<h2>Methodology</h2>
+<h2>1. Introduction</h2>
+<!--TODO: Hyperlink references to the reference section.-->
+<p class="just">Geometry Processing is involved with efficient acquisition, representation, optimization, editing, and
+simulation of geometric objects.
+There is a large boost in the availability of 3D data due to the decreasing prices of geometry acquisition devices,
+like 3D laser scanners (Fig.1), LiDAR scanners. Geometry processing is playing an important role in a large range of
+applications. Examples include video games, animation, TV, building design, web design, CAD, interactive shape editing,
+    simulations for medical applications and movie productions<sup>[1]</sup>. Problems arising in these highly
+diverse fields follow the same fundamental geometry principles proves geometry processing to be a potentially growing
+    field of high potential impact research<sup>[2]</sup>.</p>
+    <p align="center"><img src="IIT_files/Lab_scan.png" alt="IITGN Lab Scan!" style="width:900px;height:450px;" align="centre"></p>
+    <p align="center">Fig.1: 3D Laser scan (Point Cloud) of our lab at IIT Gandhinagar</p>
+<p class="just"> For converting a point cloud (Fig.1) to a usable 3D model various steps are to be performed. All the steps are explained
+    in section 2. Section 3 covers various approaches I took to solve various steps of the pipeline. Section 4 shows some
+of the results obtained using approaches described in section 3. Section 5 concludes the discussion with possible future
+work.</p>
+
+<h2>2. Pipeline Constructed</h2>
+<p class="just">The task of the following pipeline is to convert a less usable point clouds to more usable complete 3D
+models.</p>
+<h3> 2.1 Data Acquisition</h3>
+<p class="just">Data acquisition is the process of converting a signal measuring real physical condition to a digital
+signal that can be manipulated by a digital computer<sup>[3]</sup>. For our purpose of collecting 3D data, we used the
+FARO Focus 3D X 330 HRD<sup>[4]</sup> long-range laser scanner (Fig.2). It is a portable laser scanner capable of taking scans
+up to 330 meters. The laser scanner throws a laser beam on to the object and calculates how long it takes the laser
+    beam to bounce back from the surface and return. This is how the distance of the object from the laser
+    scanner is calculated and the point cloud is constructed<sup>[5]</sup>.</p>
+<div style="display:flex">
+     <div style="flex:1;padding-right:5px;padding-left:35px">
+                   <img src="IIT_files/faro.jpg" alt="Faro scanner image." style="width:500px;height:400px;">
+         <p align="center">Fig.3: Faro Focus 3D X 330 HDR <a href="http://www.dicarlotech.com/products/FARO-Focus-3D-X-330-HDR">(source)</a> </p>
+     </div>
+     <div style="flex:1;padding-left:5px;">
+     <img src="IIT_files/Scanner_appearance.png" alt="Labelled laser scanner" style="width:380px;height:400px;">
+         <p align="center">Fig.2: Long Range 3D scanner <a href="http://www.jsm.or.jp/ejam/Vol.4No.2/NT/NT47/Figure1.html">(source)</a></p>
+     </div>
+</div>
+<p class="just">Fig.3 shows the basic structure of a 3D laser scanner. The mirror rotates on its axis to form a 3D scan of the surroundings
+The tripod is used to keep the scanner stable while scanning. And it has various indicator lights for indication various
+operations (their function changes with various manufacturers).</p>
+<p>Fig.1 is an example of point cloud obtained using Faro Focus 3D X 330 HDR scanner.</p>
+<h3>2.2 Point Cloud Registration</h3>
+<p></p>
+<h2>3. Methodology</h2>
 <p>This will describe the way in which I solved the problem.</p>
-<h2>Results</h2>
+<h2>4. Results</h2>
 <p>This section will show the results of all the methods including ICP, surface reconstruction, cloud completion, mesh preparation</p>
-<h2>Conclusion</h2>
+<h2>5. Conclusion</h2>
 <p>This will conclude the work giving some insights.</p>
-<h2>References</h2>
-<p>This will contains all the references.</p>
+<h2>6. References</h2>
+<ol>
+    <li>https://kieffmoon.wordpress.com/unit-66/applications-of-3d/</li>
+    <li>https://graphics.uni-bielefeld.de/research/</li>
+    <li>https://en.wikipedia.org/wiki/Data_acquisition</li>
+    <li>https://knowledge.faro.com/Hardware/3D_Scanners/Focus/Technical_Specification_Sheet_for_the_Focus3D_X_30-130-330_and_X_130-330_HDR</li>
+    <li>https://www.engineering.com/AdvancedManufacturing/ArticleID/12390/Quality-Basics-How-Does-3D-Laser-Scanning-Work.aspx</li>
+</ol>
 </body>
 </html>
