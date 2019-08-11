@@ -19,9 +19,13 @@
         margin-left: 35px;
         margin-right: 35px;
         }
-        p {
+        p{
         margin-left: 60px;
         margin-right: 60px;
+        }
+        ol {
+        margin-left: 40px;
+        margin-right: 40px;
         }
         img {
         margin-left: 35px;
@@ -55,7 +59,7 @@
 <p class="just">Geometry Processing is involved with efficient acquisition, representation, optimization, editing, and
 simulation of geometric objects.
 There is a large boost in the availability of 3D data due to the decreasing prices of geometry acquisition devices,
-like 3D laser scanners (Fig.1), LiDAR scanners. Geometry processing is playing an important role in a large range of
+like 3D laser scanners (Fig.1), LiDAR (Light Detection and Ranging) scanners. Geometry processing is playing an important role in a large range of
 applications. Examples include video games, animation, TV, building design, web design, CAD, interactive shape editing,
     simulations for medical applications and movie productions<sup>[1]</sup>. Problems arising in these highly
 diverse fields follow the same fundamental geometry principles proves geometry processing to be a potentially growing
@@ -67,7 +71,7 @@ diverse fields follow the same fundamental geometry principles proves geometry p
 of the results obtained using approaches described in section 3. Section 5 concludes the discussion with possible future
 work.</p>
 
-<h2>2. Pipeline Constructed</h2>
+<h2>2. Pipeline</h2>
 <p class="just">The task of the following pipeline is to convert a less usable point clouds to more usable complete 3D
 models.</p>
 <h3> 2.1 Data Acquisition</h3>
@@ -80,11 +84,11 @@ up to 330 meters. The laser scanner throws a laser beam on to the object and cal
 <div style="display:flex">
      <div style="flex:1;padding-right:5px;padding-left:35px">
                    <img src="IIT_files/faro.jpg" alt="Faro scanner image." style="width:500px;height:400px;">
-         <p align="center">Fig.3: Faro Focus 3D X 330 HDR <a href="http://www.dicarlotech.com/products/FARO-Focus-3D-X-330-HDR">(source)</a> </p>
+         <p align="center">Fig.2: Faro Focus 3D X 330 HDR <a href="http://www.dicarlotech.com/products/FARO-Focus-3D-X-330-HDR">(source)</a> </p>
      </div>
      <div style="flex:1;padding-left:5px;">
      <img src="IIT_files/Scanner_appearance.png" alt="Labelled laser scanner" style="width:380px;height:400px;">
-         <p align="center">Fig.2: Long Range 3D scanner <a href="http://www.jsm.or.jp/ejam/Vol.4No.2/NT/NT47/Figure1.html">(source)</a></p>
+         <p align="center">Fig.3: Long Range 3D scanner <a href="http://www.jsm.or.jp/ejam/Vol.4No.2/NT/NT47/Figure1.html">(source)</a></p>
      </div>
 </div>
 <p class="just">Fig.3 shows the basic structure of a 3D laser scanner. The mirror rotates on its axis to form a 3D scan of the surroundings
@@ -92,9 +96,51 @@ The tripod is used to keep the scanner stable while scanning. And it has various
 operations (their function changes with various manufacturers).</p>
 <p>Fig.1 is an example of point cloud obtained using Faro Focus 3D X 330 HDR scanner.</p>
 <h3>2.2 Point Cloud Registration</h3>
-<p></p>
+<p class="just">As it can be seen in Fig.1, a single scan of an object does not contains entire information of the object. There are
+some missing places in the final single scan of the object. This is a well known issue and plays an essential role in
+    many practical applications, such as 3D reconstruction and mapping, object pose estimation, LiDAR SLAM and others.
+    To overcome this issue more than one scan of an object is
+obtained from different orientations. Then all the scans are stitched together to form the true 3D scan of the object.
+In order to perform the 'stitching' various algorithms are used. These algorithms are used to estimate the relative
+transformation (combination of rotation and translation) between the point clouds. </p>
+<p class="just">The most common method is Iterative Closest Point (ICP)<sup>[6]</sup> algorithm for solving the point
+    cloud registration problem. It works by estimating point correspondences and performing least squares optimization.
+There are several versions of the ICP available, we used the one defined by [6]. Using ICP we wish to find a rigid
+transformation that optimally aligns the two sets in least squares sense<sup>[7]</sup>.</p>
+<p class="just">We seek to find a Rotation <i>R</i> and translation vector <b>t</b> such that </p>
+<p align="center"><img src="http://latex.codecogs.com/svg.latex?(R, \mathbf{t}) = \sum_{i=1}^{n}w_{i}\left \| (R\mathbf{p_{i}}+\mathbf{t})-\mathbf{q}_{i} \right \|^2" border="0"/></p>
+<p class="just">where <i>w<sub>i</sub></i> > 0 are weights for each point pair.</p>
+<p>Now the steps are as follows<sup>[7]</sup>:</p>
+<ol>
+    <li>Weighted centroids of both the point clouds are calculated<p align="center"><img src="http://latex.codecogs.com/svg.latex?\overline{\mathbf{p}} =\frac{\sum_{i=1}^{n}w_i\mathbf{p}_i}{\sum_{i=1}^{n}w_i},   \overline{\mathbf{q}} =\frac{\sum_{i=1}^{n}w_i\mathbf{q}_i}{\sum_{i=1}^{n}w_i}" border="0"/></p></li>
+    <li>Centered vectors are calculated<p align="center"><img src="http://latex.codecogs.com/svg.latex?\mathbf{x}_i $:= $\mathbf{p}_i - \overline{\mathbf{p}}, \mathbf{y}_i  $:=$   \mathbf{q}_i - \overline{\mathbf{q}}, i = 1, 2, ..., n" border="0"/></p></li>
+    <li>Covariance matrix is calculated<p align="center"><img src="http://latex.codecogs.com/svg.latex?S = XWY^{\textup{T}}" border="0"/></p> <br>Where <i>X</i> and <i>Y</i> are the <i>d</i> x <i>n</i> matrices that have x<sub>i</sub> and y<sub>i</sub> as their columns, respectively, and W = diag(w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>).</li>
+    <li>Singular Value Decomposition is calculated <p align="center"><img src="http://latex.codecogs.com/svg.latex?S = U\Sigma V^{\textup{T}}" border="0"/></p><br>Then rotation matrix is calculated as:<p align="center"><img src="http://latex.codecogs.com/svg.latex?R = V\begin{pmatrix}
+1  &  &  &  & \\
+ &  1  &  &  & \\
+ &  &  \ddots   &  & \\
+ &  &  &  1 & \\
+ &  &  &  &  det(VU^{T})
+\end{pmatrix}U^{T}" border="0"/></p></li>
+    <li>Optimal translation is calculated as <p align="center"><img src="http://latex.codecogs.com/svg.latex?\mathbf{t} = \overline{\mathbf{q}} - R\overline{\mathbf{p}} " border="0"/></li>
+</ol>
+<p class="just"> The above steps are repeated until an optimal result is obtained. We implemented the above algorithms
+    in Python <a href="https://github.com/Sid2697/3D"><b>(code)</b></a> and obtained following results on a chair and bunny data set.</p>
+<div style="display:flex">
+     <div style="flex:1;padding-right:5px;padding-left:35px;align:center;">
+                   <img src="files/Chairs.gif" alt="ICP on chair GIF" style="width:300px;height:300px;">
+         <p align="left">Fig.4: ICP application on chair</p>
+     </div>
+     <div style="flex:1;padding-left:25px;">
+     <img src="IIT_files/Bunny.gif" alt="Labelled laser scanner" style="width:300px;height:300px;">
+<!--         <img src="IIT_files/Bunny.gif" alt="Labelled laser scanner" >-->
+         <p align="left">Fig.5: ICP application on bunny</p>
+     </div>
+</div>
+<h3>2.3 Point Cloud Completion</h3>
+<p class="just"></p>
 <h2>3. Methodology</h2>
-<p>This will describe the way in which I solved the problem.</p>
+<p>This will describe the way in which I solved the problem. </p>
 <h2>4. Results</h2>
 <p>This section will show the results of all the methods including ICP, surface reconstruction, cloud completion, mesh preparation</p>
 <h2>5. Conclusion</h2>
@@ -106,6 +152,7 @@ operations (their function changes with various manufacturers).</p>
     <li>https://en.wikipedia.org/wiki/Data_acquisition</li>
     <li>https://knowledge.faro.com/Hardware/3D_Scanners/Focus/Technical_Specification_Sheet_for_the_Focus3D_X_30-130-330_and_X_130-330_HDR</li>
     <li>https://www.engineering.com/AdvancedManufacturing/ArticleID/12390/Quality-Basics-How-Does-3D-Laser-Scanning-Work.aspx</li>
+    <li>P. Besl and N. D. McKay. A method for registration of 3-D shapes. IEEE Transactions on Pattern Analysis and Machine Intelligence, 14(2):239–256, Feb 1992.</li>
+    <li>https://igl.ethz.ch/projects/ARAP/svd_rot.pdf</li>
 </ol>
-</body>
 </html>
