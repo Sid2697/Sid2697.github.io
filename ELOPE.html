@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        a {
+        color: #1772d0;
+        text-decoration:none;
+        }
+        body,td,th,tr,p,a {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 14px
+            padding: 30px;
+        }
+        .just{
+        text-align: justify;
+        }
+        .tab {position:absolute;left:100px;}
+        h2, h3, h4{
+        margin-left: 35px;
+        margin-right: 35px;
+        }
+        p{
+        margin-left: 60px;
+        margin-right: 60px;
+        }
+        ol {
+        margin-left: 40px;
+        margin-right: 40px;
+        }
+        img {
+        margin-left: 35px;
+        margin-right: 10px;
+        }
+    </style>
+    <title>Meditab Report - Siddhant Bansal</title>
+</head>
+<body>
+<h1 align="center">Facility Layout using Genetic Algorithm</h1>
+<p align="center"><a href="https://sid2697.github.io">Siddhant Bansal</a><br>Meditab Software, Inc.<br>siddhant2697@gmail.com</p>
+<h2>About</h2>
+<p class="just">This is web page dedicated to the work done by me at Meditab Software, Inc.</p>
+<h2>Abstract</h2>
+<p class="just">For any organization to make the maximum profit it is important to have an efficient and effective
+manufacturing unit. For such a unit it is necessary to give special attention to facility layout. Facility layout is
+defined as an effective arrangement of different manufacturing units to achieve desired production results. There are a few
+things that can be considered for facility layout like, total available space, time for manufacturing a single batch of
+product, user access points of the machine for convenient operations. An efficient layout is the one which ensures a
+steady and smooth flow of equipment, production material, and manpower at minimum expense.</p>
+<p class="just">Manually figuring out the best possible layout satisfying all the constraints can be a difficult task
+as there can be infinitely many ways of arranging a facility with <i>n</i> number of constraints. This is the reason we
+    consider Genetic Algorithm to find the best layout for us with the given set of constraints. <b>[ADD ABOUT GA]</b></p>
+<h2>1. Introduction</h2>
+<p class="just">Layout Optimisation Problem refers to the problem of determining positions of modules in a layout for
+    optimizing multiple constraint objectives specific to the problem statement. The discussed problem statement can be
+    divided into two subdivisions as continuous layout optimization problem and discrete layout optimization problem.
+    Researchers like [1], [2], [3], [4] have contributed immensely for the continuous layout optimisation problem, whereas
+    [5], [6], [7] made numerous efforts for a discrete layout optimisation problem. Apart from mentioned categorization,
+    there are also additional possible ways of categorizing Layout optimization problem as equal-area problem,
+    unequal area problem [8], Quadratic Assignment Problem (QAP) and Quadratic Set Covering Problem (QSCP) [9].</p>
+<p align="center"><b>CREATE A DIAGRAM FOR GENERAL FACILITY LAYOUT</b></p>
+<p class="just">For solving the above-mentioned problem scenarios, a wide array of algorithms have been employed.
+    Genetic algorithms were used by [9] for flexible manufacturing system optimisation, genetic search by [10] for
+    unequal-area facility layout optimization, genetic programming by [11]  for Geometry and sizing optimisation of
+    the discrete structure. This problem statement has also been assessed by researchers from diverse applied engineering
+    fields. [12] have explored the same for optimizing placement of components on the PCB using genetic algorithms. The
+    above-mentioned methods use vectors as the representation of the modules (units to be arranged in a given space
+    called environment). Whereas our approach uses 2D matrices as the representations of the modules and produces some
+    good environment.</p>
+<p class="just">The work can be explored in two phases, first by learning about Genetic Algorithms in Section 2. Then
+    by analyzing the environment created by us called ELOPE (Evolutionary Layout Optimization Playground and Evaluator)
+    in Section 3.</p>
+<h2>2. Genetic Algorithm</h2>
+<p class="just">The genetic algorithm is a type of evolutionary algorithm that tries to mimic
+    the actual biological process in a hope of discovering good solutions which was first introduced by [13].
+The genetic algorithm is analogous to Darwinian natural mutation and selection, it is a part of ‘randomized heuristics’
+    which does not depend on the prior knowledge of various features of the domain whereas it depends on the randomized
+    choice of operators.</p>
+<h3>2.1 Basic flow of the algorithm</h3>
+<p class="just">The genetic algorithm transforms a population of individual solutions repeatedly.  At each iteration, the
+    algorithm chooses some individuals randomly from the current population which acts at the parents to produce
+    the offsprings for the coming generation. The process continues for some generations, and the population evolves
+    toward an local or global optimal solution. </p>
+<p class="just">Three main steps are used in the algorithm to create the future generation from the current generation:</p>
+<ol>
+    <li><b>Selection</b> rules selects the parents, that are used to create the next generation.</li>
+    <li><b>Crossover</b> is used to define rules of combining parents to generate children.</li>
+    <li><b>Mutation</b> is used to apply random changes to some of the individuals from the new generation.</li>
+</ol>
+<p class="just">Lets learn about all the above steps one by one.</p>
+<h3>2.2 Selection</h3>
+<p class="just">First of all fitness score of the entire population is calculated. Fitness score indicates the value of
+    a particular individual, in our case the more the fitness score of an environment is the more better it is. The
+    population is then sorted on the fitness score. Then we use any one of the following two techniques for selection
+    of the parents:</p>
+<ol>
+    <li>Here we generate a random number between the minimum and maximum score. The individuals who have the score
+        higher than this number are taken to the next step of crossover.</li>
+    <li>In this method either 0 or 1 is generated. If 1 is generated then all the environments at even index are chosen,
+        else the once at odd index are chosen and taken to the next step of crossover.</li>
+</ol>
+<h3>2.3 Crossover</h3>
+<p class="just">Crossover is used for exploring the sample space in the Genetic Algorithm, we implement 2 different
+    crossover strategies, they are as follows:</p>
+<ol>
+    <li>In the most basic strategy, we choose any environment at random and take the module’s position from it for
+        creating a new environment. If there is any conflict in creating the environment then a completely new
+        environment is used as a child.</li>
+    <li>The second strategy involves using the fitness score of the environment. The environment with a higher score is
+        given an 80% probability of contributing in the crossover process, whereas the one with the lower score is
+        given the remaining 20% probability.</li>
+</ol>
+<p>For old population P, new population P′ is generated as P′ = C (P) where C is crossover function.</p>
+<p align="center"><b>CREATE A DIAGRAM FOR CROSSOVER</b></p>
+<h3>2.4 Mutation</h3>
+<p class="just">Mutation is used for exploiting the sample space in the Genetic Algorithm, we implement 3 different
+    strategies in our plugin, they are as follows:</p>
+<ol>
+    <li><b>Shift mutation</b>: This strategy involves moving the module up, down, right or left by n number of blocks.</li>
+    <li><b>Tilt mutation</b>: This strategy involves rotating the module by 180 degrees.</li>
+    <li><b>Rotate mutation</b>: This strategy involves rotating the module by 90 degrees.</li>
+</ol>
+<p align="center"><b>CREATE A DIAGRAM FOR MUTATION</b></p>
+<h3>2.5 Complete Algorithm</h3>
+<p class="just">Here is the pseudo code for implementing Genetic Algorithm:</p>
+<p class="just"><b>Input: </b>desired fitness score, maximum number of generations<br><b>Output: </b>Parameter:
+    Fitness strategy<br><ol>
+    <li>Generate Initial Population</li>
+    <li>Set population score to zero</li>
+    <li>Set generation number to zero</li>
+    <li><b>while</b> population score < desired score or generation number < maximum generations <b>do</b></li>
+    <li><span class="tab">Get sorted population, population score and best individual score</span></li>
+    <li><span class="tab">Perform selection</span> </li>
+    <li><span class="tab">Perform crossover</span></li>
+    <li><span class="tab">Sort population</span></li>
+    <li><span class="tab">Perform Mutation</span></li>
+    <li><span class="tab">Increment generation number</span> </li>
+    <li><b>end while</b></li>
+</ol></p>
+<p align="center"><b>CREATE A FLOW CHART</b></p>
+<h2>3. ELOPE: Evolutionary Layout Optimization Playground and Evaluator</h2>
+<p class="just">Current ameliorations in Evolutionary Strategies have allowed us to achieve phenomenal accuracy in
+    variants of optimization problems. However, for the layout optimization problem, there doesn’t exist a platform
+    adept enough to challenge off-the-shelf algorithms to the fullest extent. For addressing the mentioned problem
+    statement, we introduce Evolutionary Layout Optimization Playground and Evaluator (ELOPE), a platform for solving a
+    large spectrum of layout optimization problems. ELOPE’s major contributions are its proposed 2D rectangular
+    representation for the environment, multi-objective optimization, pre-defined plugins for evolutionary algorithms
+    and visualization of the generated layouts.</p>
+<h3>3.1 About ELOPE</h3>
+<p class="just">ELOPE, is a platform for evaluating and comparing different evolutionary algorithms for solving
+    layout problems using evolutionary algorithms.<br>Major advantages of ELOPE are:</p>
+<ol>
+    <li><b>ELOPE provides a scalable playground</b> as it can be used to generate diverse set of layout customizations
+        for various applications.</li>
+    <li><b>It provides a rich set of plugins</b> that makes it easy to use for developing various functionalities on the
+        top of it.</li>
+    <li><b>It provides visualisation module</b> which can be used to visualise layouts generated by the algorithm.</li>
+</ol>
+<p align="center"><img src="Meditab_files/ELOPE_ARC.png" alt="ELOPE architecture information." style="width:1000px;height:550px"> </p>
+<p align="center">Fig.X: ELOPE’s architecture and interaction with the algorithm.</p>
+<h3>3.2 Architecture</h3>
+<p class="just">The key idea for ELOPE is to avail the community with a comprehensive platform for solving the layout
+    optimisation problems. ELOPE is written in Python to avail the implemented operations for matrix manipulation and
+    its matured range of libraries for applied programming. This choice also caters the developers to prototype the
+    ideas relatively faster and help direct the efforts on the algorithm than the interfaces. ELOPE stands out as a
+    bridge between the problem statement and the algorithm employed to solve it. Figure <b>X</b> illustrates that
+    relationship via the user-defined data-flow originating from the problem statement at hand. The interactions among
+    the sub-modules of ELOPE and the optimization strategy of choice are also represented.</p>
+<h2>4. References</h2>
+<ol>
+    <li>Kar Yan Tam and Shih Gong Li. A hierarchical approach to the facility layout problem. The International Journal
+        of Production Research, 29(1):165–184, 1991.</li>
+    <li>Drew J Van Camp, Michael W Carter, and Anthony Vannelli. A nonlinear optimization approach for solving facility
+        layout problems. European Journal of Operational Research, 57(2):174–189, 1992.</li>
+    <li>Kar Yan Tam. A simulated annealing algorithm for allocating space to manufacturing cells. The International
+        Journal of Production Research, 30(1):63–87, 1992.</li>
+    <li>Kar Yan Tam. Genetic algorithms, function optimization, and facility layout design. European Journal of
+        Operational Research, 63(2):322–346, 1992.</li>
+    <li>Gordon C Armour and Elwood S Buffa. A heuristic algorithm and simulation approach to relative location of
+        facilities. Management Science, 9(2):294–309, 1963.</li>
+    <li>Robert C Lee. Corelap-computerized relationship layout planning. J. Ind. Eng., 18(3):195–200, 1967.</li>
+    <li>Tarek M Khalil. Facilities relative allocation technique (frat). International Journal of Production
+        Research, 11(2):183–194, 1973.</li>
+    <li>Kyu-Yeul Lee, Myung-Il Roh, and Hyuk- Su Jeong. An improved genetic algorithm for multi-floor facility layout
+        problems having inner structure walls and passages. Computers & Operations Research, 32(4):879–899, 2005.</li>
+    <li>Maheswaran Rajasekharan, Brett A Peters, and Taho Yang. A genetic algorithm for facility layout design in
+        flexible manufacturing systems. International Journal of Production Research, 36(1):95–110, 1998.</li>
+    <li>David M Tate* and Alice E Smith. Unequal-area facility layout by genetic search. IIE trans- actions, 27(4):465–
+        472, 1995.</li>
+    <li>QZ Zheng, OM Querin, and DC Barton. Geometry and sizing optimisation of discrete structure using the genetic
+        programming method. Structural and Multidisciplinary Optimization, 31(6):452–461, 2006.</li>
+    <li>Fatimah Sham Ismail, Rubiyah Yusof, and Marzuki Khalid. Optimization of electronics component placement design
+        on pcb using self organizing genetic algorithm (soga). Journal of intelligent Manufacturing, 23(3):883–895, 2012.</li>
+    <li>John Henry Holland et al. Adaptation in natural and artificial systems: an introductory analysis with
+        applications to biology, control, and artificial intelligence. MIT press, 1992.</li>
+</ol>
+</body>
+</html>
