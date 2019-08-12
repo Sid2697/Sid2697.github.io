@@ -168,7 +168,10 @@ and decreased it to 1024 -> 512 -> 256 -> 128 -> 64. In this encoded code with 6
 feed into the decoder which would up-sample it back to 2048 points by 64 -> 128 -> 256 -> 512 -> 1024 -> 2048. In this way,
  a smaller and more point cloud was retrieved. Fig.7 shows the architecture.</p>
 <!--TODO: Add a network architecture figure.-->
-<p><b>TODO: INSERT THE ARCHITECTURE IMAGE HERE</b></p>
+<p align="center"><img src="IIT_files/Encoder.svg" alt="Network architecture"></p>
+<p align="center">Fig.7 Architecture of the auto-encoder designed. Here <i>n</i> represents the batch size while training.
+The encoder takes in <i>n</i> point-clouds of shape (3, 2048) and creates a code of shape (n, 3, 64). The decoder takes
+this code and up-samples it create the point-clouds of the original shape.</p>
 <p>The data set used for training was obtained from <a href="http://completion3d.stanford.edu">here</a>.</p>
 <p class="just">Two types of losses were used to train the network (in two different experiments). First Euclidean distance
 was used, and in the second one, Chamfer distance<sup>[13]</sup> was used. Fig.8 shows results obtained using Euclidean distance.
