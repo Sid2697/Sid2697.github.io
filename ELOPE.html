@@ -88,7 +88,7 @@ The genetic algorithm is analogous to Darwinian natural mutation and selection, 
     choice of operators.</p>
 <h3>2.1 Basic flow of the algorithm</h3>
 <p class="just">The genetic algorithm transforms a population of individual solutions repeatedly.  At each iteration, the
-    algorithm chooses some individuals randomly from the current population which acts at the parents to produce
+    algorithm chooses some individuals randomly from the current population which acts as the parents to produce
     the offsprings for the coming generation. The process continues for some generations, and the population evolves
     toward a local or global optimal solution. </p>
 <p class="just">Three main steps are used in the algorithm to create the future generation from the current generation:</p>
@@ -106,7 +106,7 @@ The genetic algorithm is analogous to Darwinian natural mutation and selection, 
 <ol>
     <li>Here we generate a random number between the minimum and maximum score. The individuals who have the score
         higher than this number are taken to the next step of crossover.</li>
-    <li>In this method either 0 or 1 is generated. If 1 is generated then all the environments at even index are chosen,
+    <li>In this second method either 0 or 1 is generated. If 1 is generated then all the environments at even index are chosen,
         else the once at odd index are chosen and taken to the next step of crossover.</li>
 </ol>
 <h3>2.3 Crossover</h3>

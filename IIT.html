@@ -45,14 +45,14 @@
 </head>
 <p>
 <h1 align="center">3D Modelling and Geometry Processing</h1>
-<p align="center"><a href="https://sid2697.github.io">Siddhant Bansal</a> <br> Indian Institute of Technology, Gandhinagar <br> siddhant.b@iitgn.ac.in</p>
+<p align="center"><a href="https://sid2697.github.io">Siddhant Bansal</a> <br> Indian Institute of Technology, Gandhinagar <br> siddhant2697@gmail.com</p>
 <h2>About</h2>
 <p class="just">This is a web page dedicated to the work done by me at IIT Gandhinagar.</p>
 <h2>Abstract</h2>
 <p class="just">Creation of a pipeline that takes in 3D point clouds and gives out a complete 3D geometric model is a pretty vast
     topic which includes various currently focused research concepts like Rigid and Non-Rigid Point Cloud Registration,
     3D object recognition, and Point Cloud Completion. These generated 3D models find various applications in the domain
-    of 3D Computer Vision, 3D Graphics, architecture simulation, games graphics, animated movies and 3D documentation
+    of 3D Computer Vision, 3D Graphics, architecture simulation, games graphics, animated movies, 3D documentation
     of objects, and many other renowned fields. This research project aims at using various digital geometry processing
     approaches for preserving and restoring cultural heritage. </p>
 
@@ -166,9 +166,9 @@ with all the fully-connected layers and no convolution layers.
 <!--    The code developed is available here-->
 <!--    <a href="https://github.com/Sid2697/Fill_missing"><i>https://github.com/Sid2697/Fill_missing.</i></a>-->
 The architecture of the encoder was as follows it consisted of fully-connected layers which took 2048 cloud points as input
-and decreased it to 1024 -> 512 -> 256 -> 128 -> 64. In this encoded code with 64 points was obtained which was further
+and decreased it to 1024 -> 512 -> 256 -> 128 -> 64. In this manner an encoded code with 64 points was obtained which was further
 feed into the decoder which would up-sample it back to 2048 points by 64 -> 128 -> 256 -> 512 -> 1024 -> 2048. In this way,
- a smaller and more point cloud was retrieved. Fig.7 shows the architecture.</p>
+ a point cloud smaller in size and with more shape information was retrieved. Fig.7 shows the architecture.</p>
 <!--TODO: Add a network architecture figure.-->
 <p align="center"><img src="IIT_files/Encoder.svg" alt="Network architecture"></p>
 <p align="center">Fig.7 Architecture of the auto-encoder designed. Here <i>n</i> represents the batch size while training.
@@ -187,7 +187,7 @@ execution.</p>
 compared to Euclidean distance. The network seems to learn the global structure from the input shapes.</p>
 <p class="just">The above two experiments concluded that we can use a simple fully-connected linear neural network to solve
 a complex problem like cloud completion. Out of the two loss functions used Chamfer distance proved to be a better one
-(by visual inspection of results). Whereas Euclidean distance proved to be more computationally easy to compute.
+(by visual inspection of the results). Whereas Euclidean distance proved to be more computationally easy to compute.
 Although the above experiments did not yield the desired results, this attempt was proof that we can use simple fully-connected
 neural networks for cloud completion task. If successful they will prove to be very useful for applications using less
 computational resources like robots using Raspberry Pi.</p>
