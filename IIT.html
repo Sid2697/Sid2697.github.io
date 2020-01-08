@@ -134,8 +134,8 @@ transformation that optimally aligns the two sets in the least-squares sense<sup
 </ol>
 <p class="just"> The above steps are repeated until an optimal result is obtained. We implemented the above algorithms
     in Python and obtained the following results on a chair and bunny data set.
-<!--    The code developed is available here-->
-<!--<a href="https://github.com/Sid2697/3D"><i>https://github.com/Sid2697/3D.</i></a></p>-->
+   The code developed is available here
+<a href="https://github.com/Sid2697/3D"><i>https://github.com/Sid2697/3D.</i></a></p>
 <div style="display:flex">
      <div style="flex:1;padding-right:5px;padding-left:35px;align:center;">
                    <img src="files/Chairs.gif" alt="ICP on chair GIF" style="width:300px;height:300px;">
@@ -163,8 +163,8 @@ point cloud.</p>
 <p class="just">Going through all the methods like PCN [8], AtlasNet [10], Scan2Mesh [11], and TopNet [12] I wondered what will happen
 if we try an encoder-decoder architecture consisting of only fully-connected layers. So, I designed an auto-encoder
 with all the fully-connected layers and no convolution layers.
-<!--    The code developed is available here-->
-<!--    <a href="https://github.com/Sid2697/Fill_missing"><i>https://github.com/Sid2697/Fill_missing.</i></a>-->
+   The code developed is available here
+   <a href="https://github.com/Sid2697/Fill_missing"><i>https://github.com/Sid2697/Fill_missing.</i></a>
 The architecture of the encoder was as follows it consisted of fully-connected layers which took 2048 cloud points as input
 and decreased it to 1024 -> 512 -> 256 -> 128 -> 64. In this manner an encoded code with 64 points was obtained which was further
 feed into the decoder which would up-sample it back to 2048 points by 64 -> 128 -> 256 -> 512 -> 1024 -> 2048. In this way,
