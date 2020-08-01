@@ -11,7 +11,7 @@
 
 - title: Smile Detector
   image: Dad_GIF.gif
-  description: Created an end-to-end system for detecting smiling faces in a live video stream using Convolutional Neural Network.
+  description: Created an end-to-end system for detecting smiling faces in a live video stream using Convolutional Neural Network. <br><br><br>
   number_link: 1
   link1:
     url: https://github.com/Sid2697/Smile-Detector
@@ -19,7 +19,7 @@
 
 - title: Self Driving Car
   image: Self.gif
-  description: Learned about Deep Q Learning by implementing it for driving a car autonomously.
+  description: <br> Learned about Deep Q Learning by implementing it for driving a car autonomously. <br><br><br>
   number_link: 2
   link1:
     url: https://github.com/Sid2697/Self_Driving_Car
@@ -30,4 +30,4 @@
 
 - title: Anime Classification
   image: Anime.jpeg
-  description: In this project, I worked on autoencoders to learn the features from 1,40,000 images. Then using the trained autoencoder with added convolution layers to classify the anime to answer various questions with 74.6% accuracy like - <br> Does the image contain any nudity or sexual content? (Yes, No) <br> Is this an interesting image or not? (Yes, no).
+  description: In this project, I worked on autoencoders to learn the features from 1,40,000 images. Then using the trained autoencoder with added convolution layers to classify the anime to answer various questions with 74.6% accuracy like - <br> Does the image contain any nudity or sexual content? (Yes, No) <br> Is this an interesting image or not? (Yes, no). <br><br><br>
