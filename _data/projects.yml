@@ -1,0 +1,33 @@
+- title: Automatic Garbage Detection and Collection
+  image: AGDC.png
+  description: Lead a team of three for creating a robot using a RaspberryPi capable of detecting waste bottles and picking them up.<br>Developed an algorithm for getting a rough estimation of the depth of the garbage (with an error margin of 2cms).<br>Developed a path planning algorithm based on the concept of PID (by considering bottle as the centre).<br>One of the 4% projects selected for demonstration at SSIP annual conference.
+  number_link: 2
+  link1:
+    url: http://arxiv.org/abs/1908.05849
+    display: Paper
+  link2:
+    url: https://www.vgecg.ac.in/student_projects.php?id=21
+    display: Project Page
+
+- title: Smile Detector
+  image: Dad_GIF.gif
+  description: Created an end-to-end system for detecting smiling faces in a live video stream using Convolutional Neural Network.
+  number_link: 1
+  link1:
+    url: https://github.com/Sid2697/Smile-Detector
+    display: Code (Github)
+
+- title: Self Driving Car
+  image: Self.gif
+  description: Learned about Deep Q Learning by implementing it for driving a car autonomously.
+  number_link: 2
+  link1:
+    url: https://github.com/Sid2697/Self_Driving_Car
+    display: Code (Github)
+  link2:
+    url: https://youtu.be/ZRDK-vmoAog
+    display: Video (YouTube)
+
+- title: Anime Classification
+  image: Anime.jpeg
+  description: In this project, I worked on autoencoders to learn the features from 1,40,000 images. Then using the trained autoencoder with added convolution layers to classify the anime to answer various questions with 74.6% accuracy like - <br> Does the image contain any nudity or sexual content? (Yes, No) <br> Is this an interesting image or not? (Yes, no).

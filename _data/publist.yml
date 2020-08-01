@@ -1,0 +1,22 @@
+- title: Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval
+  image: WordRecVisualisation_website.png
+  description: Fusing recognition-based and recognition-free approaches using rule-based methods for improving word recognition and retrieval. <span style="color:red;">(ORAL)</span>
+  authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
+  venue: IAPR International Workshop on Document Analysis and System (DAS), 2020
+  number_link: 5
+  link1:
+    url: https://arxiv.org/pdf/2007.00166.pdf
+    display: PDF
+  link2:
+    url: ../images/pubpic/Word_Retrieval_demo.gif
+    display: Demo
+  link3:
+    url: https://sid2697.github.io/Word-recognition-and-retrieval/
+    display: Project Page
+  link4:
+    url: https://github.com/Sid2697/Word-recognition-and-retrieval
+    display: Code (Github)
+  link5:
+    url: ../papers/Siddhant_Bansal_V4.pdf
+    display: Poster
+
