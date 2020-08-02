@@ -1,6 +1,14 @@
+- title: Scene Text Detection and Recognition
+  image: MAVI_Diagram.png
+  description: <br> Working on detecting and recognising text in the images from Mobility Assistant for Visually Impared (MAVI) developed at IIT-Delhi.<br><br><br>
+  number_link: 1
+  link1: 
+    url: http://www.cse.iitd.ac.in/mavi/index.html
+    display: Website (MAVI)
+
 - title: Automatic Garbage Detection and Collection
   image: AGDC.png
-  description: Lead a team of three for creating a robot using a RaspberryPi capable of detecting waste bottles and picking them up.<br>Developed an algorithm for getting a rough estimation of the depth of the garbage (with an error margin of 2cms).<br>Developed a path planning algorithm based on the concept of PID (by considering bottle as the centre).<br>One of the 4% projects selected for demonstration at SSIP annual conference.
+  description: Lead a team of three for creating a robot using a RaspberryPi. It was capable of detecting waste bottles and picking them up.<br>Developed an algorithm for getting a rough estimate of the distance of the garbage from the robot (with an error margin of 2 cm).<br>Developed a path planning algorithm based on the concept of PID (by considering bottle as the centre).<br>One of the top 4% projects selected for demonstration at SSIP annual conference.
   number_link: 2
   link1:
     url: http://arxiv.org/abs/1908.05849

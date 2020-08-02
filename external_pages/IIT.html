@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145393252-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145393252-1');
+</script>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        a {
+        color: #1772d0;
+        text-decoration:none;
+        }
+        body,td,th,tr,p,a {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 14px
+            padding: 30px;
+        }
+        .just{
+        text-align: justify;
+        }
+        h2, h3, h4{
+        margin-left: 35px;
+        margin-right: 35px;
+        }
+        p{
+        margin-left: 60px;
+        margin-right: 60px;
+        }
+        ol {
+        margin-left: 40px;
+        margin-right: 40px;
+        }
+        img {
+        margin-left: 35px;
+        margin-right: 10px;
+        }
+    </style>
+    <title>IIT Gandhinagar Report - Siddhant Bansal</title>
+</head>
+<p>
+<h1 align="center">3D Modelling and Geometry Processing</h1>
+<p align="center"><a href="https://sid2697.github.io">Siddhant Bansal</a> <br> Indian Institute of Technology, Gandhinagar <br> siddhant2697@gmail.com</p>
+<h2>About</h2>
+<p class="just">This is a web page dedicated to the work done by me at IIT Gandhinagar.</p>
+<h2>Abstract</h2>
+<p class="just">Creation of a pipeline that takes in 3D point clouds and gives out a complete 3D geometric model is a pretty vast
+    topic which includes various currently focused research concepts like Rigid and Non-Rigid Point Cloud Registration,
+    3D object recognition, and Point Cloud Completion. These generated 3D models find various applications in the domain
+    of 3D Computer Vision, 3D Graphics, architecture simulation, games graphics, animated movies, 3D documentation
+    of objects, and many other renowned fields. This research project aims at using various digital geometry processing
+    approaches for preserving and restoring cultural heritage. </p>
+
+<p class="just">Task here is to develop an end-to-end pipeline which begins with <b>acquisition</b> of 2.5D point clouds using a
+    long-range laser scanner. It is followed by <b>point cloud registration</b> to obtain a complete 3D point cloud. If the point
+    cloud is incomplete then applying point cloud completion algorithms for completing the point clouds. The complete
+    point clouds are then converted to mesh, the <b>mesh</b> is then converted to <b>surface</b>. Finally a complete
+    3D model is obtained which can be 3D printed. My work was focused on understanding and applying various point
+    cloud registration and completion methods.</p>
+
+<h2>1. Introduction</h2>
+<!--TODO: Hyperlink references to the reference section.-->
+<p class="just">Geometry Processing is involved with the efficient acquisition, representation, optimization, editing, and
+simulation of geometric objects.
+There is a large boost in the availability of 3D data due to the decreasing prices of geometry acquisition devices,
+like 3D laser scanners (Fig.1), LiDAR (Light Detection and Ranging) scanners. Geometry processing is playing an important role in a large range of
+applications. Examples include video games, animation, TV, building design, web design, CAD, interactive shape editing,
+    simulations for medical applications and movie productions<sup>[1]</sup>. Problems arising in these highly
+diverse fields follow the same fundamental geometry principles proves geometry processing to be a potentially growing
+    field of high potential impact research<sup>[2]</sup>.</p>
+    <p align="center"><img src="IIT_files/Lab_scan.png" alt="IITGN Lab Scan!" style="width:900px;height:450px;" align="centre"></p>
+    <p align="center">Fig.1: 3D Laser scan (Point Cloud) of our lab at IIT Gandhinagar</p>
+<p class="just"> For converting a point cloud (Fig.1) to a usable 3D model various steps are to be performed. The entire pipeline
+    is explained in Section 2 with all the experiments done. Section 3 covers extra information of stuff did at the internship.
+    Section 4 concludes the discussion with possible future work.</p>
+
+<h2>2. Pipeline</h2>
+<p class="just">The task of the following pipeline is to convert a less usable point clouds to more usable complete 3D
+models.</p>
+<h3> 2.1 Data Acquisition</h3>
+<p class="just">Data acquisition is the process of converting a signal measuring real physical condition to a digital
+signal that can be manipulated by a digital computer<sup>[3]</sup>. For our purpose of collecting 3D data, we used the
+FARO Focus 3D X 330 HRD<sup>[4]</sup> long-range laser scanner (Fig.2). It is a portable laser scanner capable of taking scans
+up to 330 meters. The laser scanner throws a laser beam on to the object and calculates how long it takes the laser
+    beam to bounce back from the surface and return. This is how the distance of the object from the laser
+    scanner is calculated and the point cloud is constructed<sup>[5]</sup>.</p>
+<div style="display:flex">
+     <div style="flex:1;padding-right:5px;padding-left:35px">
+                   <img src="IIT_files/faro.jpg" alt="Faro scanner image." style="width:500px;height:400px;">
+         <p align="center">Fig.2: Faro Focus 3D X 330 HDR <a href="http://www.dicarlotech.com/products/FARO-Focus-3D-X-330-HDR">(source)</a> </p>
+     </div>
+     <div style="flex:1;padding-left:5px;">
+     <img src="IIT_files/Scanner_appearance.png" alt="Labelled laser scanner" style="width:380px;height:400px;">
+         <p align="center">Fig.3: Long Range 3D scanner <a href="http://www.jsm.or.jp/ejam/Vol.4No.2/NT/NT47/Figure1.html">(source)</a></p>
+     </div>
+</div>
+<p class="just">Fig.3 shows the basic structure of a 3D laser scanner. The mirror rotates on its axis to form a 3D scan of the surroundings
+The tripod is used to keep the scanner stable while scanning. And it has various indicator lights for indication various
+operations (their function changes with various manufacturers).</p>
+<p>Fig.1 is an example of a point cloud obtained using Faro Focus 3D X 330 HDR scanner.</p>
+<h3>2.2 Point Cloud Registration</h3>
+<p class="just">As it can be seen in Fig.1, a single scan of an object does not contain entire information of the object. There are
+some missing places in the final single scan of the object. This is a well-known issue and plays an essential role in
+    many practical applications, such as 3D reconstruction and mapping, object pose estimation, LiDAR SLAM and others.
+    To overcome this issue more than one scan of an object is
+obtained from different orientations. Then all the scans are stitched together to form the true 3D scan of the object.
+In order to perform the 'stitching' various algorithms are used. These algorithms are used to estimate the relative
+transformation (a combination of rotation and translation) between the point clouds. </p>
+<p class="just">The most common method is the Iterative Closest Point (ICP)<sup>[6]</sup> algorithm for solving the point
+    cloud registration problem. It works by estimating point correspondences and performing least-squares optimization.
+There are several versions of the ICP available, we used the one defined by [6]. Using ICP we wish to find a rigid
+transformation that optimally aligns the two sets in the least-squares sense<sup>[7]</sup>.</p>
+<p class="just">We seek to find a Rotation <i>R</i> and translation vector <b>t</b> such that </p>
+<p align="center"><img src="http://latex.codecogs.com/svg.latex?(R, \mathbf{t}) = \sum_{i=1}^{n}w_{i}\left \| (R\mathbf{p_{i}}+\mathbf{t})-\mathbf{q}_{i} \right \|^2" border="0"/></p>
+<p class="just">where <i>w<sub>i</sub></i> > 0 are weights for each point pair.</p>
+<p>Now the steps are as follows<sup>[7]</sup>:</p>
+<ol>
+    <li>Weighted centroids of both the point clouds are calculated<p align="center"><img src="http://latex.codecogs.com/svg.latex?\overline{\mathbf{p}} =\frac{\sum_{i=1}^{n}w_i\mathbf{p}_i}{\sum_{i=1}^{n}w_i},   \overline{\mathbf{q}} =\frac{\sum_{i=1}^{n}w_i\mathbf{q}_i}{\sum_{i=1}^{n}w_i}" border="0"/></p></li>
+    <li>Centered vectors are calculated<p align="center"><img src="http://latex.codecogs.com/svg.latex?\mathbf{x}_i $:= $\mathbf{p}_i - \overline{\mathbf{p}}, \mathbf{y}_i  $:=$   \mathbf{q}_i - \overline{\mathbf{q}}, i = 1, 2, ..., n" border="0"/></p></li>
+    <li>Covariance matrix is calculated<p align="center"><img src="http://latex.codecogs.com/svg.latex?S = XWY^{\textup{T}}" border="0"/></p> <br>Where <i>X</i> and <i>Y</i> are the <i>d</i> x <i>n</i> matrices that have x<sub>i</sub> and y<sub>i</sub> as their columns, respectively, and W = diag(w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>).</li>
+    <li>Singular Value Decomposition is calculated <p align="center"><img src="http://latex.codecogs.com/svg.latex?S = U\Sigma V^{\textup{T}}" border="0"/></p><br>Then rotation matrix is calculated as:<p align="center"><img src="http://latex.codecogs.com/svg.latex?R = V\begin{pmatrix}
+1  &  &  &  & \\
+ &  1  &  &  & \\
+ &  &  \ddots   &  & \\
+ &  &  &  1 & \\
+ &  &  &  &  det(VU^{T})
+\end{pmatrix}U^{T}" border="0"/></p></li>
+    <li>Optimal translation is calculated as <p align="center"><img src="http://latex.codecogs.com/svg.latex?\mathbf{t} = \overline{\mathbf{q}} - R\overline{\mathbf{p}} " border="0"/></li>
+</ol>
+<p class="just"> The above steps are repeated until an optimal result is obtained. We implemented the above algorithms
+    in Python and obtained the following results on a chair and bunny data set.
+   The code developed is available here
+<a href="https://github.com/Sid2697/3D"><i>https://github.com/Sid2697/3D.</i></a></p>
+<div style="display:flex">
+     <div style="flex:1;padding-right:5px;padding-left:35px;align:center;">
+                   <img src="IIT_files/Chairs.gif" alt="ICP on chair GIF" style="width:300px;height:300px;">
+         <p align="left">Fig.4: ICP application on chair</p>
+     </div>
+     <div style="flex:1;padding-left:25px;">
+     <img src="IIT_files/Bunny.gif" alt="Labelled laser scanner" style="width:300px;height:300px;">
+<!--         <img src="IIT_files/Bunny.gif" alt="Labelled laser scanner" >-->
+         <p align="left">Fig.5: ICP application on bunny</p>
+     </div>
+</div>
+<h3>2.3 Point Cloud Completion</h3>
+<p class="just">The data collected from 3D scanners are often incomplete which leads to a loss in semantic and geometric
+information. For example, as shown in Fig.6 the cars in the LiDAR scan are barely recognizable as the data points are
+very sparse due to sensor resolution and occlusion.</p>
+<p align="center"><img src="IIT_files/Incomplete_cloud.png" alt="Incomplete point clouds image" style="width:600px;"></p>
+<p align="center">Fig.6: Cars are hardly recognisable due to sparsity of data <a href="https://www.cs.cmu.edu/~wyuan1/pcn/">(source)</a></p>
+<p class="just">The task here is to predict the full shape of the object from the incomplete scan as shown in Fig.6
+acquired by LiDAR. This leads to applications like scene understanding, robot manipulation, and manipulation of completed
+shapes. Previous works like [9] include encoder-decoder network, here the encoder encodes the input to embedding, and the decoder
+generates the point cloud from the embedding. [8] learn to generate point cloud as manifold using a series of
+folding operations on the Euclidean plane. [10] assume the point clouds of the 3D object is on a 2-manifold space that locally
+resembles the Euclidean plane. The decoder proposed by them learns a set of deformations from euclidean plane to the object
+point cloud.</p>
+<p class="just">Going through all the methods like PCN [8], AtlasNet [10], Scan2Mesh [11], and TopNet [12] I wondered what will happen
+if we try an encoder-decoder architecture consisting of only fully-connected layers. So, I designed an auto-encoder
+with all the fully-connected layers and no convolution layers.
+   The code developed is available here
+   <a href="https://github.com/Sid2697/Fill_missing"><i>https://github.com/Sid2697/Fill_missing.</i></a>
+The architecture of the encoder was as follows it consisted of fully-connected layers which took 2048 cloud points as input
+and decreased it to 1024 -> 512 -> 256 -> 128 -> 64. In this manner an encoded code with 64 points was obtained which was further
+feed into the decoder which would up-sample it back to 2048 points by 64 -> 128 -> 256 -> 512 -> 1024 -> 2048. In this way,
+ a point cloud smaller in size and with more shape information was retrieved. Fig.7 shows the architecture.</p>
+<!--TODO: Add a network architecture figure.-->
+<p align="center"><img src="IIT_files/Encoder.svg" alt="Network architecture"></p>
+<p align="center">Fig.7 Architecture of the auto-encoder designed. Here <i>n</i> represents the batch size while training.
+The encoder takes in <i>n</i> point-clouds of shape (3, 2048) and creates a code of shape (n, 3, 64). The decoder takes
+this code and up-samples it create the point-clouds of the original shape.</p>
+<p>The data set used for training was obtained from <a href="http://completion3d.stanford.edu">here</a>.</p>
+<p class="just">Two types of losses were used to train the network (in two different experiments). First Euclidean distance
+was used, and in the second one, Chamfer distance<sup>[13]</sup> was used. Fig.8 shows results obtained using Euclidean distance.
+Fig.9 shows the results using Chamfer distance<sup>[13]</sup>.</p>
+<p align="center" ><img src="IIT_files/Euclidean.svg" alt="Euclidean distance results"></p>
+<p align="center" >Fig.8 Results using Euclidean distance, the network is not able to generalize on the shapes well and
+not able to get a sense of the global shape of the point cloud. But it still gives decent shapes despite simple
+execution.</p>
+<p align="center" ><img src="IIT_files/Chamfer.svg" alt="Chamfer distance results"></p>
+<p align="center">Fig.9 Results using Chamfer distance, here it can be seen the network is learning much better as
+compared to Euclidean distance. The network seems to learn the global structure from the input shapes.</p>
+<p class="just">The above two experiments concluded that we can use a simple fully-connected linear neural network to solve
+a complex problem like cloud completion. Out of the two loss functions used Chamfer distance proved to be a better one
+(by visual inspection of the results). Whereas Euclidean distance proved to be more computationally easy to compute.
+Although the above experiments did not yield the desired results, this attempt was proof that we can use simple fully-connected
+neural networks for cloud completion task. If successful they will prove to be very useful for applications using less
+computational resources like robots using Raspberry Pi.</p>
+<h3>2.4 Triangulation</h3>
+<p class="just">For the construction of a surface joining the points in the point-cloud is necessary. One possible way
+of connecting all the points in the point cloud is to form <i>n</i> number of triangles by connecting the points.
+Out of many, we will discuss two types of possible triangulations techniques<sup>[14]</sup>:</p>
+<ol>
+    <li>Random Triangulation</li>
+    <li>Delaunay Triangulation</li>
+</ol>
+<h4>2.4.1 Random Triangulations</h4>
+<p class="just">The idea behind random triangulation is, a point from the set is chosen at random from which the point under
+consideration can be connected. This pair of point is connected forming a new edge. This process is repeated until
+all the points are connected. Fig.10 shows connections made using random triangulation.</p>
+<p align="center"><img src="IIT_files/Random.png" alt="Random Triangulation Image"> </p>
+<p align="center">Fig.10 Triangulation done using Random Triangulation process <a href="http://www.dma.fi.upm.es/personal/mabellanas/tfcs/flips/Intercambios/html/teoria/teoria_del_ing.htm#Introduccion">(source)</a> </p>
+<h4>2.4.2 Delaunay Triangulation</h4>
+<p class="just">The advantage of using this process is that it provides uniform triangulation, and tries to get a larger
+number of equilateral triangles. Conditions to fulfill for successful application of Delaunay triangulation is all the
+edges must be '<a href="http://www.cs.uu.nl/docs/vakken/ga/slides/slides9.pdf">legal edges</a>' (edges belonging to
+   the convex hull of the set of points). Fig.11 shows connections made using Delaunay triangulation.</p>
+<p align="center"><img src="IIT_files/Delaunay.png" alt="Delaunay Triangulation Image"> </p>
+<p align="center">Fig.11 Triangulation done using Delaunay Triangulation process <a href="http://www.dma.fi.upm.es/personal/mabellanas/tfcs/flips/Intercambios/html/teoria/teoria_del_ing.htm#Introduccion">(source)</a> </p>
+<h2>3. Extras</h2>
+<p class="just">During the internship, I read a couple of books and a dozen papers. The books helped me in
+understanding the concepts better and get a mathematical insight into the 3D geometry world.<br><br>List of books I read is
+as follows:</p>
+<ol>
+    <li><a href="http://people.csail.mit.edu/jsolomon/share/book/numerical_book.pdf"> Numerical Algorithms</a> by <a href="http://people.csail.mit.edu/jsolomon/"> Justin Solomon</a> (Email me for notes).</li>
+    <li><a href="http://www.pmp-book.org">Polygon Mesh Processing</a> by <a href="https://graphics.uni-bielefeld.de/people/botsch.php"> Mario Botsch</a> (Email me for notes).</li>
+    <li><a href="https://www.cs.cmu.edu/~kmcrane/Projects/DDG/">Discrete Differential Geometry</a> by <a href="https://www.cs.cmu.edu/~kmcrane/">Keenan Crane</a> (Partially read).</li>
+</ol>
+<p>List of papers read with summaries written by me is as follows:</p>
+<ol>
+    <li><a href="https://arxiv.org/abs/1807.09413">3DFeat-Net:</a> Weakly Supervised Local 3D Features for Point Cloud Registration
+<a href="https://docs.google.com/document/d/1NwqXWUpGc5sKT-Z298lglCsPsMyrN-GEC5SjV3nVXRo/edit?usp=sharing"> (summary)</a>.</li>
+    <li><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Park_Colored_Point_Cloud_ICCV_2017_paper.pdf">Colored Point Cloud Registration Revisited </a><a href="https://docs.google.com/document/d/1ePmvXrbIMv8HTXnBSXBfVIQCtROC735Au0E6OvPSfrU/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="https://arxiv.org/abs/1905.03304">Deep Closest Point</a><a href="https://docs.google.com/document/d/1RoCu5FWVZMXVnEMUURKcOE5UBdZtdwIiYZjRA0P2fqc/edit?usp=sharing"> (summary)</a>.</li>
+    <li><a href="https://arxiv.org/abs/1905.04153">DeepICP: </a>An End-to-End Deep Neural Network for 3D Point Cloud Registration <a href="https://docs.google.com/document/d/1M_ZNe6gV7wF9v03vuBrhVxSOH5Bthol3XivEls96OD4/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="https://arxiv.org/abs/1707.04318">Discriminative Optimization:</a> Theory and Applications to Computer Vision Problems <a href="https://docs.google.com/document/d/1goKojceyfbhDtOk63pS-S4-ngldZf_8v87AyHeEAI6c/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="https://ieeexplore.ieee.org/document/8099748">3D Point Cloud Registration for Localization Using a Deep Neural Network Auto-Encoder </a><a href="https://docs.google.com/document/d/1K6f-HnP8K2ONEKnWm7bQmn5fI-KXUn_YvkJyu9pTAgo/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Vongkulbhisal_Inverse_Composition_Discriminative_CVPR_2018_paper.pdf">Inverse Composition Discriminative Optimization for Point Cloud Registration </a><a href="https://docs.google.com/document/d/1FWJct6_EzhNk4c4pjm6bKovTZMPKhjZA5RgmEXJldVA/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="https://arxiv.org/abs/1612.00593">PointNet: </a>Deep Learning on Point Sets for 3D Classification and Segmentation <a href="https://docs.google.com/document/d/1cfYS5un1ba208ctuLIMzX4hxfLwp0zX_Jr7aKaLXEwI/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="https://arxiv.org/abs/1903.05711">PointNetLK: </a>Robust & Efficient Point Cloud Registration using PointNet <a href="https://docs.google.com/document/d/1ZKhXr-F74E3Z4qcJZI8JV4IGYta4sX-3ivmGJRuqnzc/edit?usp=sharing">(summary)</a>.</li>
+    <li><a href="https://arxiv.org/abs/1811.10464">Scan2Mesh: </a>From Unstructured Range Scans to 3D Meshes <a href="https://docs.google.com/document/d/1FTh2a5CxUa-kHvw1ro2PVXxCq_qRh_pummhH6CPjKqw/edit?usp=sharing">(summary)</a>.</li>
+</ol>
+<h2>4. Conclusion</h2>
+<p class="just">I have presented a pipeline to the generation of complete 3D models from point cloud collected using a laser
+scanner. The pipeline consisted of various sections like data acquisition, point cloud registration, point cloud completion,
+and triangulation. All these processes help convert a point cloud to a complete 3D model. A new approach was
+tried in point cloud completion which showed potential in the application of fully-connected linear auto-encoders for the point
+cloud generation. This work can be carried on and improved to compete with the state-of-the-art results.</p>
+<h2>5. Acknowledgements</h2>
+<p class="just">I would like to express my gratitude towards my guide <a href="https://people.iitgn.ac.in/~shanmuga/">Dr. Shanmuganathan Raman </a>
+for his timely support and guidance.<br>I also owe my deep gratitude towards <a href="https://www.linkedin.com/in/rajendra-nagar-16389b3a/">Dr. Rajendra Nagar</a>  for his discussions and
+<a href="https://www.linkedin.com/in/nayan-chaudhary-aa02b6167/">Nayan Chaudhary</a> for his support with the experiments.</p>
+<h2>6. References</h2>
+<ol>
+    <li>https://kieffmoon.wordpress.com/unit-66/applications-of-3d/</li>
+    <li>https://graphics.uni-bielefeld.de/research/</li>
+    <li>https://en.wikipedia.org/wiki/Data_acquisition</li>
+    <li>https://knowledge.faro.com/Hardware/3D_Scanners/Focus/Technical_Specification_Sheet_for_the_Focus3D_X_30-130-330_and_X_130-330_HDR</li>
+    <li>https://www.engineering.com/AdvancedManufacturing/ArticleID/12390/Quality-Basics-How-Does-3D-Laser-Scanning-Work.aspx</li>
+    <li>P. Besl and N. D. McKay. A method for registration of 3-D shapes. IEEE Transactions on Pattern Analysis and Machine Intelligence, 14(2):239–256, Feb 1992.</li>
+    <li>https://igl.ethz.ch/projects/ARAP/svd_rot.pdf</li>
+    <li>W. Yuan and D. Held. PCN : Point Completion Network. International Conference on 3D Vision (3DV), 2018.</li>
+    <li>H. Fan, H. Su, and L. Guibas. A Point Set Generation Net- work for 3D Object Reconstruction from a Single Image.
+        IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017.</li>
+    <li>T. Groueix, M. Fisher, V. G. Kim, B. C. Russell, and M. Aubry. AtlasNet: A Papier-M\ˆach\’e Approach to Learning
+        3D Surface Generation. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.</li>
+    <li>Angela Dai, Matthias Niebner. Scan2Mesh From Unstructured Range Scans to 3D Meshes. In IEEE Conference on Computer
+    Vision and Pattern Recognition (CVPR) 2019.</li>
+    <li>Lyne P. Tchapmi, Vineet Kosaraju, Hamid Rezatofighi, Ian Reid and Silvio Savarese. TopNet: Structural Point Cloud Decoder.
+    In IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2019.</li>
+    <li>H.G. Barrow, J.M. Tenenbaum, R.C. Bolles, H.C. Wolf., Parametric correspondence and chamfer matching: Two new
+        techniques for image matching. Proceedings of the Fifth International Joint Conference on Artificial
+        Intelligence, Cambridge, Massachusetts, 1977, pp. 659 – 663.</li>
+    <li>http://www.dma.fi.upm.es/personal/mabellanas/tfcs/flips/Intercambios/html/teoria/teoria_del_ing.htm#Introduccion</li>
+</ol>
+</html>
