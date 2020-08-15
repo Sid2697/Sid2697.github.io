@@ -1,0 +1,19 @@
+- title: "H+O: Unified Egocentric Recognition and 3D Hand-Object Poses and Interactions"
+  desc: This paper proposes an end-to-end neural network architecture capable of *jointly* identifying 3D object and hand poses, and at the same time predicting the object and activity category for a RGB image in a single pass.
+  link: https://sid2697.github.io/Blog_Sid/paper_summary/2020/08/12/3D-action-recognition-Pollefeys-CVPR2019.html
+
+- title: Going Deeper into First-Person Activity Recognition
+  desc: This paper aims at improving action recognition accuracy in the egocentric videos by using a two-stream Convolutional Neural Network (CNN) architecture.
+  link: https://sid2697.github.io/Blog_Sid/paper_summary/2020/08/10/Ego_action.html
+
+- title: An Intuitive Introduction to Linear Programming
+  desc: A linear programming problem can be defined as the task of maximizing or minimizing a linear function subject to some linear constraints. The constraints can be equalities or inequalities.
+  link: https://sid2697.github.io/Blog_Sid/algorithm/2020/01/09/Linear-Intro.html
+
+- title: Decoding Connectionist Temporal Classification
+  desc: Being able to interpret the output probability matrix from the Convolutional Recurrent Neural Network (CRNN) is an essential task for getting output from the trained network. Various decoding techniques prove to be useful for this task. In this article, we’ll discuss two of those methods.
+  link: https://sid2697.github.io/Blog_Sid/algorithm/2019/11/04/Beam-search.html
+
+- title: Explanation of Connectionist Temporal Classification
+  desc: Connectionist Temporal Classification (CTC) is a type of Neural Network output helpful in tackling sequence problems like handwriting and speech recognition where the timing varies. Using CTC ensures that one does not need an aligned dataset, which makes the training process more straightforward.
+  link: https://sid2697.github.io/Blog_Sid/algorithm/2019/10/19/CTC-Loss.html
