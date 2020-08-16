@@ -1,3 +1,7 @@
+- title: Two-Stream Convolutional Networks for Action Recognition in Videos
+  desc: This paper proposes a two-stream convolutional neural network architecture for the task of action recognition in a video.
+  link: https://sid2697.github.io/Blog_Sid/paper_summary/2020/08/16/Two-Stream-Zisserman-nips2014.html
+
 - title: "H+O: Unified Egocentric Recognition and 3D Hand-Object Poses and Interactions"
   desc: This paper proposes an end-to-end neural network architecture capable of *jointly* identifying 3D object and hand poses, and at the same time predicting the object and activity category for a RGB image in a single pass.
   link: https://sid2697.github.io/Blog_Sid/paper_summary/2020/08/12/3D-action-recognition-Pollefeys-CVPR2019.html
