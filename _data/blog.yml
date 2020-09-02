@@ -1,3 +1,7 @@
+- title: "Deep Future Gaze: Gaze Anticipation on Egocentric Videos Using Adversarial Networks"
+  desc: This paper proposes a *Generative Adversarial Network* (GAN) based architecture called Deep Future Gaze (DFG) for addressing the task of *gaze anticipation* in egocentric videos.
+  link: https://sid2697.github.io/Blog_Sid/paper_summary/2020/09/01/Deep-future-gaze.html
+
 - title: First Person Action Recognition Using Deep Learned Descriptors
   desc: This paper proposes a three-stream convolutional neural network architecture for the task of action recognition in first-person videos.
   link: https://sid2697.github.io/Blog_Sid/paper_summary/2020/08/19/action-descriptors-Suriya.html
