@@ -1,3 +1,19 @@
+- title: Improving Word Recognition using Multiple Hypotheses and Deep Embeddings
+  image: Confidence_module.png
+  description: We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods.
+  authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
+  venue: International Conference on Pattern Recognition (ICPR), 2020
+  number_link: 3
+  link1:
+    url: 
+    display: PDF [Coming Soon!]
+  link2:
+    url: 
+    display: Project Page [Coming Soon!]
+  link3:
+    url:
+    display: Code (GitHub) [Coming Soon!]
+
 - title: Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval
   image: WordRecVisualisation_website.png
   description: Fusing recognition-based and recognition-free approaches using rule-based methods for improving word recognition and retrieval. <span style="color:red;">(ORAL)</span>
