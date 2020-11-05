@@ -57,10 +57,11 @@
 <a href="https://faculty.iiit.ac.in/~jawahar/index.html" style="color: #CC0000"> C.V. Jawahar </a>
       
 </p>
-<p> </p>
+<p style="text-align: center;"><a href="https://www.icpr2020.it/" style="color:#CC0000">ICPR 2020</a></p>
 
 <h3> Abstract </h3>
-<p>We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods. 
+<div style="text-align: justify">
+  <p>We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods. 
 For this purpose, results obtained using a text recognizer and deep embeddings (generated using an End2End network) are fused.
 To further improve the embeddings, we propose EmbedNet, it uses triplet loss for training and learns an embedding space where the embedding of the word image lies closer to its corresponding text transcription’s embedding.
 This updated embedding space helps in choosing the correct prediction with higher confidence.
@@ -69,13 +70,15 @@ It takes in the confidence scores obtained from the text recognizer and Euclidea
 This vector has lower distance values for the correct words and higher distance values for the incorrect words.
 We rigorously evaluate our proposed method systematically on a collection of books that are in the Hindi language.
 Our method achieves an absolute improvement of around 10% in terms of word recognition accuracy.</p>
-
+</div>
+<p> </p>
 <center>
 <figure>
 		<div id="projectid">
     <img src="http://localhost:4000/images/projectpic/EmbedNet_ProcessFlow.pdf" width="900px" />
 		</div>
 		<br />
+    <p>&nbsp;</p>
     <figcaption>
         For generating the textual transcription, we pass the word image through the CRNN and the End2End network (E2E), simultaneously.
         The CRNN generates multiple (K) textual transcriptions for the input image, whereas the E2E network generates the word image's embedding.
@@ -89,23 +92,23 @@ Our method achieves an absolute improvement of around 10% in terms of word recog
 </center>
 
 <h3> Paper </h3>
-<p><b>Coming soon</b>!</p>
 
-<!-- - Paper: <a href="http://localhost:4000/papers/hung19_SCOPS.pdf" style="color: #CC0000"> PDF </a>
-- Supplementary: <a href="http://localhost:4000/papers/hung19_SCOPS_supp.pdf" style="color: #CC0000"> PDF </a> -->
+<ul>
+  <li>arXiv: <a href="https://arxiv.org/pdf/2010.14411.pdf" style="color: #CC0000">PDF</a></li>
+  <li>ICPR: Coming soon!</li>
+</ul>
 
-<p>Please consider citing if you make use of this work and/or the corresponding code:
-<b>Coming soon</b>!</p>
+<p>Please consider citing if you make use of this work and/or the corresponding code:</p>
 
-<!-- ```
-@inproceedings{hung:CVPR:2019,
-	title = {SCOPS: Self-Supervised Co-Part Segmentation},
-	author = {Hung, Wei-Chih and Jampani, Varun and Liu, Sifei and Molchanov, Pavlo and Yang, Ming-Hsuan and Kautz, Jan},
-	booktitle = {IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
-	month = june,
-	year = {2019}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{bansal2020improving,
+      title={Improving Word Recognition using Multiple Hypotheses and Deep Embeddings}, 
+      author={Siddhant Bansal and Praveen Krishnan and C. V. Jawahar},
+      year={2020},
+      eprint={2010.14411},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
-``` -->
+</code></pre></div></div>
 
 <h3> Code </h3>
 <p>This work is implemented using <a href="https://pytorch.org/" style="color: #CC0000">pytorch</a> neural network framework. Code is available in this github repository:
@@ -116,6 +119,9 @@ Our method achieves an absolute improvement of around 10% in terms of word recog
 <center>
 <iframe width="900" height="500" src="https://www.youtube.com/embed/OeBhDK8mQa8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </center> -->
+
+<p> </p>
+<p> </p>
 
 </div>
 
