@@ -11,8 +11,8 @@
     url: https://sid2697.github.io/embednet_cab/
     display: Project Page
   link3:
-    url:
-    display: Code (GitHub) [Coming Soon!]
+    url: https://github.com/Sid2697/Word-recognition-EmbedNet-CAB
+    display: Code (GitHub)
 
 - title: Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval
   image: WordRecVisualisation_website.png
