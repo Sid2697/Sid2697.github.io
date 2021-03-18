@@ -78,11 +78,11 @@ Please consider citing if you make use of this work and/or the corresponding cod
 This work is implemented using the <a href="https://pytorch.org/" style="color: #CC0000">pytorch</a> neural network framework. Code is available in <a href="https://github.com/Sid2697/Word-recognition-EmbedNet-CAB">this</a> GitHub repository:
 <a href="" style="color: #CC0000"></a>.
 
-<!-- [comment]: Video
+[comment]: Video
 <h3> Video </h3>
 <center>
-<iframe width="900" height="500" src="https://www.youtube.com/embed/OeBhDK8mQa8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</center> -->
+<iframe width="900" height="500" src="https://www.youtube.com/embed/2Ut3VGfd9Qw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>

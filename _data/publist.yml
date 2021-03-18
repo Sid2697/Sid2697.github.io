@@ -3,7 +3,7 @@
   description: We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods.
   authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
   venue: International Conference on Pattern Recognition (ICPR), 2020
-  number_link: 3
+  number_link: 4
   link1:
     url: https://arxiv.org/pdf/2010.14411.pdf
     display: PDF
@@ -13,6 +13,9 @@
   link3:
     url: https://github.com/Sid2697/Word-recognition-EmbedNet-CAB
     display: Code (GitHub)
+  link4:
+    url: https://youtu.be/2Ut3VGfd9Qw
+    display: Video (YouTube)
 
 - title: Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval
   image: WordRecVisualisation_website.png
