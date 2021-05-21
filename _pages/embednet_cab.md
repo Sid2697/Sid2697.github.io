@@ -75,8 +75,8 @@ Please consider citing if you make use of this work and/or the corresponding cod
 
 [comment]: Code
 <h3> Code </h3>
-This work is implemented using the <a href="https://pytorch.org/" style="color: #CC0000">pytorch</a> neural network framework. Code is available in <a href="https://github.com/Sid2697/Word-recognition-EmbedNet-CAB">this</a> GitHub repository:
-<a href="" style="color: #CC0000"></a>.
+This work is implemented using the <a href="https://pytorch.org/" style="color: #CC0000">pytorch</a> neural network framework.<br>
+The code is available on GitHub. Link: <a href="https://github.com/Sid2697/Word-recognition-EmbedNet-CAB">https://github.com/Sid2697/Word-recognition-EmbedNet-CAB</a>
 
 [comment]: Video
 <h3> Video </h3>
