@@ -38,7 +38,7 @@ Our method achieves an absolute improvement of around 10% in terms of word recog
 <center>
 <figure>
 		<div id="projectid">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/projectpic/EmbedNet_ProcessFlow.pdf" width="900px" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/projectpic/EmbedNet_ProcessFlow.jpg" width="900px" />
 		</div>
 		<br />
     <p>&nbsp;</p>
@@ -58,7 +58,7 @@ Our method achieves an absolute improvement of around 10% in terms of word recog
 <h3> Paper </h3>
 
 - arXiv: <a href="https://arxiv.org/pdf/2010.14411.pdf" style="color: #CC0000">PDF</a>
-- ICPR: Coming soon!
+- ICPR: <a href="https://ieeexplore.ieee.org/abstract/document/9412417" style="color: #CC0000">IEEE</a>
 
 Please consider citing if you make use of this work and/or the corresponding code:
 
