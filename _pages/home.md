@@ -66,7 +66,7 @@ My ultimate goal is to contribute to the development of systems capable of under
  <div class="well">
  <pubtit>{{ publi.title }}</pubtit>
 
- <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="200px" style="float: left" />
+ <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="250px" style="float: left" />
 
  <p>{{ publi.description }}</p>
 

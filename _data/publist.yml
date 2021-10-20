@@ -1,3 +1,24 @@
+- title: 'Ego4D: Around the World in 3,000 Hours of Egocentric Video'
+  image: ego4d.png
+  description: We offer 3,025 hours of daily-life activity video spanning hundreds of scenarios captured by 855 unique camera wearers from 74 worldwide locations and 9 different countries.<br>We present a host of new benchmark challenges centered around understanding the first-person visual experience in the past (querying an episodic memory), present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future (forecasting activities).
+  authors: <a href="https://www.cs.utexas.edu/users/grauman/">Kristen Grauman</a>, ... <b>Siddhant Bansal</b>, ... <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C. V. Jawahar</a>, ... <a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a>
+  number_link: 5
+  link1:
+    url: https://arxiv.org/abs/2110.07058
+    display: Paper
+  link2:
+    url: https://ego4d-data.org/
+    display: Project Page
+  link3:
+    url: https://www.youtube.com/watch?v=taC2ZKl9IsE
+    display: Video
+  link4:
+    url: https://drive.google.com/file/d/1oknfQIH9w1rXy6I1j5eUE6Cqh96UwZ4L/view
+    display: Benchmark's description
+  link5:
+    url: https://eyewear-computing.org/EPIC_ICCV21/
+    display: EPIC@ICCV2021 Ego4D Reveal Session
+
 - title: Improving Word Recognition using Multiple Hypotheses and Deep Embeddings
   image: Confidence_module.png
   description: We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods.
@@ -15,7 +36,7 @@
     display: Code (GitHub)
   link4:
     url: https://youtu.be/T_TYL-_HpbY
-    display: Video (YouTube)
+    display: Video (YouTube)<br><br>
 
 - title: Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval
   image: WordRecVisualisation_website.png
