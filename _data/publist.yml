@@ -2,6 +2,7 @@
   image: ego4d.png
   description: We offer 3,025 hours of daily-life activity video spanning hundreds of scenarios captured by 855 unique camera wearers from 74 worldwide locations and 9 different countries.<br>We present a host of new benchmark challenges centered around understanding the first-person visual experience in the past (querying an episodic memory), present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future (forecasting activities).
   authors: <a href="https://www.cs.utexas.edu/users/grauman/">Kristen Grauman</a>, ... <b>Siddhant Bansal</b>, ... <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C. V. Jawahar</a>, ... <a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a>
+  venue: Conference on Computer Vision and Pattern Recognition (CVPR), 2022
   number_link: 5
   link1:
     url: https://arxiv.org/abs/2110.07058
