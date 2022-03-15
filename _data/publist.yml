@@ -1,8 +1,8 @@
 - title: 'Ego4D: Around the World in 3,000 Hours of Egocentric Video'
   image: ego4d.png
-  description: We offer 3,025 hours of daily-life activity video spanning hundreds of scenarios captured by 855 unique camera wearers from 74 worldwide locations and 9 different countries.<br>We present a host of new benchmark challenges centered around understanding the first-person visual experience in the past (querying an episodic memory), present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future (forecasting activities).
+  description: We offer 3,025 hours of daily-life activity video spanning hundreds of scenarios captured by 855 unique camera wearers from 74 worldwide locations and 9 different countries. We present a host of new benchmark challenges centered around understanding the first-person visual experience in the past (querying an episodic memory), present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future (forecasting activities).
   authors: <a href="https://www.cs.utexas.edu/users/grauman/">Kristen Grauman</a>, ... <b>Siddhant Bansal</b>, ... <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C. V. Jawahar</a>, ... <a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a>
-  venue: Conference on Computer Vision and Pattern Recognition (CVPR), 2022
+  venue: Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2022
   number_link: 5
   link1:
     url: https://arxiv.org/abs/2110.07058
@@ -24,7 +24,7 @@
   image: Confidence_module.png
   description: We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods.
   authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
-  venue: International Conference on Pattern Recognition (ICPR), 2020
+  venue: International Conference on Pattern Recognition (<b>ICPR</b>), 2020
   number_link: 4
   link1:
     url: https://arxiv.org/pdf/2010.14411.pdf
@@ -43,7 +43,7 @@
   image: WordRecVisualisation_website.png
   description: Fusing recognition-based and recognition-free approaches using rule-based methods for improving word recognition and retrieval. <span style="color:red;">(ORAL)</span>
   authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
-  venue: IAPR International Workshop on Document Analysis and System (DAS), 2020
+  venue: IAPR International Workshop on Document Analysis and System (<b>DAS</b>), 2020
   number_link: 5
   link1:
     url: https://arxiv.org/pdf/2007.00166.pdf
