@@ -129,7 +129,9 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 ### Service
 ****
-**Conference Reviewer**: CVPR 2022
+**Conference Reviewer**: CVPR 2022, ECCV 2022
+
+**Workshop Reviewer**: Joint 1st Ego4D and 10th EPIC Workshop (CVPR 2022)
 <p> &nbsp; </p>
 
 ### Blog
