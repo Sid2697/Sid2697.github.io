@@ -1,3 +1,17 @@
+- title: 'Google Summer of Code 2022: Enhancing DBpedia with image-based querying'
+  image: DBpedia-Logo_.png
+  description: 'Working on two aspects of <a href="https://www.dbpedia.org/"> DBpedia Knowledge Graphs</a>: (a) A framework to create an image-based knowledge graph out of existing DBpedia entries; (b) Using the graph created to perform tasks like image querying, text + image search, and using relevant input images to add more images to existing articles.'
+  number_link: 3
+  link1:
+    url: https://summerofcode.withgoogle.com/programs/2022/projects/IvRmwXNu
+    display: GSoC Project Page
+  link2:
+    url: https://sid2697.github.io/Blog_Sid/
+    display: Blog
+  link3:
+    url: https://github.com/Sid2697/image-based-dbpedia-kg
+    display: Code (GitHub)
+
 - title: Scene Text Detection and Recognition
   image: MAVI_Diagram.png
   description: <br> Working on detecting and recognising text in the images from Mobility Assistant for Visually Impaired (MAVI) developed at IIT-Delhi.<br><br><br>
