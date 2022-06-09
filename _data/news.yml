@@ -1,3 +1,6 @@
+- date: May, 2022
+  headline: My proposal, <a href='https://summerofcode.withgoogle.com/programs/2022/projects/IvRmwXNu'>Enhancing DBpedia with image-based querying</a> got accepted to <a href="https://summerofcode.withgoogle.com/">Google Summer of Code 2022</a>.
+
 - date: March, 2022
   headline: <a href='https://ego4d-data.org/'>Ego4D:</a> <a href='https://ego4d-data.org/'>Around the World in 3,000 Hours of Egocentric Video</a> got accepted to <a href='https://cvpr2022.thecvf.com/'>CVPR 2022</a>!
 
@@ -7,8 +10,8 @@
 - date: Oct, 2020
   headline: <a href='https://arxiv.org/abs/2010.14411'>Improving Word Recognition using Multiple Hypotheses and Deep Embeddings</a> got accepted to <a href='https://www.icpr2020.it'>ICPR 2020</a>!
 
-- date: July, 2020
-  headline: Submitted my latest work with <a href='https://kris314.github.io'>Praveen Krishnan</a> and <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> to <a href='https://www.icpr2020.it'>ICPR 2020</a>.
+# - date: July, 2020
+#   headline: Submitted my latest work with <a href='https://kris314.github.io'>Praveen Krishnan</a> and <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> to <a href='https://www.icpr2020.it'>ICPR 2020</a>.
 
 - date: April, 2020
   headline: <a href='https://sid2697.github.io/Word-recognition-and-retrieval/'>Fused Text Recogniser and Deep Embeddings Improve Word Recognition and Retrieval </a>got accepted to DAS 2020!
