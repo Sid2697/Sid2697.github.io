@@ -14,7 +14,7 @@
     url: https://sid2697.github.io/egoprocel/#download
     display: <b>Download the EgoProceL Dataset</b>
   link4:
-    url: https://sid2697.github.io/egoprocel/
+    url: https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning
     display: Code
 
 - title: 'Ego4D: Around the World in 3,000 Hours of Egocentric Video'

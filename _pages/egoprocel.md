@@ -102,7 +102,7 @@ We present a novel self-supervised <b>Correspond and Cut (CnC) framework</b> for
 
 [comment]: Code
 <h3> Code </h3>
-The code for this work is available on GitHub! Link: <b>Coming soon!</b>
+The code for this work is available on GitHub!<br>Link: <a href="https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning">Sid2697/EgoProceL-egocentric-procedure-learning</a>
 
 <p>&nbsp;</p>
 
