@@ -7,7 +7,7 @@ permalink: /egoprocel/
 ---
 
 [comment]: Title
-<h2 align="center">My View is the Best View:<br>Procedure Learning using Egocentric Videos</h2>
+<h2 align="center">My View is the Best View:<br>Procedure Learning from Egocentric Videos</h2>
 
 [comment]: Authors
 <p style="text-align: center;">
@@ -60,7 +60,8 @@ EgoProceL consists of
 - average <b><u>0.12</u> missing steps ratio</b>
 - average <b><u>0.49</u> repeated steps ratio</b>
 
-<h3><span style="color:DodgerBlue">Downloads</span></h3>
+<h3 id="download"><span style="color:DodgerBlue">Downloads</span></h3>
+<p>&nbsp;</p>
 
 <h4> Videos </h4>
 

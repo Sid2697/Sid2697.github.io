@@ -1,3 +1,22 @@
+- title: 'My View is the Best View: Procedure Learning from Egocentric Videos'
+  image: CVPR_diagrams-Correspondences_v1_2.png
+  description: We propose the <b>EgoProceL dataset</b> consisting of 62 hours of videos captured by 130 subjects performing 16 tasks and a self-supervised <b>Correspond and Cut (CnC) framework</b> for procedure learning. CnC utilizes the temporal correspondences between the key-steps across multiple videos to learn the procedure.
+  authors: <b>Siddhant Bansal</b>, <a href="https://www.cse.iitd.ac.in/~chetan/">Chetan Arora</a>, <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a>
+  venue: European Conference on Computer Vision (<b>ECCV</b>), 2022
+  number_link: 4
+  link1:
+    url: https://sid2697.github.io/egoprocel/
+    display: Paper
+  link3:
+    url: https://sid2697.github.io/egoprocel/
+    display: Project Page
+  link2:
+    url: https://sid2697.github.io/egoprocel/#download
+    display: <b>Download the EgoProceL Dataset</b>
+  link4:
+    url: https://sid2697.github.io/egoprocel/
+    display: Code
+
 - title: 'Ego4D: Around the World in 3,000 Hours of Egocentric Video'
   image: ego4d.png
   description: We offer 3,670 hours of daily-life activity video spanning hundreds of scenarios captured by 931 unique camera wearers from 74 worldwide locations and 9 different countries.<br>We present a host of new benchmark challenges centered around understanding the first-person visual experience in the past (querying an episodic memory), present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future (forecasting activities).
@@ -28,7 +47,7 @@
   number_link: 4
   link1:
     url: https://arxiv.org/pdf/2010.14411.pdf
-    display: PDF
+    display: Paper
   link2:
     url: https://sid2697.github.io/embednet_cab/
     display: Project Page
@@ -47,7 +66,7 @@
   number_link: 5
   link1:
     url: https://arxiv.org/pdf/2007.00166.pdf
-    display: PDF
+    display: Paper
   link2:
     url: ../images/pubpic/Word_Retrieval_demo.gif
     display: Demo
