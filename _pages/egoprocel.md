@@ -114,6 +114,10 @@ We present a novel self-supervised <b>Correspond and Cut (CnC) framework</b> for
 <h3> Code </h3>
 The code for this work is available on GitHub!<br>Link: <a href="https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning">Sid2697/EgoProceL-egocentric-procedure-learning</a>
 
+<h3> Acknowledgements </h3>
+
+This work was supported in part by the Department of Science and Technology, Government of India, under DST/ICPS/Data-Science project ID T-138. A portion of the data used in this paper was obtained from <a href="http://kitchen.cs.cmu.edu/">kitchen.cs.cmu.edu</a> and the data collection was funded in part by the National Science Foundation under Grant No. EEEC-0540865. We acknowledge <a href="https://scholar.google.com/citations?user=k4TZSPQAAAAJ&hl=en">Pravin Nagar</a> and <a href="https://sagarverma.github.io/">Sagar Verma</a> for recording and sharing the PC Assembly and Disassembly videos at IIIT Delhi. We also acknowledge <a href="https://www.linkedin.com/in/jehlum-pandit/">Jehlum Vitasta Pandit</a> and Astha Bansal for their help with annotating a portion of EgoProceL.
+
 <p>&nbsp;</p>
 
 Please consider citing if you make use of the EgoProceL dataset and/or the corresponding code:
