@@ -25,7 +25,17 @@ permalink: /egoprocel/
 <div style="text-align: justify">
 Given multiple videos of a task, the goal is to identify the key-steps and their order to perform the task.
 
-TODO: Add a figure to explain procedure learning.
+<center>
+<figure>
+		<div id="projectid">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/projectpic/procedure-learning.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption>
+        Provided multiple videos of making a pizza, the goal is to identify the steps required to prepare the pizza and their order.
+    </figcaption>
+</figure>
+</center>
 
 <h2 align="center"><span style="color:DodgerBlue">EgoProceL Dataset</span> (<a href="https://sid2697.github.io/egoprocel/#download">Download</a>)</h2>
 
