@@ -27,7 +27,7 @@ Given multiple videos of a task, the goal is to identify the key-steps and their
 
 TODO: Add a figure to explain procedure learning.
 
-<h2 align="center"><span style="color:DodgerBlue">EgoProceL Dataset</span></h2>
+<h2 align="center"><span style="color:DodgerBlue">EgoProceL Dataset</span> (<a href="https://sid2697.github.io/egoprocel/#download">Download</a>)</h2>
 
 <h3> Why an egocentric dataset for Procedure Learning?</h3>
 Using third-person videos for procedure learning makes the manipulated object small in appearance and often occluded by the actor, leading to significant errors.
