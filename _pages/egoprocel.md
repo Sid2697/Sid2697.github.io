@@ -73,13 +73,15 @@ EgoProceL consists of
 <h3 id="download"><span style="color:DodgerBlue">Downloads</span></h3>
 <p>&nbsp;</p>
 
+We recommend referring to the [README](https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning/blob/main/EgoProceL-download-README.md) before downloading the videos.
+
 <h4> Videos </h4>
 
-Link: <b>Coming Soon!</b>
+Link: [OneDrive](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/siddhant_bansal_research_iiit_ac_in/Ev14SL5JYtJNpVUUAhDMgEABbPnTYpbDUzBYAhQToyHmVw?e=cQu5by)
 
 <h4> Annotations </h4>
 
-Link: <b>Coming Soon!</b>
+Link: [OneDrive](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/siddhant_bansal_research_iiit_ac_in/EgqvXb5syepDv1z-UAwsYEQBivEYauz8tuotty7eey32Ng?e=TNXpBE)
 
 <h3 align="center"><span style="color:DodgerBlue">CnC framework for Procedure Learning</span></h3>
 
@@ -123,7 +125,14 @@ This work was supported in part by the Department of Science and Technology, Gov
 Please consider citing if you make use of the EgoProceL dataset and/or the corresponding code:
 
 ```
-Coming soon!
+@InProceedings{EgoProceLECCV2022,
+author="Bansal, Siddhant
+and Arora, Chetan
+and Jawahar, C.V.",
+title="My View is the Best View: Procedure Learning from Egocentric Videos",
+booktitle = "European Conference on Computer Vision (ECCV)",
+year="2022"
+}
 ```
 
 <p>&nbsp;</p>
