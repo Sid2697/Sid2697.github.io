@@ -73,7 +73,7 @@ EgoProceL consists of
 <h3 id="download"><span style="color:DodgerBlue">Downloads</span></h3>
 <p>&nbsp;</p>
 
-We recommend referring to the [README](https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning/blob/main/EgoProceL-download-README.md) before downloading the videos.
+We recommend referring to the [README](https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning/blob/main/EgoProceL-download-README.md) before downloading the videos. [Mirror link](http://cvit.iiit.ac.in/research/projects/cvit-projects/egoprocel).
 
 <h4> Videos </h4>
 
@@ -118,7 +118,7 @@ The code for this work is available on GitHub!<br>Link: <a href="https://github.
 
 <h3> Acknowledgements </h3>
 
-This work was supported in part by the Department of Science and Technology, Government of India, under DST/ICPS/Data-Science project ID T-138. A portion of the data used in this paper was obtained from <a href="http://kitchen.cs.cmu.edu/">kitchen.cs.cmu.edu</a> and the data collection was funded in part by the National Science Foundation under Grant No. EEEC-0540865. We acknowledge <a href="https://scholar.google.com/citations?user=k4TZSPQAAAAJ&hl=en">Pravin Nagar</a> and <a href="https://sagarverma.github.io/">Sagar Verma</a> for recording and sharing the PC Assembly and Disassembly videos at IIIT Delhi. We also acknowledge <a href="https://www.linkedin.com/in/jehlum-pandit/">Jehlum Vitasta Pandit</a> and Astha Bansal for their help with annotating a portion of EgoProceL.
+This work was supported in part by the Department of Science and Technology, Government of India, under DST/ICPS/Data-Science project ID T-138. A portion of the data used in this paper was obtained from <a href="http://kitchen.cs.cmu.edu/">kitchen.cs.cmu.edu</a> and the data collection was funded in part by the National Science Foundation under Grant No. EEEC-0540865. We acknowledge <a href="https://scholar.google.com/citations?user=k4TZSPQAAAAJ&hl=en">Pravin Nagar</a> and <a href="https://sagarverma.github.io/">Sagar Verma</a> for recording and sharing the PC Assembly and Disassembly videos at IIIT Delhi. We also acknowledge <a href="https://www.linkedin.com/in/jehlum-pandit/">Jehlum Vitasta Pandit</a> and [Astha Bansal](https://contemplationanddeepthoughts.home.blog/) for their help with annotating a portion of EgoProceL.
 
 <p>&nbsp;</p>
 
