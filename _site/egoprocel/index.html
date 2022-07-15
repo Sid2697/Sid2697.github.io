@@ -58,6 +58,19 @@
 </p>
 <p style="text-align: center;"><a href="https://eccv2022.ecva.net/" style="color:#CC0000">ECCV 2022</a></p>
 
+<p style="text-align: center;">
+
+<a href="https://sid2697.github.io/egoprocel/" class="btn">Paper</a>
+      
+
+<a href="https://sid2697.github.io/egoprocel/#download" class="btn">Dataset</a>
+      
+
+<a href="https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning" class="btn">Code</a>
+      
+
+</p>
+
 <h3>What is Procedure Learning?</h3>
 <div style="text-align: justify">
   <p>Given multiple videos of a task, the goal is to identify the key-steps and their order to perform the task.</p>
@@ -74,7 +87,17 @@
 </figure>
 </center>
 
-  <h2 align="center"><span style="color:DodgerBlue">EgoProceL Dataset</span> (<a href="https://sid2697.github.io/egoprocel/#download">Download</a>)</h2>
+  <h2 align="center"><span style="color:DodgerBlue">EgoProceL Dataset</span></h2>
+
+  <video class="centered" width="100%" autoplay="" muted="" loop="" playsinline="">
+  <source src="http://localhost:4000/images/projectpic/EgoProceL-demo.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+  <figure style="width: 100%; float: left">
+    <p class="caption_justify">
+    EgoProceL is a large-scale dataset for procedure learning. It consists of 62 hours of egocentric videos recorded by 130 subjects performing 16 tasks for procedure learning. EgoProceL contains videos and key-step annotations for multiple tasks from <a href="http://kitchen.cs.cmu.edu/main.php">CMU-MMAC</a>, <a href="https://cbs.ic.gatech.edu/fpv/">EGTEA Gaze+</a>, and individual tasks like <a href="https://iplab.dmi.unict.it/MECCANO/">toy-bike assembly</a>, <a href="https://sites.google.com/view/epic-tent">tent assembly</a>, PC assembly, and PC disassembly.
+  </p>
+  </figure>
 
   <h3> Why an egocentric dataset for Procedure Learning?</h3>
   <p>Using third-person videos for procedure learning makes the manipulated object small in appearance and often occluded by the actor, leading to significant errors.
@@ -85,16 +108,17 @@ In contrast, we observe that videos obtained from first-person (egocentric) wear
 		<div id="projectid">
     <img src="http://localhost:4000/images/projectpic/ECCV_diagrams-first_person_vs_third_person_v1.png" width="900px" />
 		</div>
-    <p>&nbsp;</p>
-    <figcaption>
-        Existing datasets majorly consist of third-person videos for procedure learning. 
-        Third-person videos contain issues like occlusion and atypical camera locations that makes them ill-suited for procedure learning.
-        Additionally, the datasets rely on videos from YouTube that are noisy.
-        In contrast, we propose to use egocentric videos that overcome the issues posed by third-person videos.
-        Third-person frames in the figure are from ProceL and CrossTask and the first-person frames are from EgoProceL.
-    </figcaption>
 </figure>
 </center>
+  <figure style="width: 100%; float: left">
+    <p class="caption_justify">
+    Existing datasets majorly consist of third-person videos for procedure learning. 
+    Third-person videos contain issues like occlusion and atypical camera locations that makes them ill-suited for procedure learning.
+    Additionally, the datasets rely on videos from YouTube that are noisy.
+    In contrast, we propose to use egocentric videos that overcome the issues posed by third-person videos.
+    Third-person frames in the figure are from ProceL and CrossTask and the first-person frames are from EgoProceL.
+  </p>
+  </figure>
 
   <h3> Overview of EgoProceL </h3>
 
@@ -111,36 +135,37 @@ In contrast, we observe that videos obtained from first-person (egocentric) wear
 
   <h3 id="download"><span style="color:DodgerBlue">Downloads</span></h3>
   <p> </p>
-
-  We recommend referring to the <a href="https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning/blob/main/EgoProceL-download-README.md">README</a> before downloading the videos. <a href="http://cvit.iiit.ac.in/research/projects/cvit-projects/egoprocel">Mirror link</a>.
+  <p>We recommend referring to the <a href="https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning/blob/main/EgoProceL-download-README.md">README</a> before downloading the videos. <a href="http://cvit.iiit.ac.in/research/projects/cvit-projects/egoprocel">Mirror link</a>.</p>
 
   <h4> Videos </h4>
 
-  <p>Link: <b><a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/siddhant_bansal_research_iiit_ac_in/Ev14SL5JYtJNpVUUAhDMgEABbPnTYpbDUzBYAhQToyHmVw?e=cQu5by">OneDrive</a></b></p>
+  <p>Link: <a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/siddhant_bansal_research_iiit_ac_in/Ev14SL5JYtJNpVUUAhDMgEABbPnTYpbDUzBYAhQToyHmVw?e=cQu5by">OneDrive</a></p>
 
   <h4> Annotations </h4>
 
-  <p>Link: <b><a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/siddhant_bansal_research_iiit_ac_in/EgqvXb5syepDv1z-UAwsYEQBivEYauz8tuotty7eey32Ng?e=TNXpBE">OneDrive</a></b></p>
+  <p>Link: <a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/siddhant_bansal_research_iiit_ac_in/EgqvXb5syepDv1z-UAwsYEQBivEYauz8tuotty7eey32Ng?e=TNXpBE">OneDrive</a></p>
 
   <h3 align="center"><span style="color:DodgerBlue">CnC framework for Procedure Learning</span></h3>
 
   <p>We present a novel self-supervised <b>Correspond and Cut (CnC) framework</b> for procedure learning. CnC identifies and utilizes the temporal correspondences between the key-steps across multiple videos to learn the procedure. Our experiments show that CnC outperforms the state-of-the-art on the benchmark ProceL and CrossTask datasets by 5.2% and 6.3%, respectively.</p>
-
+  <p> </p>
   <center>
 <figure>
 		<div id="projectid">
     <img src="http://localhost:4000/images/projectpic/ECCV_diagrams-Methodology_v0-5.png" width="900px" />
 		</div>
-    <p>&nbsp;</p>
-    <figcaption>
+</figure>
+</center>
+  <p> </p>
+  <figure style="width: 100%; float: left">
+    <p class="caption_justify">
     CnC takes in multiple videos from the same task and passes them through the embedder network trained using the proposed TC3I loss.
     The goal of the embedder network is to learn similar embeddings for corresponding key-steps from multiple videos and for temporally close frames.
     The ProCut Module (PCM) localizes the key-steps required for performing the task.
     PCM converts the clustering problem to a multi-label graph cut problem.
     The output provides the assignment of frames to the respective key-steps and their ordering.
-    </figcaption>
-</figure>
-</center>
+  </p>
+  </figure>
 
 </div>
 <p> </p>
@@ -163,7 +188,14 @@ In contrast, we observe that videos obtained from first-person (egocentric) wear
 
 <p>Please consider citing if you make use of the EgoProceL dataset and/or the corresponding code:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Coming soon!
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@InProceedings{EgoProceLECCV2022,
+author="Bansal, Siddhant
+and Arora, Chetan
+and Jawahar, C.V.",
+title="My View is the Best View: Procedure Learning from Egocentric Videos",
+booktitle = "European Conference on Computer Vision (ECCV)",
+year="2022"
+}
 </code></pre></div></div>
 
 <p> </p>
