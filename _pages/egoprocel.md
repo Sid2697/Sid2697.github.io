@@ -22,7 +22,7 @@ permalink: /egoprocel/
 
 <p style="text-align: center;">
 
-[Paper](https://sid2697.github.io/egoprocel/){: .btn}
+[Paper]({{ site.url }}{{ site.baseurl }}/papers/Procedure_Learning_from_Egocentric_Videos_camera-ready_v1-5_2022-07-20.pdf){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Dataset](https://sid2697.github.io/egoprocel/#download){: .btn}
@@ -135,6 +135,7 @@ We present a novel self-supervised <b>Correspond and Cut (CnC) framework</b> for
 [comment]: Paper
 <h3> Paper </h3>
 
+- PDF: <a href="{{ site.url }}{{ site.baseurl }}/papers/Procedure_Learning_from_Egocentric_Videos_camera-ready_v1-5_2022-07-20.pdf">Paper</a>; <a href="{{ site.url }}{{ site.baseurl }}/papers/Supplementary-Procedure_Learning_from_Egocentric_Videos_camera-ready_v1-4_2022-07-19.pdf">Supplementary</a>
 - arXiv: <b>Coming soon!</b>
 - ECCV: <b>Coming soon!</b>
 
