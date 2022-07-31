@@ -95,6 +95,12 @@ EgoProceL consists of
 - average <b><u>0.12</u> missing steps ratio</b>
 - average <b><u>0.49</u> repeated steps ratio</b>
 
+A portion of EgoProceL consist of videos from the following datasets:
+- [CMU-MMAC](http://kitchen.cs.cmu.edu/main.php)
+- [EGTEA Gaze+](https://cbs.ic.gatech.edu/fpv/)
+- [MECCANO](https://iplab.dmi.unict.it/MECCANO/)
+- [EPIC-Tent](https://sites.google.com/view/epic-tent)
+
 <h3 id="download"><span style="color:DodgerBlue">Downloads</span></h3>
 <p>&nbsp;</p>
 We recommend referring to the [README](https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning/blob/main/EgoProceL-download-README.md) before downloading the videos. [Mirror link](http://cvit.iiit.ac.in/research/projects/cvit-projects/egoprocel).
@@ -151,7 +157,7 @@ This work was supported in part by the Department of Science and Technology, Gov
 
 <p>&nbsp;</p>
 
-Please consider citing if you make use of the EgoProceL dataset and/or the corresponding code:
+Please consider citing the following works if you make use of the EgoProceL dataset:
 
 ```
 @InProceedings{EgoProceLECCV2022,
@@ -161,6 +167,34 @@ and Jawahar, C.V.",
 title="My View is the Best View: Procedure Learning from Egocentric Videos",
 booktitle = "European Conference on Computer Vision (ECCV)",
 year="2022"
+}
+
+@InProceedings{CMU_Kitchens,
+author = "De La Torre, F. and Hodgins, J. and Bargteil, A. and Martin, X. and Macey, J. and Collado, A. and Beltran, P.",
+title = "Guide to the Carnegie Mellon University Multimodal Activity (CMU-MMAC) database.",
+booktitle = "Robotics Institute",
+year = "2008"
+}
+
+@InProceedings{egtea_gaze_p,
+author = "Li, Yin and Liu, Miao and Rehg, James M.",
+title =  "In the Eye of Beholder: Joint Learning of Gaze and Actions in First Person Video",
+booktitle = "European Conference on Computer Vision (ECCV)",
+year = "2018"
+}
+
+@InProceedings{meccano,
+    author    = "Ragusa, Francesco and Furnari, Antonino and Livatino, Salvatore and Farinella, Giovanni Maria",
+    title     = "The MECCANO Dataset: Understanding Human-Object Interactions From Egocentric Videos in an Industrial-Like Domain",
+    booktitle = "Winter Conference on Applications of Computer Vision (WACV)",
+    year      = "2021"
+}
+
+@InProceedings{tent,
+author = "Jang, Youngkyoon and Sullivan, Brian and Ludwig, Casimir and Gilchrist, Iain and Damen, Dima and Mayol-Cuevas, Walterio",
+title = "EPIC-Tent: An Egocentric Video Dataset for Camping Tent Assembly",
+booktitle = "International Conference on Computer Vision (ICCV) Workshops",
+year = "2019"
 }
 ```
 
