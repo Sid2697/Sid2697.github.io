@@ -31,6 +31,12 @@ permalink: /egoprocel/
 [Code](https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+[Video](./../docs/1886.mp4){: .btn}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[Poster](./../docs/1886.pdf){: .btn}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 </p>
 
 [comment]: ProcedureLearning
