@@ -28,7 +28,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 ### News
 ****
-{% for article in site.data.news limit:5 %}
+{% for article in site.data.news limit:7 %}
 {{ article.date }} :
 <em>{{ article.headline }}</em>
 {% endfor %}
@@ -127,11 +127,30 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 <div class="col-sm-12">
 
-### Service
+### Miscellaneous
 ****
-**Conference Reviewer**: CVPR 2022, ECCV 2022
+#### Invited Talks
 
-**Workshop Reviewer**: Joint 1st Ego4D and 10th EPIC Workshop (CVPR 2022)
+* Egocentric Videos for Procedure Learning @ [Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2022)](https://events.iitgn.ac.in/2022/icvgip/index.html) ([Vision India](https://events.iitgn.ac.in/2022/icvgip/vision_india.html)). [[slides](https://iiitaphyd-my.sharepoint.com/:p:/g/personal/siddhant_bansal_research_iiit_ac_in/EbxapAwL-hxCjJyEMYa8aXgBHeKsYTbhqonfQzT0hUIltg?e=W9z8Ki); [tweet](https://twitter.com/Sid__Bansal/status/1602165700424273920?s=20&t=BOQDMb1dCMppgcCjHaA9KA); [linkedin](https://www.linkedin.com/posts/siddhant-bansal_icvgip2022-eccv2022-activity-7007934958484746240-wBva?utm_source=share&utm_medium=member_desktop)]
+
+* Egocentric Videos for Procedure Learning @ [IPLAB, University of Catania](https://iplab.dmi.unict.it/fpv/) [[slides](https://iiitaphyd-my.sharepoint.com/:p:/g/personal/siddhant_bansal_research_iiit_ac_in/ERc_foZHgKZEnG9xhQKvXS8BWeQOgosXJCpnhM1YBad98Q?e=C4eyS4); [tweet](https://twitter.com/Sid__Bansal/status/1588149526459736064?s=20&t=CTjlbGTkjcmHUS8tbbJ0Qw)]
+
+* Egocentric Videos for Procedure Learning @ [Computer Vision Centre, Universitat Autònoma de Barcelona](http://www.cvc.uab.es) [[slides](https://iiitaphyd-my.sharepoint.com/:p:/g/personal/siddhant_bansal_research_iiit_ac_in/EX5YUA772apKte6EsNcZX4IBwVh5Xz4cmWGvDAvXmYzm2w?e=KvoTKi); [tweet](https://twitter.com/dkaratzas/status/1590723083198873604?s=20&t=EAKrnmTUI0IsHTh5mQ98Tw)]
+
+#### Workshop Organizer
+
+* [2nd International Ego4D Workshop @ ECCV 2022](https://ego4d-data.org/workshops/eccv22/)
+
+#### Conference Reviewer
+
+* CVPR 2022, 2023
+* ECCV 2022
+* WACV 2023
+
+#### Workshop Reviewer
+
+* [Joint 1st Ego4D and 10th EPIC Workshop @ CVPR 2022](https://sites.google.com/view/cvpr2022w-ego4d-epic/)
+
 <p> &nbsp; </p>
 
 ### Blog
