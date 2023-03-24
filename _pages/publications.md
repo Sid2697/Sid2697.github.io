@@ -17,9 +17,13 @@ permalink: /publications/
 
  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="200px" style="float: left" />
 
+<div style="text-align: justify">
  <p>{{ publi.description }}</p>
+</div>
 
+<div style="text-align: justify">
  <p><em>{{ publi.authors }}</em></p>
+</div>
 
  <p>{{ publi.venue }}</p>
 

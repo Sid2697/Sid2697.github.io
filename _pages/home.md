@@ -12,10 +12,18 @@ permalink: /
 
 <div class="col-sm-8">
 
-I am an MS by Research candidate at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>. I work with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a>.
-My research interest lies in Computer Vision, Pattern Recognition, and Machine Learning. My graduate research focuses on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision. Earlier, I worked on improving word recognition and retrieval in large document collection under the guidance of <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a>. Previously, I worked with <a href='https://people.iitgn.ac.in/~shanmuga/'>Prof. Shanmuganathan Raman</a> on 3D Computer Vision.
+<div style="text-align: justify">
+I am a first-year PhD student at the <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
+My research interest is Computer Vision, Pattern Recognition, and Machine Learning. 
+Currently, I am working on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision.
+Previously, at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>, I worked with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a> on <a href="https://sid2697.github.io/egoprocel/">unsupervised procedure learning</a> from egocentric videos.
+<!-- I am an MS by Research candidate at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>. I work with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a>. -->
+Earlier, I worked on improving word recognition and retrieval in large document collection with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and on 3D Computer Vision with <a href="https://people.iitgn.ac.in/~shanmuga/">Prof. Shanmuganathan Raman</a>.
+</div>
 
+<div style="text-align: justify">
 My ultimate goal is to contribute to the development of systems capable of understanding the world as we do. I'm an inquisitive person, and I'm always willing to learn about fields including, but not limited to, science, technology, astrophysics, and physics.
+</div>
 
 <p align="center">
   <a href="./docs/Siddhant_Bansal.pdf">CV</a> /
@@ -36,19 +44,18 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 </div>
 
-<div class="col-sm-4" style="display:table-cell; vertical-align:middle; text-align:left">
+<div class="col-sm-4" style="display:table-cell; vertical-align:left; text-align:left">
 
   <ul style="overflow: hidden">
   <img src="{{ site.url }}{{ site.baseurl }}/images/profile_pic.jpeg" class="img-responsive" width="100%" />
   </ul>
 
   <!-- <br clear="all" /> -->
-
-  <A HREF="mailto:siddhant.bansal@research.iiit.ac.in">siddhant.bansal@research.iiit.ac.in</A> <br>
-  Center for Visual Information and Technology (<b>CVIT</b>), 
-  International Institute of Information Technology (<b>IIIT</b>),
-  Hyderabad, India.<br>
-
+<div style="text-align: right">
+  <A HREF="mailto:siddhant.bansal@bristol.ac.uk">siddhant.bansal@bristol.ac.uk</A> <br>
+  Machine Learning and Computer Vision (<b>MaVi</b>) @ 
+  University of Bristol
+</div>
 
 </div>
 
@@ -68,9 +75,13 @@ My ultimate goal is to contribute to the development of systems capable of under
 
  <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive" width="250px" style="float: left" />
 
+<div style="text-align: justify">
  <p>{{ publi.description }}</p>
+</div>
 
+<div style="text-align: justify">
  <p><em>{{ publi.authors }}</em></p>
+</div>
 
  <p>{{ publi.venue }}</p>
 
@@ -146,6 +157,11 @@ My ultimate goal is to contribute to the development of systems capable of under
 * CVPR 2022, 2023
 * ECCV 2022
 * WACV 2023
+
+#### Journal Reviewer
+
+* IEEE Transactions on Pattern Analysis and Machine Intelligence ([T-PAMI](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34))
+* Computer Vision and Image Understanding ([CVIU](https://www.sciencedirect.com/journal/computer-vision-and-image-understanding))
 
 #### Workshop Reviewer
 
