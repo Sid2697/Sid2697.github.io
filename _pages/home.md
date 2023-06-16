@@ -150,11 +150,13 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 #### Workshop Organizer
 
+* [Joint International 3rd Ego4D and 11th EPIC Workshop @ CVPR 2023](https://sites.google.com/view/ego4d-epic-cvpr2023-workshop/home)
 * [2nd International Ego4D Workshop @ ECCV 2022](https://ego4d-data.org/workshops/eccv22/)
 
 #### Conference Reviewer
 
 * CVPR 2022, 2023
+* ICCV 2023
 * ECCV 2022
 * WACV 2023
 
