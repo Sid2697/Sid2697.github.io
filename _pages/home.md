@@ -158,7 +158,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 * CVPR 2022, 2023
 * ICCV 2023
 * ECCV 2022
-* WACV 2023
+* WACV 2023, 2024
 
 #### Journal Reviewer
 
