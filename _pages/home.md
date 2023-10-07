@@ -52,8 +52,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 
   <!-- <br clear="all" /> -->
 <div style="text-align: right">
-  <A HREF="mailto:siddhant.bansal@bristol.ac.uk">siddhant.bansal@bristol.ac.uk</A> <br>
-  Machine Learning and Computer Vision (<b>MaVi</b>) @ 
+  Machine Learning and Computer Vision (<b>MaVi</b>) @
   University of Bristol
 </div>
 

@@ -59,12 +59,19 @@ permalink: /experience
 
 <h3>Education</h3>
 
-<p><em>(January &rsquo;20 - Present)</em></p>
+<p><em>(April &rsquo;23 - <i>Present</i>)</em></p>
+<p><strong>University of Bristol</strong>, United Kingdom</p>
+<p><b>PhD</b> in Computer Science</p>
+<p>Advisor: <a href='https://dimadamen.github.io'>Prof. Dima Damen</a></p>
+<p>&nbsp;</p>
+
+
+<p><em>(January &rsquo;20 - March &rsquo;23)</em></p>
 
 <p><strong>International Institute of Information Technology</strong>, Hyderabad (IIIT-H), India</p>
 
-<p>Master of Science (<em>MS</em>) by Research in Computer Science</p>
-<!-- <p>Thesis Title: A Study of X-ray Image Perception for Pneumoconiosis Diagnosis</p> -->
+<p><b>Master of Science</b> (<em>MS</em>) by Research in Computer Science (CGPA: <strong>9.2/10.0</strong>)</p>
+<p>Thesis Title: <i>I-Do, You-Learn: Techniques for Unsupervised Procedure Learning using Egocentric Videos</i></p>
 <p>Advisors: <a href='https://faculty.iiit.ac.in/~jawahar/index.html'> Prof. C.V. Jawahar </a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a></p>
 
 <p>&nbsp;</p>
@@ -73,7 +80,7 @@ permalink: /experience
 
 <p><strong>Vishwakarma Government Engineering College</strong>, Ahmedabad, India</p>
 
-<p>Bachelor of Engineering (<em>BE</em>) (CPI: <strong>8.01/10.0</strong>)</p>
+<p><b>Bachelor</b> of Engineering (<em>BE</em>) (CPI: <strong>8.01/10.0</strong>)</p>
 
 <p><i>Automatic Garbage Detection and Collection</i> (<a href='http://arxiv.org/abs/1908.05849'>paper</a>): One of the top 4% projects selected by the Government of India under the Student Startup and Innovation Policy (SSIP) for full-funding. </p>
 
