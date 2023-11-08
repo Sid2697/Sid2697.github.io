@@ -66,7 +66,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 ### Publications
 ****
 
-{% for publi in site.data.publist limit:10 %}
+{% for publi in site.data.publist limit:5 %}
 
 <div class="col-sm-11 clearfix">
  <div class="well">

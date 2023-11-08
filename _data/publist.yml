@@ -1,3 +1,16 @@
+- title: 'United We Stand, Divided We Fall: UnityGraph for Unsupervised Procedure Learning from Videos'
+  image: unity_graph.png
+  description: We propose Graph-based Procedure Learning (GPL) framework for procedure learning. GPL creates novel UnityGraph that represents <i>all</i> the task videos as a graph to encode both intra-video and inter-videos context. We achieve an improvement of 2% on third-person datasets and 3.6% on EgoProceL.
+  authors: <b>Siddhant Bansal</b>, <a href="https://www.cse.iitd.ac.in/~chetan/">Chetan Arora</a>, <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a>
+  venue: Winter Conference on Applications of Computer Vision (<b>WACV</b>), 2024
+  number_link: 2
+  link1:
+    url: https://arxiv.org/pdf/2311.03550
+    display: Paper
+  link2:
+    url: https://sid2697.github.io/egoprocel/#download
+    display: Download the EgoProceL Dataset
+
 - title: 'An Outlook into the Future of Egocentric Vision'
   image: survey_image.png
   description: The survey looks at the difference between what we're studying now in egocentric vision and what we expect in the future. We imagine the future using stories and connect them to current research. We highlight problems, analyze current progress, and suggest areas to explore in egocentric vision, aiming for a future that's always on, personalized, and improves our lives.
