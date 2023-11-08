@@ -168,6 +168,11 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 * [Joint 1st Ego4D and 10th EPIC Workshop @ CVPR 2022](https://sites.google.com/view/cvpr2022w-ego4d-epic/)
 
+
+#### Thesis
+
+* Masters: <a href='../papers/masters_thesis.pdf'>I-Do, You-Learn: Techniques for Unsupervised Procedure Learning using Egocentric Videos</a>
+
 <p> &nbsp; </p>
 
 ### Blog
