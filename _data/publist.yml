@@ -1,3 +1,22 @@
+- title: 'Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives'
+  image: ego-exo4d.png
+  description: Ego-Exo4D is a diverse, large-scale multi-modal, multi-view, video dataset and benchmark collected across 13 cities worldwide by 839 camera wearers, capturing 1422 hours of video of skilled human activities.<br>We present three synchronized natural language datasets paired with videos. (1) expert commentary, (2) participant-provided narrate-and-act, and (3) one-sentence atomic action descriptions. <br>Finally, our camera configuration features Aria glasses for ego capture which is time-synchronized with 4-5 (stationary) GoPros as the exo capture devices.
+  authors: Kristen Grauman, Andrew Westbury, Lorenzo Torresani, Kris Kitani, Jitendra Malik, Triantafyllos Afouras, Kumar Ashutosh, Vijay Baiyya, <a href='https://sid2697.github.io/'><b>Siddhant Bansal</b></a>, Bikram Boote, Eugene Byrne, Zach Chavis, Joya Chen, Feng Cheng, Fu-Jen Chu, Sean Crane, Avijit Dasgupta, Jing Dong, Maria Escobar, Cristhian Forigua, Abrham Gebreselasie, Sanjay Haresh, Jing Huang, Md Mohaiminul Islam, Suyog Jain, Rawal Khirodkar, Devansh Kukreja, Kevin J Liang, Jia-Wei Liu, Sagnik Majumder, Yongsen Mao, Miguel Martin, Effrosyni Mavroudi, Tushar Nagarajan, Francesco Ragusa, Santhosh Kumar Ramakrishnan, Luigi Seminara, Arjun Somayazulu, Yale Song, Shan Su, Zihui Xue, Edward Zhang, Jinxu Zhang, Angela Castillo, Changan Chen, Xinzhu Fu, Ryosuke Furuta, Cristina Gonzalez, Prince Gupta, Jiabo Hu, Yifei Huang, Yiming Huang, Weslie Khoo, Anush Kumar, Robert Kuo, Sach Lakhavani, Miao Liu, Mi Luo, Zhengyi Luo, Brighid Meredith, Austin Miller, Oluwatumininu Oguntola, Xiaqing Pan, Penny Peng, Shraman Pramanick, Merey Ramazanova, Fiona Ryan, Wei Shan, Kiran Somasundaram, Chenan Song, Audrey Southerland, Masatoshi Tateno, Huiyu Wang, Yuchen Wang, Takuma Yagi, Mingfei Yan, Xitong Yang, Zecheng Yu, Shengxin Cindy Zha, Chen Zhao, Ziwei Zhao, Zhifan Zhu, Jeff Zhuo, Pablo Arbelaez, Gedas Bertasius, David Crandall, Dima Damen, Jakob Engel, Giovanni Maria Farinella, Antonino Furnari, Bernard Ghanem, Judy Hoffman, C. V. Jawahar, Richard Newcombe, Hyun Soo Park, James M. Rehg, Yoichi Sato, Manolis Savva, Jianbo Shi, Mike Zheng Shou, Michael Wray
+  venue: <i>Under Review</i>
+  number_link: 4
+  link1:
+    url: https://arxiv.org/abs/2311.18259
+    display: Paper
+  link2:
+    url: https://ego-exo4d-data.org
+    display: Project Page
+  link3:
+    url: https://youtu.be/GdooXEBAnI8
+    display: Video
+  link4:
+    url: https://ai.meta.com/blog/ego-exo4d-video-learning-perception/
+    display: Meta blog post
+
 - title: 'United We Stand, Divided We Fall: UnityGraph for Unsupervised Procedure Learning from Videos'
   image: unity_graph.png
   description: We propose Graph-based Procedure Learning (GPL) framework for procedure learning. GPL creates novel UnityGraph that represents <i>all</i> the task videos as a graph to encode both intra-video and inter-videos context. We achieve an improvement of 2% on third-person datasets and 3.6% on EgoProceL.
