@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siddhant Bansal - UnityGraph</title>
+  <meta name="description" content="Siddhant Bansal: UnityGraph">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/unitygraph/">
+<link rel="shortcut icon" type ="image/x-icon" href="http://localhost:4000/images/favicon.ico">
+
+
+
+</head>
+
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+
+    <a class="navbar-brand" href="http://localhost:4000/">Siddhant Bansal</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="http://localhost:4000/">Home</a></li>
+		<li><a href="http://localhost:4000/publications">Publications</a></li>
+		<li><a href="http://localhost:4000/projects">Projects</a></li>
+		<li><a href="http://localhost:4000/experience">Experience</a></li>
+		<li><a href="https://sid2697.github.io/Blog_Sid">Blog</a></li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="gridid" class="col-sm-12">
+  <h2 align="center">United We Stand, Divided We Fall:<br />UnityGraph for Unsupervised Procedure Learning from Videos</h2>
+
+<p style="text-align: center;">
+<a href="https://sid2697.github.io" style="color: #CC0000"> Siddhant Bansal</a>
+      
+<a href="https://www.cse.iitd.ac.in/~chetan/" style="color: #CC0000"> Chetan Arora</a>
+      
+<a href="https://faculty.iiit.ac.in/~jawahar/index.html" style="color: #CC0000"> C.V. Jawahar</a>
+      
+</p>
+<p style="text-align: center;"><a href="https://eccv2022.ecva.net/" style="color:#CC0000">WACV 2024</a></p>
+
+<p style="text-align: center;">
+
+<a href="http://arxiv.org/abs/2311.03550" class="btn">Paper</a>
+      
+
+<!-- TODO -->
+<a href="./../docs/" class="btn">Video</a>
+      
+
+<a href="./../docs/wacv24-236.pdf" class="btn">Poster</a>
+      
+
+</p>
+
+<h3>What is Procedure Learning?</h3>
+<div style="text-align: justify">
+  <p>Given multiple videos of a task, the goal is to identify the key-steps and their order to perform the task.</p>
+
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/procedure-learning.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption>
+        Provided multiple videos of making a pizza, the goal is to identify the steps required to prepare the pizza and their order.
+    </figcaption>
+</figure>
+</center>
+
+  <h3 align="center"><span style="color:DodgerBlue">Graph-based Procedure Learning (GPL)</span></h3>
+
+  <p>We propose the Graph-based Procedure Learning (GPL) framework. Contrary to existing graph-based frameworks, GPL does not require node or edge annotations, enabling unsupervised procedure learning.</p>
+  <p> </p>
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/wacv_24_meth_v1-2_2022-08-25.pdf" width="900px" />
+		</div>
+</figure>
+</center>
+  <p> </p>
+  <figure style="width: 100%; float: left">
+    <p class="caption_justify">
+    Graph-based Procedure Learning (GPL) framework. Given multiple videos of the same task, we create UnityGraph.
+    Using the Node2Vec algorithm, we exploit the structure of UnityGraph to enhance the node embeddings in an unsupervised manner.
+    For example, the temporal and spatial clips that were originally far in the embedding space are closer after Node2Vec (highlighted in blue).
+    Finally, we cluster the embeddings using KMeans and filter the background frames to obtain the key-steps required to perform the task.
+  </p>
+  </figure>
+
+</div>
+<p> </p>
+
+<h3> Paper </h3>
+
+<ul>
+  <li>PDF: <a href="http://localhost:4000/papers/0236.pdf">Paper</a>; <a href="http://localhost:4000/papers/0236-supp.pdf">Supplementary</a></li>
+  <li>arXiv: <a href="https://arxiv.org/pdf/2311.03550">Paper</a>; <a href="http://arxiv.org/abs/2311.03550">Abstract</a></li>
+  <li>WACV: <b>Coming soon!</b></li>
+</ul>
+
+<h3> Code </h3>
+<p>Coming Soon!</p>
+
+<h3> Acknowledgements </h3>
+
+<p style="text-align: justify">
+The work was supported in part by the Department of Science and Technology, Government of India, under DST/ICPS/Data-Science project ID T-138.
+The authors thank <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a> and <a href="https://sites.google.com/site/charusharmacseiith/">Charu Sharma</a> for their Topics in Deep Learning course which motivated the paper’s central idea.
+</p>
+
+<p> </p>
+
+<p>Please consider citing if you make use of the work:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@InProceedings{UnityGraphWACV2022,
+author="Bansal, Siddhant
+and Arora, Chetan
+and Jawahar, C.V.",
+title="United We Stand, Divided We Fall: UnityGraph for Unsupervised Procedure Learning from Videos",
+booktitle = "Winter Conference on Applications of Computer Vision (WACV)",
+year="2024"
+}
+</code></pre></div></div>
+
+<p> </p>
+<p> </p>
+
+</div>
+
+      </div>
+    </div>
+
+    <div id="footer" class="panel">
+  <div class="panel-footer">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-sm-5">
+
+		  <p>&copy 2022 Siddhant Bansal. Site made with <a href="https://jekyllrb.com">Jekyll</a>.</p>
+		   <p>  </p><p>
+
+
+		</div>
+		<div class="col-sm-5">
+		</div>
+    <div class="col-sm-5">
+		</div>
+		<div class="col-sm-5">
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>

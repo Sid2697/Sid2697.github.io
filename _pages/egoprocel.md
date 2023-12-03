@@ -149,7 +149,7 @@ We present a novel self-supervised <b>Correspond and Cut (CnC) framework</b> for
 
 - PDF: <a href="{{ site.url }}{{ site.baseurl }}/papers/Procedure_Learning_from_Egocentric_Videos_camera-ready_v1-5_2022-07-20.pdf">Paper</a>; <a href="{{ site.url }}{{ site.baseurl }}/papers/Supplementary-Procedure_Learning_from_Egocentric_Videos_camera-ready_v1-4_2022-07-19.pdf">Supplementary</a>
 - arXiv: [Paper](https://arxiv.org/pdf/2207.10883); [Abstract](http://arxiv.org/abs/2207.10883)
-- ECCV: <b>Coming soon!</b>
+- ECCV: [Paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136730656.pdf); [Supplementary](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136730656-supp.pdf)
 
 [comment]: Code
 <h3> Code </h3>
