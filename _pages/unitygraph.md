@@ -25,8 +25,7 @@ permalink: /unitygraph/
 [Paper](http://arxiv.org/abs/2311.03550){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<!-- TODO -->
-[Video](./../docs/){: .btn}
+[Video](./../docs/wacv24-236.mp4){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Poster](./../docs/wacv24-236.pdf){: .btn}

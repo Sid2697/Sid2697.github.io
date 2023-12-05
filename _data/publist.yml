@@ -22,7 +22,7 @@
   description: We propose Graph-based Procedure Learning (GPL) framework for procedure learning. GPL creates novel UnityGraph that represents <i>all</i> the task videos as a graph to encode both intra-video and inter-videos context. We achieve an improvement of 2% on third-person datasets and 3.6% on EgoProceL.
   authors: <b>Siddhant Bansal</b>, <a href="https://www.cse.iitd.ac.in/~chetan/">Chetan Arora</a>, <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a>
   venue: Winter Conference on Applications of Computer Vision (<b>WACV</b>), 2024
-  number_link: 3
+  number_link: 4
   link1:
     url: https://arxiv.org/pdf/2311.03550
     display: Paper
@@ -32,6 +32,9 @@
   link3:
     url: https://sid2697.github.io/unitygraph/
     display: Project Page
+  link4:
+    url: ./../docs/wacv24-236.mp4
+    display: Video
 
 - title: 'An Outlook into the Future of Egocentric Vision'
   image: survey_image.png
