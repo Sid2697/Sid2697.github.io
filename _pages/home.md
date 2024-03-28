@@ -13,7 +13,7 @@ permalink: /
 <div class="col-sm-8">
 
 <div style="text-align: justify">
-I am a first-year PhD student at the <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
+I am a second-year PhD student at the <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
 My research interest is Computer Vision, Pattern Recognition, and Machine Learning. 
 Currently, I am working on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision.
 Previously, at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>, I worked with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a> on <a href="https://sid2697.github.io/egoprocel/">unsupervised procedure learning</a> from egocentric videos.
