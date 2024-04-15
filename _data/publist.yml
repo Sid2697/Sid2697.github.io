@@ -1,3 +1,21 @@
+- title: 'HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision'
+  image: hoi-ref.png
+  description: We propose the HOI-Ref task to understand hand-object using Vision Language Models (VLMs). We introduce the HOI-QA dataset with 3.9M question-answer pairs for training and evaluating VLMs. Finally, we train the first VLM for HOI-Ref, achieving state-of-the-art performance.
+  authors: <b>Siddhant Bansal</b>, <a href="https://mwray.github.io/">Michael Wray</a>, <a href="https://dimadamen.github.io/">Dima Damen</a>
+  number_link: 4
+  link1:
+    url: 
+    display: Paper (coming soon)
+  link2:
+    url: https://sid2697.github.io/hoi-ref/
+    display: Project Page
+  link3:
+    url: https://github.com/Sid2697/HOI-Ref
+    display: Code
+  link4:
+    url: 
+    display: Gradio Demo (coming soon)
+
 - title: 'Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives'
   image: ego-exo4d.png
   description: Ego-Exo4D is a diverse, large-scale multi-modal, multi-view, video dataset and benchmark collected across 13 cities worldwide by 839 camera wearers, capturing 1422 hours of video of skilled human activities.<br>We present three synchronized natural language datasets paired with videos. (1) expert commentary, (2) participant-provided narrate-and-act, and (3) one-sentence atomic action descriptions. <br>Finally, our camera configuration features Aria glasses for ego capture which is time-synchronized with 4-5 (stationary) GoPros as the exo capture devices.

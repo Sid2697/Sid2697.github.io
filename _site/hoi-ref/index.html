@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siddhant Bansal - HOI-Ref</title>
+  <meta name="description" content="Siddhant Bansal: HOI-Ref">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/hoi-ref/">
+<link rel="shortcut icon" type ="image/x-icon" href="http://localhost:4000/images/favicon.ico">
+
+
+
+</head>
+
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+
+    <a class="navbar-brand" href="http://localhost:4000/">Siddhant Bansal</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="http://localhost:4000/">Home</a></li>
+		<li><a href="http://localhost:4000/publications">Publications</a></li>
+		<li><a href="http://localhost:4000/projects">Projects</a></li>
+		<li><a href="http://localhost:4000/experience">Experience</a></li>
+		<li><a href="https://sid2697.github.io/Blog_Sid">Blog</a></li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="gridid" class="col-sm-12">
+  <h2 align="center">HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision</h2>
+
+<p style="text-align: center;">
+<a href="https://sid2697.github.io" style="color: #CC0000"> Siddhant Bansal</a>
+      
+<a href="https://mwray.github.io/" style="color: #CC0000"> Michael Wray</a>
+      
+<a href="https://dimadamen.github.io/" style="color: #CC0000"> Dima Damen</a>
+      
+</p>
+<!-- <p style="text-align: center;"><a href="" style="color:#CC0000">XXXX 2024</a></p> -->
+
+<p style="text-align: center;">
+<!-- TODO: add the links once available -->
+<a href="" class="btn">Paper</a>
+      
+
+<a href="" class="btn">Dataset</a>
+      
+
+<a href="https://github.com/Sid2697/HOI-Ref" class="btn">Code</a>
+      
+
+<a href="" class="btn">Demo (coming soon)</a>
+      
+
+</p>
+
+<h3 align="center"><span style="color:DodgerBlue">What is Hand-Object Interaction Referral?</span></h3>
+<div style="text-align: justify">
+
+  <p> </p>
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/hoi-ref.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption>
+    Given an image from an egocentric video, the goal here is to refer the hands and the objects being interacted with. For example, here we wish to refer the left and right hand along with the two objects (jar and lid) that the hands are interacting with.
+    </figcaption>
+</figure>
+</center>
+
+  <p>      </p>
+  <h3 align="center"><span style="color:DodgerBlue">VLM4HOI: VLM for Hand-Object Interaction Referral</span></h3>
+
+  <p> </p>
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/vlm4hoi.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption>
+    (a) VLM4HOI for hand-object interaction referral in egocentric images. The VLM4HOI model takes in an image (I), passes it through a vision encoder (g) and a projection layer (Wφ) to obtain embeddings (Ep) in language model’s (fθ ) embedding space. This is concatenated with the tokenised text (EL) and passed through fθ to generate a language response (Ea). We show two examples where based on the task instruction template, the model generates an output. (b), the model identifies a bounding box input as the right hand. (c), the model takes in the image and a question to refer the object being held in the right hand and outputs a bounding box.
+    </figcaption>
+</figure>
+</center>
+  <p> </p>
+
+  <p>      </p>
+  <h3 align="center"><span style="color:DodgerBlue">HOI-Ref Task</span></h3>
+
+  <p> </p>
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/hoi_ref_task.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption align="justify">
+    HOI-Ref task to train and evaluate VLMs for hand-object interaction referral. HOI-Ref focuses on the following two aspects: ability to spatially refer and recognise hands and objects and the capability to understand hand-object interaction. Columns (1) and (2) evaluate spatially referring hands and objects whereas, columns (3) and (4) aim at object and hand side recognition. Moving across rows (A) and (B) shows HOI-Ref’s ability to evaluate for direct referral vs interaction referral. For example, in A-1, referring a bottle is simply asking where is the bottle however, for B-1, it involves knowing which hand is holding the bottle.
+    </figcaption>
+</figure>
+</center>
+  <p> </p>
+
+  <p>      </p>
+  <h3 align="center"><span style="color:DodgerBlue">HOI-QA Dataset</span></h3>
+
+  <p> </p>
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/hoi_qa.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption align="justify">
+    HOI-QA for training VLMs to understand hand-object interaction. We use multiple annotation types to create the question-answer pairs. Top shows the annotations utilised and Bottom shows the types of question-answer pairs generated from these annotations. As shown, we convert the segments to bounding boxes to generate various referral questions and utilise contact information to understand interaction between hands and objects. Right shows the distribution of questions in the proposed HOI-QA dataset.
+    <b>HOI-QA consists of 3.9M question-answer pairs.</b>
+    </figcaption>
+</figure>
+</center>
+
+  <p>      </p>
+  <h3 align="center"><span style="color:DodgerBlue">Qualitative Results</span></h3>
+
+  <p> </p>
+  <center>
+<figure>
+		<div id="projectid">
+    <img src="http://localhost:4000/images/projectpic/vlm4hoi_qual.png" width="900px" />
+		</div>
+    <p>&nbsp;</p>
+    <figcaption align="justify">
+    Qualitative Results on VLM4HOI and MiniGPT-v2 on HOI-QA. For questions with correct bounding box output, the ground truth bounding box is omitted. When both models are incorrect, we add the ground truth in blue. VLM4HOI performs well on most of the cases where MiniGPT-v2 falls short. VLM4HOI fails in case of ambiguity. For example, it identifies the hand as cloth as the hand is holding the cloth (MiniGPT-v2 predicts waffle).
+    </figcaption>
+</figure>
+</center>
+
+  <h3> Paper </h3>
+
+  <!-- TODO: Add the links when available -->
+  <ul>
+    <li>arXiv: <a href="">Paper</a>; <a href="">Abstract</a>
+<!-- - Conference: <b>Coming soon!</b> --></li>
+  </ul>
+
+  <h3> Code </h3>
+  <p>The code for this work is available on GitHub!<br />
+Link: <a href="https://github.com/Sid2697/HOI-Ref">https://github.com/Sid2697/HOI-Ref</a></p>
+
+  <h3> Acknowledgements </h3>
+
+  <p style="text-align: justify">
+The authors would like to thank Alexandros Stergiou, Kranti Kumar Parida, Samuel Pollard, and Rhodri Guerrier for their comments on the manuscript.
+</p>
+
+  <p> </p>
+
+  <p>Please consider citing if you make use of the work:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@InProceedings{hoiref2024,
+author="Bansal, Siddhant
+and Wray, Michael, 
+and Damen, Dima",
+title="HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision",
+booktitle = "Arxiv",
+year="2024"
+}
+</code></pre></div>  </div>
+
+  <p> </p>
+  <p> </p>
+</div>
+
+</div>
+
+      </div>
+    </div>
+
+    <div id="footer" class="panel">
+  <div class="panel-footer">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-sm-5">
+
+		  <p>&copy 2022 Siddhant Bansal. Site made with <a href="https://jekyllrb.com">Jekyll</a>.</p>
+		   <p>  </p><p>
+
+
+		</div>
+		<div class="col-sm-5">
+		</div>
+    <div class="col-sm-5">
+		</div>
+		<div class="col-sm-5">
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://localhost:4000/js/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>
