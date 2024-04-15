@@ -1,4 +1,4 @@
-- title: 'HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision'
+- title: "<a href='https://sid2697.github.io/hoi-ref/' style='color: black;'>HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision</a>"
   image: hoi-ref.png
   description: We propose the HOI-Ref task to understand hand-object using Vision Language Models (VLMs). We introduce the HOI-QA dataset with 3.9M question-answer pairs for training and evaluating VLMs. Finally, we train the first VLM for HOI-Ref, achieving state-of-the-art performance.
   authors: <b>Siddhant Bansal</b>, <a href="https://mwray.github.io/">Michael Wray</a>, <a href="https://dimadamen.github.io/">Dima Damen</a>
@@ -19,7 +19,7 @@
     url: 
     display: Gradio Demo (coming soon)
 
-- title: 'Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives'
+- title:  "<a href='https://ego-exo4d-data.org/' style='color: black;'>Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</a>"
   image: ego-exo4d.png
   description: Ego-Exo4D is a diverse, large-scale multi-modal, multi-view, video dataset and benchmark collected across 13 cities worldwide by 839 camera wearers, capturing 1422 hours of video of skilled human activities.<br>We present three synchronized natural language datasets paired with videos. (1) expert commentary, (2) participant-provided narrate-and-act, and (3) one-sentence atomic action descriptions. <br>Finally, our camera configuration features Aria glasses for ego capture which is time-synchronized with 4-5 (stationary) GoPros as the exo capture devices.
   authors: Kristen Grauman, Andrew Westbury, Lorenzo Torresani, Kris Kitani, Jitendra Malik, Triantafyllos Afouras, Kumar Ashutosh, Vijay Baiyya, <a href='https://sid2697.github.io/'><b>Siddhant Bansal</b></a>, Bikram Boote, Eugene Byrne, Zach Chavis, Joya Chen, Feng Cheng, Fu-Jen Chu, Sean Crane, Avijit Dasgupta, Jing Dong, Maria Escobar, Cristhian Forigua, Abrham Gebreselasie, Sanjay Haresh, Jing Huang, Md Mohaiminul Islam, Suyog Jain, Rawal Khirodkar, Devansh Kukreja, Kevin J Liang, Jia-Wei Liu, Sagnik Majumder, Yongsen Mao, Miguel Martin, Effrosyni Mavroudi, Tushar Nagarajan, Francesco Ragusa, Santhosh Kumar Ramakrishnan, Luigi Seminara, Arjun Somayazulu, Yale Song, Shan Su, Zihui Xue, Edward Zhang, Jinxu Zhang, Angela Castillo, Changan Chen, Xinzhu Fu, Ryosuke Furuta, Cristina Gonzalez, Prince Gupta, Jiabo Hu, Yifei Huang, Yiming Huang, Weslie Khoo, Anush Kumar, Robert Kuo, Sach Lakhavani, Miao Liu, Mi Luo, Zhengyi Luo, Brighid Meredith, Austin Miller, Oluwatumininu Oguntola, Xiaqing Pan, Penny Peng, Shraman Pramanick, Merey Ramazanova, Fiona Ryan, Wei Shan, Kiran Somasundaram, Chenan Song, Audrey Southerland, Masatoshi Tateno, Huiyu Wang, Yuchen Wang, Takuma Yagi, Mingfei Yan, Xitong Yang, Zecheng Yu, Shengxin Cindy Zha, Chen Zhao, Ziwei Zhao, Zhifan Zhu, Jeff Zhuo, Pablo Arbelaez, Gedas Bertasius, David Crandall, Dima Damen, Jakob Engel, Giovanni Maria Farinella, Antonino Furnari, Bernard Ghanem, Judy Hoffman, C. V. Jawahar, Richard Newcombe, Hyun Soo Park, James M. Rehg, Yoichi Sato, Manolis Savva, Jianbo Shi, Mike Zheng Shou, Michael Wray
@@ -38,7 +38,7 @@
     url: https://ai.meta.com/blog/ego-exo4d-video-learning-perception/
     display: Meta blog post
 
-- title: 'United We Stand, Divided We Fall: UnityGraph for Unsupervised Procedure Learning from Videos'
+- title:  "<a href='https://sid2697.github.io/unitygraph/' style='color: black;'>United We Stand, Divided We Fall: UnityGraph for Unsupervised Procedure Learning from Videos</a>"
   image: unity_graph.png
   description: We propose Graph-based Procedure Learning (GPL) framework for procedure learning. GPL creates novel UnityGraph that represents <i>all</i> the task videos as a graph to encode both intra-video and inter-videos context. We achieve an improvement of 2% on third-person datasets and 3.6% on EgoProceL.
   authors: <b>Siddhant Bansal</b>, <a href="https://www.cse.iitd.ac.in/~chetan/">Chetan Arora</a>, <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a>
@@ -57,7 +57,7 @@
     url: ./../docs/wacv24-236.mp4
     display: Video
 
-- title: 'An Outlook into the Future of Egocentric Vision'
+- title: "<a href='https://arxiv.org/abs/2308.07123' style='color: black;'>An Outlook into the Future of Egocentric Vision</a>"
   image: survey_image.png
   description: The survey looks at the difference between what we're studying now in egocentric vision and what we expect in the future. We imagine the future using stories and connect them to current research. We highlight problems, analyze current progress, and suggest areas to explore in egocentric vision, aiming for a future that's always on, personalized, and improves our lives.
   authors: <a href='https://chiaraplizz.github.io'>Chiara Plizzari*</a>, <a href='https://ezius07.github.io'>Gabriele Goletto*</a>, <a href='https://www.antoninofurnari.it'>Antonino Furnari*</a>, <b>Siddhant Bansal*</b>, <a href='https://iplab.dmi.unict.it/ragusa/'>Francesco Ragusa*</a>, <a href='https://www.dmi.unict.it/farinella/'>Giovanni Maria Farinella</a>, <a href='https://dimadamen.github.io'>Dima Damen</a>, <a href='http://www.tatianatommasi.com'>Tatiana Tommasi</a>
@@ -70,7 +70,7 @@
     url: https://arxiv.org/abs/2308.07123
     display: Paper (arXiv)
 
-- title: 'My View is the Best View: Procedure Learning from Egocentric Videos'
+- title:  "<a href='https://sid2697.github.io/egoprocel/' style='color: black;'>My View is the Best View: Procedure Learning from Egocentric Videos</a>"
   image: CVPR_diagrams-Correspondences_v1_2.png
   description: We propose the <b>EgoProceL dataset</b> consisting of 62 hours of videos captured by 130 subjects performing 16 tasks and a self-supervised <b>Correspond and Cut (CnC) framework</b> for procedure learning. CnC utilizes the temporal correspondences between the key-steps across multiple videos to learn the procedure.
   authors: <b>Siddhant Bansal</b>, <a href="https://www.cse.iitd.ac.in/~chetan/">Chetan Arora</a>, <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a>
@@ -89,7 +89,7 @@
     url: https://github.com/Sid2697/EgoProceL-egocentric-procedure-learning
     display: Code
 
-- title: 'Ego4D: Around the World in 3,000 Hours of Egocentric Video'
+- title:  "<a href='https://ego4d-data.org/' style='color: black;'>Ego4D: Around the World in 3,000 Hours of Egocentric Video</a>"
   image: ego4d.png
   description: We offer 3,670 hours of daily-life activity video spanning hundreds of scenarios captured by 931 unique camera wearers from 74 worldwide locations and 9 different countries.<br>We present a host of new benchmark challenges centered around understanding the first-person visual experience in the past (querying an episodic memory), present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future (forecasting activities).
   authors: <br>Kristen Grauman, Andrew Westbury, Eugene Byrne, Zachary Chavis, Antonino Furnari, Rohit Girdhar, Jackson Hamburger, Hao Jiang, Miao Liu, Xingyu Liu, Miguel Martin, Tushar Nagarajan, Ilija Radosavovic, Santhosh Kumar Ramakrishnan, Fiona Ryan, Jayant Sharma, Michael Wray, Mengmeng Xu, Eric Zhongcong Xu, Chen Zhao, <a href='https://sid2697.github.io/'><b>Siddhant Bansal</b></a>, Dhruv Batra, Vincent Cartillier, Sean Crane, Tien Do, Morrie Doulaty, Akshay Erapalli, Christoph Feichtenhofer, Adriano Fragomeni, Qichen Fu, Christian Fuegen, Abrham Gebreselasie, Cristina Gonzalez, James Hillis, Xuhua Huang, Yifei Huang, Wenqi Jia, Weslie Khoo, Jachym Kolar, Satwik Kottur, Anurag Kumar, Federico Landini, Chao Li, Yanghao Li, Zhenqiang Li, Karttikeya Mangalam, Raghava Modhugu, Jonathan Munro, Tullie Murrell, Takumi Nishiyasu, Will Price, Paola Ruiz Puentes, Merey Ramazanova, Leda Sari, Kiran Somasundaram, Audrey Southerland, Yusuke Sugano, Ruijie Tao, Minh Vo, Yuchen Wang, Xindi Wu, Takuma Yagi, Yunyi Zhu, Pablo Arbelaez, David Crandall, Dima Damen, Giovanni Maria Farinella, Bernard Ghanem, Vamsi Krishna Ithapu, C. V. Jawahar, Hanbyul Joo, Kris Kitani, Haizhou Li, Richard Newcombe, Aude Oliva, Hyun Soo Park, James M. Rehg, Yoichi Sato, Jianbo Shi, Mike Zheng Shou, Antonio Torralba, Lorenzo Torresani, Mingfei Yan, Jitendra Malik
@@ -111,7 +111,7 @@
     url: https://eyewear-computing.org/EPIC_ICCV21/
     display: EPIC@ICCV2021 Ego4D Reveal Session
 
-- title: Improving Word Recognition using Multiple Hypotheses and Deep Embeddings
+- title:  "<a href='https://sid2697.github.io/embednet_cab/' style='color: black;'>Improving Word Recognition using Multiple Hypotheses and Deep Embeddings</a>"
   image: Confidence_module.png
   description: We propose to fuse recognition-based and recognition-free approaches for word recognition using learning-based methods.
   authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
@@ -130,7 +130,7 @@
     url: https://youtu.be/T_TYL-_HpbY
     display: Video (YouTube)<br><br>
 
-- title: Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval
+- title:  "<a href='https://sid2697.github.io/Word-recognition-and-retrieval/' style='color: black;'>Fused Text Recogniser and Deep  Embeddings Improve  Word  Recognition  and  Retrieval</a>"
   image: WordRecVisualisation_website.png
   description: Fusing recognition-based and recognition-free approaches using rule-based methods for improving word recognition and retrieval.
   authors: <b>Siddhant Bansal</b>, <a href="https://kris314.github.io"> Praveen Krishnan </a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
