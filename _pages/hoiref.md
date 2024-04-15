@@ -25,7 +25,7 @@ permalink: /hoi-ref/
 [Paper](){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Dataset](){: .btn}
+[Dataset](https://github.com/Sid2697/HOI-Ref/blob/main/hoiqa_dataset/HOIQA_README.md){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Code](https://github.com/Sid2697/HOI-Ref){: .btn}
@@ -108,6 +108,8 @@ permalink: /hoi-ref/
 </figure>
 </center>
 
+Details on downloading the dataset can be found on [GitHub](https://github.com/Sid2697/HOI-Ref/blob/main/hoiqa_dataset/HOIQA_README.md).
+
 [comment]: results 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <h3 align="center"><span style="color:DodgerBlue">Qualitative Results</span></h3>
@@ -132,14 +134,18 @@ permalink: /hoi-ref/
 - arXiv: [Paper](); [Abstract]()
 <!-- - Conference: <b>Coming soon!</b> -->
 
-[comment]: Code
-<h3> Code </h3>
+[comment]: Code and Dataset
+<h3> Code and Dataset</h3>
 The code for this work is available on GitHub!<br>
 Link: [https://github.com/Sid2697/HOI-Ref](https://github.com/Sid2697/HOI-Ref)
+
+The HOI-QA dataset is available on GitHub!<br>
+Link: [https://github.com/Sid2697/HOI-Ref/blob/main/hoiqa_dataset/HOIQA_README.md](https://github.com/Sid2697/HOI-Ref/blob/main/hoiqa_dataset/HOIQA_README.md)
 
 <h3> Acknowledgements </h3>
 
 <p style="text-align: justify">
+This work uses public datasets---code and models are publicly available. The research is supported by EPSRC UMPIRE EP/T004991/1 and EPSRC Programme Grant VisualAI EP/T028572/1. S Bansal is supported by a Charitable Donation to the University of Bristol from Meta. We acknowledge the use of the EPSRC funded Tier 2 facility JADE-II EP/T022205/1.
 The authors would like to thank Alexandros Stergiou, Kranti Kumar Parida, Samuel Pollard, and Rhodri Guerrier for their comments on the manuscript.
 </p>
 
