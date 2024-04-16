@@ -21,8 +21,7 @@ permalink: /hoi-ref/
 <!-- <p style="text-align: center;"><a href="" style="color:#CC0000">XXXX 2024</a></p> -->
 
 <p style="text-align: center;">
-<!-- TODO: add the links once available -->
-[Paper](){: .btn}
+[Paper](https://arxiv.org/abs/2404.09933){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Dataset](https://github.com/Sid2697/HOI-Ref/blob/main/hoiqa_dataset/HOIQA_README.md){: .btn}
@@ -131,7 +130,7 @@ Details on downloading the dataset can be found on [GitHub](https://github.com/S
 <h3> Paper </h3>
 
 <!-- TODO: Add the links when available -->
-- arXiv: [Paper](); [Abstract]()
+- arXiv: [Paper](https://arxiv.org/pdf/2404.09933.pdf); [Abstract](https://arxiv.org/abs/2404.09933)
 <!-- - Conference: <b>Coming soon!</b> -->
 
 [comment]: Code and Dataset
@@ -154,13 +153,11 @@ The authors would like to thank Alexandros Stergiou, Kranti Kumar Parida, Samuel
 Please consider citing if you make use of the work:
 
 ```
-@InProceedings{hoiref2024,
-author="Bansal, Siddhant
-and Wray, Michael, 
-and Damen, Dima",
-title="HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision",
-booktitle = "Arxiv",
-year="2024"
+@article{bansal2024hoiref,
+  title={HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision},
+  author={Bansal, Siddhant and Wray, Michael, and Damen, Dima},
+  journal={arXiv preprint arXiv:2404.09933},
+  year={2024}
 }
 ```
 

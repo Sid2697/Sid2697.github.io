@@ -4,17 +4,17 @@
   authors: <b>Siddhant Bansal</b>, <a href="https://mwray.github.io/">Michael Wray</a>, <a href="https://dimadamen.github.io/">Dima Damen</a>
   number_link: 5
   link1:
-    url: 
-    display: Paper (coming soon)
+    url: https://arxiv.org/abs/2404.09933
+    display: Paper
   link2:
-    url: https://sid2697.github.io/hoi-ref/
-    display: Project Page
-  link3:
-    url: https://github.com/Sid2697/HOI-Ref
-    display: Code
-  link4:
     url: https://github.com/Sid2697/HOI-Ref/blob/main/hoiqa_dataset/HOIQA_README.md
     display: <b>Download the HOI-QA Dataset</b>
+  link3:
+    url: https://sid2697.github.io/hoi-ref/
+    display: Project Page
+  link4:
+    url: https://github.com/Sid2697/HOI-Ref
+    display: Code
   link5:
     url: 
     display: Gradio Demo (coming soon)
