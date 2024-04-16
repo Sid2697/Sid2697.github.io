@@ -1,6 +1,6 @@
 - title: "<a href='https://sid2697.github.io/hoi-ref/' style='color: black;'>HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision</a>"
   image: hoi-ref.png
-  description: We propose the HOI-Ref task to understand hand-object using Vision Language Models (VLMs). We introduce the HOI-QA dataset with 3.9M question-answer pairs for training and evaluating VLMs. Finally, we train the first VLM for HOI-Ref, achieving state-of-the-art performance.
+  description: We propose the HOI-Ref task to understand hand-object interaction using Vision Language Models (VLMs). We introduce the HOI-QA dataset with 3.9M question-answer pairs for training and evaluating VLMs. Finally, we train the first VLM for HOI-Ref, achieving state-of-the-art performance.
   authors: <b>Siddhant Bansal</b>, <a href="https://mwray.github.io/">Michael Wray</a>, <a href="https://dimadamen.github.io/">Dima Damen</a>
   number_link: 5
   link1:
