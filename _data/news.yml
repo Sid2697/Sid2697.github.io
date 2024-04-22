@@ -1,8 +1,11 @@
 - date: April, 2024
+  headline: "<a href='https://arxiv.org/abs/2308.07123'>An Outlook into the Future of Egocentric Vision</a> got accepted to <a href='https://link.springer.com/journal/11263'>IJCV</a>!"
+
+- date: April, 2024
   headline: "Introducing <a href='https://sid2697.github.io/hoi-ref/'> HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision</a>. A new task to understand hand-object interaction using VLMs."
 
 - date: March, 2024
-  headline: "<a href='https://ego-exo4d-data.org'>Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</a> got accepted to <a href='https://cvpr.thecvf.com'>CVPR 2024</a>"
+  headline: "<a href='https://ego-exo4d-data.org'>Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</a> got accepted to <a href='https://cvpr.thecvf.com'>CVPR 2024</a>!"
 
 - date: Nov, 2023
   headline: Introducing <a href='https://ego-exo4d-data.org'>Ego-Exo4D</a>, a foundational dataset for research on video learning and multimodal perception. In collboration with Meta and 11 universities!
