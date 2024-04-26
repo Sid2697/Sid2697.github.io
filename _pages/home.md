@@ -156,12 +156,13 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 * CVPR 2022, 2023, 2024
 * ICCV 2023
-* ECCV 2022
+* ECCV 2022, 2024
 * WACV 2023, 2024
 
 #### Journal Reviewer
 
 * IEEE Transactions on Pattern Analysis and Machine Intelligence ([T-PAMI](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34))
+* International Journal of Computer Vision ([IJCV](https://link.springer.com/journal/11263))
 * Computer Vision and Image Understanding ([CVIU](https://www.sciencedirect.com/journal/computer-vision-and-image-understanding))
 
 #### Workshop Reviewer
