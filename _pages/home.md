@@ -149,6 +149,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 #### Workshop Organizer
 
+* [First Joint Egocentric Vision (EgoVis) Workshop @ CVPR 2024](https://egovis.github.io/cvpr24/)
 * [Joint International 3rd Ego4D and 11th EPIC Workshop @ CVPR 2023](https://sites.google.com/view/ego4d-epic-cvpr2023-workshop/home)
 * [2nd International Ego4D Workshop @ ECCV 2022](https://ego4d-data.org/workshops/eccv22/)
 
