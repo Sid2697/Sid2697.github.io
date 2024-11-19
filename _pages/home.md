@@ -159,7 +159,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 * ICCV 2023
 * ECCV 2022, 2024
 * WACV 2023, 2024
-* ICRA 2024
+* ICRA 2025
 
 #### Journal Reviewer
 
