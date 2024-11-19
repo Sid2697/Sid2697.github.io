@@ -2,7 +2,7 @@
   image: hoi-ref.png
   description: We propose the HOI-Ref task to understand hand-object interaction using Vision Language Models (VLMs). We introduce the HOI-QA dataset with 3.9M question-answer pairs for training and evaluating VLMs. Finally, we train the first VLM for HOI-Ref, achieving state-of-the-art performance.
   authors: <b>Siddhant Bansal</b>, <a href="https://mwray.github.io/">Michael Wray</a>, <a href="https://dimadamen.github.io/">Dima Damen</a>
-  number_link: 5
+  number_link: 4
   link1:
     url: https://arxiv.org/abs/2404.09933
     display: Paper
@@ -15,9 +15,9 @@
   link4:
     url: https://github.com/Sid2697/HOI-Ref
     display: Code
-  link5:
-    url: 
-    display: Gradio Demo (coming soon)
+  # link5:
+  #   url: 
+  #   display: Gradio Demo (coming soon)
 
 - title:  "<a href='https://ego-exo4d-data.org/' style='color: black;'>Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives</a>"
   image: ego-exo4d.png

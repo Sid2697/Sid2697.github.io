@@ -13,8 +13,8 @@ permalink: /
 <div class="col-sm-8">
 
 <div style="text-align: justify">
-I am a second-year PhD student at the <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
-My research interest is Computer Vision, Pattern Recognition, and Machine Learning. 
+I am a second-year PhD student at <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
+My research interests lie in Computer Vision, Pattern Recognition, and Machine Learning. 
 Currently, I am working on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision.
 Previously, at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>, I worked with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a> on <a href="https://sid2697.github.io/egoprocel/">unsupervised procedure learning</a> from egocentric videos.
 <!-- I am an MS by Research candidate at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>. I work with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a>. -->
@@ -159,6 +159,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 * ICCV 2023
 * ECCV 2022, 2024
 * WACV 2023, 2024
+* ICRA 2024
 
 #### Journal Reviewer
 
@@ -177,7 +178,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 <p> &nbsp; </p>
 
-### Blog
+<!-- ### Blog
 ****
 {% for item in site.data.blog limit:3 %}
 ### {{item.title}}
@@ -188,6 +189,6 @@ My ultimate goal is to contribute to the development of systems capable of under
 <p> &nbsp; </p>
 #### <a href="https://sid2697.github.io/Blog_Sid">See all articles</a>
 
-<p> &nbsp; </p>
+<p> &nbsp; </p> -->
 
 </div>
