@@ -1,3 +1,27 @@
+- title: "<a href='https://hd-epic.github.io' style='color: black;'>HD-EPIC: A Highly-Detailed Egocentric Video Dataset</a>"
+  image: hdepic.jpg
+  description: "A validation dataset of kitchen-based egocentric videos with detailed, interconnected annotations on recipe steps, actions, ingredients, objects, audio, and 3D-grounded scene elements via digital twinning and gaze. Annotations include nutritional values, object locations, and fixture details."
+  authors: Toby Perrett, Ahmad Darkhalil, Saptarshi Sinha, Omar Emara, Sam Pollard, Kranti Parida, Kaiting Liu, Prajwal Gatti, <a href="https://sid2697.github.io"><b>Siddhant Bansal</b></a>, Kevin Flanagan, Jacob Chalk, Zhifan Zhu, Rhodri Guerrier, Fahd Abdelazim, Bin Zhu
+  number_link: 5
+  link1:
+    url: https://arxiv.org/abs/2502.04144
+    display: Paper (ArXiv)
+  link2:
+    url: https://hd-epic.github.io
+    display: Project Page
+  link3:
+    url: https://hd-epic.github.io/index#download
+    display: <b>Download HD-EPIC</b>
+  link4:
+    url: https://hd-epic.github.io/demo.html
+    display: Explore Samples
+  link5:
+    url: https://youtu.be/xxlXweMXKsM
+    display: Video (YouTube)
+  link6:
+    url: https://hd-epic.github.io/vqa_demo.html
+    display: Explore VQA
+
 - title: "<a href='https://sid2697.github.io/hoi-ref/' style='color: black;'>HOI-Ref: Hand-Object Interaction Referral in Egocentric Vision</a>"
   image: hoi-ref.png
   description: We propose the HOI-Ref task to understand hand-object interaction using Vision Language Models (VLMs). We introduce the HOI-QA dataset with 3.9M question-answer pairs for training and evaluating VLMs. Finally, we train the first VLM for HOI-Ref, achieving state-of-the-art performance.
