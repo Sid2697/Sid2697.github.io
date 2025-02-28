@@ -2,6 +2,7 @@
   image: hdepic.jpg
   description: "A validation dataset of kitchen-based egocentric videos with detailed, interconnected annotations on recipe steps, actions, ingredients, objects, audio, and 3D-grounded scene elements via digital twinning and gaze. Annotations include nutritional values, object locations, and fixture details."
   authors: Toby Perrett, Ahmad Darkhalil, Saptarshi Sinha, Omar Emara, Sam Pollard, Kranti Parida, Kaiting Liu, Prajwal Gatti, <a href="https://sid2697.github.io"><b>Siddhant Bansal</b></a>, Kevin Flanagan, Jacob Chalk, Zhifan Zhu, Rhodri Guerrier, Fahd Abdelazim, Bin Zhu
+  venue: Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2025
   number_link: 5
   link1:
     url: https://arxiv.org/abs/2502.04144
