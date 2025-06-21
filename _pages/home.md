@@ -156,7 +156,7 @@ My ultimate goal is to contribute to the development of systems capable of under
 #### Conference Reviewer
 
 * CVPR 2022, 2023, 2024
-* ICCV 2023
+* ICCV 2023, 2025
 * ECCV 2022, 2024
 * WACV 2023, 2024
 * ICRA 2025
