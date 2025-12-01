@@ -14,7 +14,7 @@ permalink: /
 
 <div style="text-align: justify">
 I am a third-year PhD student at <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
-Currently visiting <a href="https://is.mpg.de/ps">Max Planck Institute for Intelligent Systems</a> where I am advised by MPI Director <a href='https://is.mpg.de/ps/person/black'>Michael Black</a>.
+I recently completed a research visit at <a href="https://is.mpg.de/ps">Max Planck Institute for Intelligent Systems</a>, where I was advised by MPI Director <a href='https://is.mpg.de/ps/person/black'>Michael Black</a>.
 My research interests lie in Computer Vision, Pattern Recognition, and Machine Learning. 
 Currently, I am working on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision.
 Previously, at <a href="http://cvit.iiit.ac.in">CVIT, IIIT Hyderabad</a>, I worked with <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a> and <a href='https://www.cse.iitd.ac.in/~chetan/'>Prof. Chetan Arora</a> on <a href="https://sid2697.github.io/egoprocel/">unsupervised procedure learning</a> from egocentric videos.
