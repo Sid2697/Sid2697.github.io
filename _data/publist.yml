@@ -1,3 +1,22 @@
+- title: "<a href='https://zhifanzhu.github.io/objects-along-hit/' style='color: black;'>Reconstructing Objects along Hand Interaction Timelines in Egocentric Video</a>"
+  image: rohit.png
+  description: "A constrained optimisation framework that reconstructs object poses in egocentric video by modelling temporal constraints, from static to stably grasped."
+  authors: <a href='https://zhifanzhu.github.io/'>Zhifan Zhu</a>, <b>Siddhant Bansal</b>, <a href='https://sha2nkt.github.io/'>Shashank Tripathi</a>, <a href='https://dimadamen.github.io/'>Dima Damen</a>
+  venue: Arxiv, 2025
+  number_link: 4
+  link1:
+    url: https://arxiv.org/abs/2512.07394
+    display: Paper (ArXiv)
+  link2:
+    url: https://zhifanzhu.github.io/objects-along-hit/
+    display: Project Page
+  link3:
+    url: https://github.com/zhifanzhu/objects-along-hit
+    display: Code
+  link4:
+    url: https://zhifanzhu.github.io/objects-along-hit/static/videos/P01_05_right_bottle_73544_74450.mp4
+    display: Qualitative Results Video
+
 - title: "<a href='https://hd-epic.github.io' style='color: black;'>HD-EPIC: A Highly-Detailed Egocentric Video Dataset</a>"
   image: hdepic.jpg
   description: "A validation dataset of kitchen-based egocentric videos with detailed, interconnected annotations on recipe steps, actions, ingredients, objects, audio, and 3D-grounded scene elements via digital twinning and gaze. Annotations include nutritional values, object locations, and fixture details."
