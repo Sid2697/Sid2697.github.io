@@ -2,7 +2,7 @@
   image: rohit.png
   description: "A constrained optimisation framework that reconstructs object poses in egocentric video by modelling temporal constraints, from static to stably grasped."
   authors: <a href='https://zhifanzhu.github.io/'>Zhifan Zhu</a>, <b>Siddhant Bansal</b>, <a href='https://sha2nkt.github.io/'>Shashank Tripathi</a>, <a href='https://dimadamen.github.io/'>Dima Damen</a>
-  venue: Arxiv, 2025
+  venue: Conference on Computer Vision and Pattern Recognition's <a href='https://sense-of-space.github.io/'>SaS Workshop</a> (<b>CVPR-W</b>), 2026
   number_link: 4
   link1:
     url: https://arxiv.org/abs/2512.07394
