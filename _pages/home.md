@@ -150,15 +150,17 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 #### Workshop Organizer
 
+* [Third Joint Egocentric Vision (EgoVis) Workshop @ CVPR 2026](https://egovis.github.io/cvpr26/)
+* [Second Joint Egocentric Vision (EgoVis) Workshop @ CVPR 2025](https://egovis.github.io/cvpr25/)
 * [First Joint Egocentric Vision (EgoVis) Workshop @ CVPR 2024](https://egovis.github.io/cvpr24/)
 * [Joint International 3rd Ego4D and 11th EPIC Workshop @ CVPR 2023](https://sites.google.com/view/ego4d-epic-cvpr2023-workshop/home)
 * [2nd International Ego4D Workshop @ ECCV 2022](https://ego4d-data.org/workshops/eccv22/)
 
 #### Conference Reviewer
 
-* CVPR 2022, 2023, 2024
+* CVPR 2022, 2023, 2024, 2026
 * ICCV 2023, 2025 ([outstanding reviewer](https://iccv.thecvf.com/Conferences/2025/ProgramCommittee#all-outstanding-reviewer))
-* ECCV 2022, 2024
+* ECCV 2022, 2024, 2026
 * WACV 2023, 2024
 * ICRA 2025
 
