@@ -11,7 +11,7 @@ permalink: /hopformer/
 
 [comment]: Authors
 <p style="text-align: center;">
-<a href="https://sid2697.github.io" style="color: #CC0000">Siddhant Bansal</a><sup>1, 2</sup>
+<a href="https://sid2697.github.io" style="color: #CC0000">Siddhant Bansal</a><sup>1</sup>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://zhifanzhu.github.io/" style="color: #CC0000">Zhifan Zhu</a><sup>1</sup>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
