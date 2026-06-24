@@ -6,7 +6,7 @@
   <meta name="description" content="Project page for Towards in-the-wild Egocentric 3D Hand-Object Pose Estimation, introducing EPIC-Contact and HOPformer." />
   <title>Towards in-the-wild Egocentric 3D Hand-Object Pose Estimation</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=28" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=30" />
 </head>
 <body>
   <header class="site-header">
@@ -73,6 +73,17 @@
           </div>
         </div>
         <figcaption>Drag to reveal the annotated 3D hand–object mesh, projected into a EPIC-Contact frame. The panel rotates the posed hand-object meshes.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section video-band">
+      <figure class="paper-figure paper-figure--wide video-figure">
+        <video class="propagation-video" loop muted playsinline autoplay preload="metadata"
+               poster="assets/video/clip_propagation_poster.jpg"
+               aria-label="A grid of egocentric kitchen clips from EPIC-Contact, each overlaid with posed 3D hand and object meshes tracked across the whole clip.">
+          <source src="assets/video/clip_propagation.mp4" type="video/mp4" />
+        </video>
+        <figcaption><strong>EPIC-Contact: 3D hands and objects, in the wild.</strong> Every tile is an egocentric clip from EPIC-Kitchens, overlaid with the 3D hand (blue) and object (orange) meshes from our dataset, annotated for each frame of the clip. EPIC-Contact spans thousands of clips across nine everyday objects in cluttered kitchens with natural occlusion.</figcaption>
       </figure>
     </section>
 
@@ -508,6 +519,26 @@
       }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
       map.forEach((_, section) => observer.observe(section));
+    })();
+
+    // Looping demo video: play only while on screen (saves CPU/data); if the user
+    // prefers reduced motion, don't autoplay - show the poster with native controls.
+    (function demoVideo() {
+      const video = document.querySelector('.propagation-video');
+      if (!video) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        video.removeAttribute('autoplay');
+        video.controls = true;
+        video.pause();
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) video.play().catch(() => {});
+          else video.pause();
+        });
+      }, { threshold: 0.25 });
+      io.observe(video);
     })();
   </script>
 </body>

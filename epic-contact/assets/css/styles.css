@@ -1413,7 +1413,8 @@ main { max-width: 1200px; }
   margin: 2.4rem 0;
   padding: 0;
 }
-.paper-figure img {
+.paper-figure img,
+.paper-figure video {
   display: block;
   width: 100%;
   height: auto;
@@ -1432,6 +1433,13 @@ main { max-width: 1200px; }
 }
 .paper-figure figcaption strong { color: var(--ink); }
 .paper-figure--wide { margin-left: auto; margin-right: auto; }
+
+/* Hero teaser video sits tight under the hero: drop the section's vertical
+   padding and the figure margin so it doesn't double up the spacing. The
+   hero's bottom padding (above) and the overview's top padding (below) supply
+   the gaps. */
+.video-band { padding-top: 0; padding-bottom: 0; }
+.video-band .paper-figure { margin: 0; }
 
 /* Hero action buttons (Paper / arXiv / Code / anchors) */
 .hero-action {
