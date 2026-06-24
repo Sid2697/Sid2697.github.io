@@ -524,6 +524,22 @@
       });
     });
 
+    // Intro clip autoplay. Safari won't start an off-screen muted video from the
+    // attribute alone, so set muted in JS and call play() once it scrolls into view.
+    (function introVideo() {
+      const video = document.querySelector('.propagation-video');
+      if (!video) return;
+      video.muted = true;
+      const play = () => { const p = video.play(); if (p) p.catch(() => {}); };
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) play(); else video.pause(); });
+        }, { threshold: 0.2 }).observe(video);
+      } else {
+        play();
+      }
+    })();
+
     // Benchmark dataset toggle (EPIC-Contact / ARCTIC)
     document.querySelectorAll('.dataset-toggle [data-table]').forEach((button) => {
       button.addEventListener('click', () => {
