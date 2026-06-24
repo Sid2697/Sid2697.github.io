@@ -1805,8 +1805,12 @@ main { max-width: 1200px; }
   backdrop-filter: blur(4px);
 }
 @media (max-width: 680px) {
+  /* Stack the slider above the mesh. Reset flex to `none` so each child's
+     height comes from its aspect-ratio instead of a zero vertical flex-basis
+     (which otherwise collapses the whole hero figure to ~0 height). */
   .hero-stage { flex-direction: column; }
-  .hero-mesh { aspect-ratio: 16 / 10; }
+  .hero-stage .img-compare { flex: none; width: 100%; }
+  .hero-mesh { flex: none; width: 100%; aspect-ratio: 16 / 10; }
 }
 
 /* Active-sample pills (hand side · video id · object) - replaces the full id */
@@ -1930,6 +1934,9 @@ main { max-width: 1200px; }
 }
 .composition-tag strong { color: #fff; }
 @media (max-width: 680px) {
+  /* Stack bars above the viewer. Reset the viewer's flex to `none` so its
+     height comes from aspect-ratio rather than a zero vertical flex-basis,
+     which would otherwise collapse it to 0 height and hide the mesh. */
   .composition .composition-grid { flex-direction: column; }
-  .composition-viewer { aspect-ratio: 16 / 10; }
+  .composition-viewer { flex: none; width: 100%; aspect-ratio: 16 / 10; }
 }

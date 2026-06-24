@@ -3,6 +3,8 @@ const PAPER_COUNTS = [
   ['mug', 164], ['pan', 518], ['plate', 462], ['saucepan', 74]
 ];
 const CATEGORIES = ['all', ...PAPER_COUNTS.map(([name]) => name)];
+// Sample shown first when the demo loads (Right hand · P08_21 · Glass).
+const DEFAULT_ENTRY_ID = 'P08_21_13531_13581_right_glass';
 
 let manifest = { entries: [] };
 let currentEntry = null;
@@ -55,7 +57,10 @@ async function init() {
   updateManifestStatus();
   bindEvents();
   renderGallery();
-  if (manifest.entries.length) selectEntry(manifest.entries[0]);
+  if (manifest.entries.length) {
+    const defaultEntry = manifest.entries.find((entry) => entry.id === DEFAULT_ENTRY_ID) || manifest.entries[0];
+    selectEntry(defaultEntry);
+  }
   startManifestAutoRefresh();
 }
 

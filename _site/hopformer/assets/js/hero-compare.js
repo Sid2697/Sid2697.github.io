@@ -14,7 +14,7 @@ import {
   normalizeVertices,
   meshPalette,
   buildVertexColorPalette,
-} from './app.js?v=19';
+} from './app.js?v=20';
 
 // Mirrors the demo's fixed projection camera (app.js visualState defaults).
 const HERO_CAMERA = { focalLength: 5000, centerOffsetX: 0, centerOffsetY: 0 };
