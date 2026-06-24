@@ -1109,14 +1109,22 @@ main { max-width: 1200px; }
 }
 
 .paper-authors {
-  max-width: 820px;
-  margin: 1rem auto 0;
+  /* Let the author line use the full hero width (not just the 760px copy
+     column) so it stays on one line at the larger font. width:max-content keeps
+     it on a single line; the breakout is centered on the hero and capped to the
+     viewport so it can never cause horizontal overflow on small screens. */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(940px, 92vw);
+  margin: 1rem 0 0;
 }
 
 .author-list {
   margin: 0;
   color: var(--ink);
-  font-size: 0.98rem;
+  font-size: 1.22rem;
   line-height: 1.85;
 }
 
@@ -1147,7 +1155,7 @@ main { max-width: 1200px; }
   gap: 0.25rem 1.25rem;
   margin: 0.4rem 0 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 1.02rem;
 }
 
 .affiliation-list span {
@@ -1388,7 +1396,7 @@ main { max-width: 1200px; }
   }
 
   .author-list {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     line-height: 1.75;
   }
 
