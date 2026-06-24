@@ -1503,7 +1503,7 @@ function cross3(a, b) {
   ];
 }
 
-export function renderOBJCanvas(canvas, ctx, vertices, faces, groups, vertexColors, palette, vertexColorPalette, state) {
+export function renderOBJCanvas(canvas, ctx, vertices, faces, groups, vertexColors, palette, vertexColorPalette, state, options = {}) {
   const rect = canvas.getBoundingClientRect();
   const dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
   const cssWidth = Math.max(320, Math.floor(rect.width || canvas.parentElement.clientWidth || 420));
@@ -1575,7 +1575,7 @@ export function renderOBJCanvas(canvas, ctx, vertices, faces, groups, vertexColo
     }
   }
 
-  drawHUD(ctx, cssWidth, cssHeight, faces.length, vertices.length, state.zoom);
+  if (options.hud !== false) drawHUD(ctx, cssWidth, cssHeight, faces.length, vertices.length, state.zoom);
 }
 
 function rotateVertex([x, y, z], rotX, rotY) {

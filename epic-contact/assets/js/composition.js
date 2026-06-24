@@ -12,7 +12,7 @@ import {
   normalizeVertices,
   meshPalette,
   buildVertexColorPalette,
-} from './app.js?v=20';
+} from './app.js?v=21';
 
 const meshCache = new Map();
 let activeToken = 0; // bumped on every selection; the latest one owns the spin loop
