@@ -13,7 +13,7 @@ let handContactLoadToken = 0;
 let objectContactLoadToken = 0;
 let evidenceRuntime = null;
 let evidenceLoadToken = 0;
-let activeView = 'hand-contact';
+let activeView = 'evidence';
 let visualState = {
   projection: 'hand_object',
   compareMode: 'wipe',
@@ -204,7 +204,7 @@ function bindEvents() {
       return;
     }
     if (/^[1-4]$/.test(event.key)) {
-      switchView(['hand-contact', 'object-contact', 'evidence', 'geometry'][Number(event.key) - 1]);
+      switchView(['evidence', 'hand-contact', 'object-contact', 'geometry'][Number(event.key) - 1]);
     }
   });
 }
