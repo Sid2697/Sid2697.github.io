@@ -1547,6 +1547,8 @@ main { max-width: 1200px; }
   font-size: 1.05rem;
   letter-spacing: 0.04em;
 }
+.venue-badge a { color: inherit; text-decoration: none; }
+.venue-badge a:hover { text-decoration: underline; }
 
 /* Hero before/after slider with live 3D mesh projection */
 /* Neutralise the static .hero-preview framing so the slider controls its own look. */
