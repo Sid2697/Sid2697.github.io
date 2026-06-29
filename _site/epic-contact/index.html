@@ -260,7 +260,7 @@
 
       <figure class="paper-figure paper-figure--wide">
         <img src="assets/figures/annotation_pipeline.png" alt="Three-stage EPIC-Contact annotation: painting contact vertices on a subdivided MANO hand, transferring them to the object via region-wise contact axes to obtain bijective correspondences, and fitting posed hand-object meshes with EC-fit." loading="lazy" />
-        <figcaption><strong>Annotation pipeline.</strong> Annotators (1) paint contact on a subdivided 3,106-vertex MANO hand from a grasp clip; (2) transfer it to the object with region-wise 2-DoF contact axes (at most six clicks), yielding <em>bijective</em> hand–object correspondences; and (3) fit posed hand and object meshes with <strong>EC-fit</strong>. Inter-annotator agreement is κ<sub>h</sub>&nbsp;=&nbsp;0.61 (hand) and κ<sub>o</sub>&nbsp;=&nbsp;0.62 (object).</figcaption>
+        <figcaption><strong>Annotation pipeline.</strong> Annotators (1) paint contact on a subdivided 3,106-vertex MANO hand from a grasp clip; (2) transfer it to the object with region-wise 2-DoF contact axes (at most six clicks), yielding <em>bijective</em> hand–object correspondences; and (3) fit posed hand and object meshes with <a href="https://github.com/ZJHTerry18/ec-fit" target="_blank" rel="noreferrer"><strong>EC-fit</strong></a>. Inter-annotator agreement is κ<sub>h</sub>&nbsp;=&nbsp;0.61 (hand) and κ<sub>o</sub>&nbsp;=&nbsp;0.62 (object).</figcaption>
       </figure>
 
       <div class="method-columns dataset-pipeline">
@@ -275,7 +275,7 @@
           <ol class="timeline" aria-label="EPIC-Contact annotation steps">
             <li><span>1</span><div><strong>Paint hand contact</strong><p>Label fine-grained contact on a subdivided MANO hand while watching a stable-grasp clip, including regions occluded in the egocentric view.</p></div></li>
             <li><span>2</span><div><strong>Transfer to the object</strong><p>Region-wise 2-DoF contact axes (thumb, fingers, palm) map contact onto the object in ≤6 clicks, preserving bijective correspondences. A VLM estimates multi-DoF object scale (0.94&nbsp;cm MAE).</p></div></li>
-            <li><span>3</span><div><strong>Fit with EC-fit</strong><p>Multi-initialisation optimisation with a contact loss, occlusion-aware mask loss, and penetration loss yields posed meshes; clip-level poses propagate via WiLoR hand motion.</p></div></li>
+            <li><span>3</span><div><strong>Fit with <a href="https://github.com/ZJHTerry18/ec-fit" target="_blank" rel="noreferrer">EC-fit</a></strong><p>Multi-initialisation optimisation with a contact loss, occlusion-aware mask loss, and penetration loss yields posed meshes; clip-level poses propagate via WiLoR hand motion.</p></div></li>
           </ol>
         </article>
 
@@ -299,6 +299,7 @@
 
       <div class="hero-actions">
         <a class="hero-action" href="https://huggingface.co/datasets/Sid2697/epic-contact" target="_blank" rel="noreferrer"><span aria-hidden="true">🤗</span> Download EPIC-Contact</a>
+        <a class="hero-action" href="https://github.com/ZJHTerry18/ec-fit" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> EC-fit code</a>
       </div>
 
       <figure class="paper-figure composition" id="composition">
@@ -520,6 +521,7 @@
       <a class="hero-action" href="https://github.com/Sid2697/HOPformer" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> Code</a>
       <a class="hero-action" href="https://huggingface.co/Sid2697/HOPformer" target="_blank" rel="noreferrer"><span aria-hidden="true">🤗</span> Download Checkpoints</a>
       <a class="hero-action" href="https://huggingface.co/datasets/Sid2697/epic-contact" target="_blank" rel="noreferrer"><span aria-hidden="true">🤗</span> Download EPIC-Contact</a>
+      <a class="hero-action" href="https://github.com/ZJHTerry18/ec-fit" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> EC-fit code</a>
     </div>
   </footer>
 
