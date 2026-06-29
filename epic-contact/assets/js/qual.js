@@ -6,7 +6,7 @@ import {
   normalizeVertices,
   meshPalette,
   buildVertexColorPalette,
-} from './app.js?v=21';
+} from './app.js?v=22';
 
 const METHODS = ['gt', 'arctic', 'jt', 'hopformer'];
 const VIEW_MS = 1000;

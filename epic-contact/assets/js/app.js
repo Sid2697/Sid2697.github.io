@@ -355,7 +355,7 @@ async function renderMedia(entry) {
   stage.innerHTML = `
     <div class="camera-frame">
       <img id="evidence-frame" src="${escapeAttr(base)}" alt="${escapeAttr(entry.title)} source frame">
-      ${meshInfo ? `<canvas id="evidence-projection" class="projection-canvas overlay" role="img" aria-label="${escapeAttr(meshProjectionLabel(meshKey))} projected into the source frame"></canvas>` : ''}
+      ${meshInfo ? `<canvas id="evidence-projection" class="projection-canvas overlay" role="img" aria-label="${escapeAttr(meshProjectionLabel(meshKey))} projected into the source frame"></canvas><div class="projection-loader" aria-hidden="true"><span class="spinner"></span></div>` : ''}
     </div>
     <span class="layer-tag base">${meshInfo ? 'RGB source' : 'RGB frame'}</span>
     ${meshInfo ? `
@@ -379,6 +379,9 @@ async function renderMedia(entry) {
 
   const image = $('#evidence-frame');
   const canvas = $('#evidence-projection');
+  // Show a loading spinner only for a genuine fetch; cached re-renders (e.g. blend/wipe
+  // toggles) resolve instantly and should not flash the spinner.
+  if (!meshCache.has(meshInfo.path)) stage.classList.add('is-loading');
   try {
     const [mesh] = await Promise.all([
       loadOBJMesh(meshInfo.path),
@@ -388,8 +391,10 @@ async function renderMedia(entry) {
     image.parentElement.style.setProperty('--frame-ratio', `${image.naturalWidth} / ${image.naturalHeight}`);
     evidenceRuntime = { entryId: entry.id, meshKey, mesh, image, canvas };
     redrawEvidenceProjection();
+    stage.classList.remove('is-loading');
   } catch (err) {
     console.error(err);
+    stage.classList.remove('is-loading');
     if (requestToken !== evidenceLoadToken) return;
     $('#projection-layer-label').textContent = 'Projection unavailable';
     $('#evidence-caption').textContent = 'The mesh could not be loaded. Serve the site over HTTP so OBJ files can be fetched.';

@@ -440,26 +440,45 @@ button.matrix-row:hover { background: #f4f2eb; }
 .sample-steppers { display: flex; gap: 0.35rem; }
 .view-tabs {
   display: flex;
+  align-items: center;
   gap: 0;
-  padding: 0 1.4rem;
+  padding: 0.85rem 1.4rem;
   overflow-x: auto;
   border-bottom: 1px solid var(--line);
 }
-.view-tab {
-  position: relative;
+.view-tabs-label {
   flex: 0 0 auto;
-  padding: 0.8rem 1rem;
+  margin-right: 0.6rem;
   color: var(--muted);
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  font-size: 0.78rem;
-  font-weight: 850;
-  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
+.view-tab {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.95rem;
+  --tab-accent: 47, 103, 131;
+  color: var(--ink);
+  background: rgba(var(--tab-accent), 0.12);
+  border: 1px solid var(--line-dark);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.view-tab + .view-tab { margin-left: -1px; }
+.view-tab:nth-of-type(even) { --tab-accent: 112, 140, 23; }
+.view-tabs-label + .view-tab { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+.view-tab:last-child { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+.view-tab:not(.is-active):hover { background: rgba(var(--tab-accent), 0.2); color: var(--ink); border-color: rgb(var(--tab-accent)); }
+.view-tab:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; z-index: 2; }
 .view-tab span { margin-right: 0.3rem; color: var(--line-dark); font-family: monospace; }
-.view-tab.is-active { color: var(--ink); }
-.view-tab.is-active::after { position: absolute; right: 0.7rem; bottom: -1px; left: 0.7rem; height: 3px; content: ""; background: var(--acid-dark); }
+.view-tab.is-active { position: relative; z-index: 1; color: #fff; background: var(--ink); border-color: var(--ink); }
+.view-tab.is-active span { color: rgba(255, 255, 255, 0.7); }
 .data-view { padding: 1.25rem 1.4rem 1.4rem; }
 .evidence-toolbar {
   display: flex;
@@ -540,6 +559,35 @@ button.matrix-row:hover { background: #f4f2eb; }
   pointer-events: none;
 }
 .media-stage.is-wipe .wipe-line { display: block; }
+.projection-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.media-stage.is-loading .projection-loader { display: flex; }
+.media-stage.is-loading .camera-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  background: rgba(8, 10, 12, 0.4);
+}
+.media-stage.is-loading .wipe-line,
+.media-stage.is-loading .wipe-range-overlay { opacity: 0; pointer-events: none; }
+.projection-loader .spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: projection-spin 0.8s linear infinite;
+}
+@keyframes projection-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .projection-loader .spinner { animation-duration: 1.8s; } }
 .wipe-range-overlay {
   position: absolute;
   top: 50%;
@@ -825,8 +873,8 @@ tr:last-child td { border-bottom: 0; }
   .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metric { min-height: 125px; }
   .metric-index { margin-bottom: 1.2rem; }
-  .view-tabs { padding: 0 0.35rem; overflow-x: auto; }
-  .view-tab { flex: 1 0 auto; padding: 0.78rem 0.65rem; }
+  .view-tabs { padding: 0.7rem 0.85rem; }
+  .view-tab { padding: 0.4rem 0.7rem; }
   .detail-header { align-items: start; }
   .detail-header-actions { align-items: flex-end; flex-direction: column-reverse; }
   .active-sample-thumbnail { width: clamp(150px, 42vw, 190px); }
@@ -1034,8 +1082,6 @@ main { max-width: 1200px; }
   font-weight: 600;
 }
 .modality-dot.has-data { background: var(--blue); }
-.view-tab { font-weight: 500; }
-.view-tab.is-active::after { height: 2px; background: var(--blue); }
 .contact-mesh-lab, .contact-breakdown, .camera-controls {
   background: #fafbfb;
   border-radius: 4px;
