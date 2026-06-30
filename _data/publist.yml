@@ -1,3 +1,25 @@
+- title: "<a href='https://sid2697.github.io/epic-contact/' style='color: black;'>Towards in-the-wild Egocentric 3D Hand-Object Pose Estimation</a>"
+  image: epic-contact.jpg
+  description: "We tackle 3D hand–object pose estimation in unconstrained, cluttered, occluded egocentric video. We contribute <a href='https://huggingface.co/datasets/Sid2697/epic-contact'>EPIC-Contact</a>, an in-the-wild dataset with dense bijective 3D hand–object contact, and <a href='https://github.com/Sid2697/HOPformer'>HOPformer</a>, a transformer that conditions object pose on strong hand priors to predict both hands and the object in a single forward pass."
+  authors: <b>Siddhant Bansal</b>, <a href='https://zhifanzhu.github.io/'>Zhifan Zhu</a>, <a href='https://sha2nkt.github.io/'>Shashank Tripathi</a>, <a href='https://zjhterry18.github.io/'>Jiahe Zhao</a>, <a href='https://is.mpg.de/person/black'>Michael Black</a>, <a href='https://dimadamen.github.io/'>Dima Damen</a>
+  venue: European Conference on Computer Vision (<b>ECCV</b>), 2026
+  number_link: 5
+  link1:
+    url: https://arxiv.org/abs/2606.30598
+    display: Paper (ArXiv)
+  link2:
+    url: https://sid2697.github.io/epic-contact/
+    display: Project Page
+  link3:
+    url: https://github.com/Sid2697/HOPformer
+    display: Code
+  link4:
+    url: https://huggingface.co/datasets/Sid2697/epic-contact
+    display: <b>Download EPIC-Contact</b>
+  link5:
+    url: https://huggingface.co/Sid2697/HOPformer
+    display: Download Checkpoints
+
 - title: "<a href='https://zhifanzhu.github.io/objects-along-hit/' style='color: black;'>Reconstructing Objects along Hand Interaction Timelines in Egocentric Video</a>"
   image: rohit.png
   description: "A constrained optimisation framework that reconstructs object poses in egocentric video by modelling temporal constraints, from static to stably grasped."
