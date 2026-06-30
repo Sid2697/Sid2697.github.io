@@ -13,7 +13,7 @@ permalink: /
 <div class="col-sm-8">
 
 <div style="text-align: justify">
-I am a third-year PhD student at <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
+I am a final year PhD student at <a href="https://uob-mavi.github.io/people/">University of Bristol</a> working with <a href="https://dimadamen.github.io">Prof. Dima Damen</a>.
 I recently completed a research visit at <a href="https://is.mpg.de/ps">Max Planck Institute for Intelligent Systems</a>, where I was advised by MPI Director <a href='https://is.mpg.de/ps/person/black'>Michael Black</a>.
 My research interests lie in Computer Vision, Pattern Recognition, and Machine Learning. 
 Currently, I am working on devising learning-based methods for understanding and exploring various aspects of first-person (egocentric) vision.
