@@ -142,6 +142,8 @@ My ultimate goal is to contribute to the development of systems capable of under
 ****
 #### Invited Talks
 
+* Understanding Hand-Object Interactions in Egocentric Video @ [VISTA Lab, Indian Institute of Science (IISc), Bengaluru](https://www.vistalabiisc.com/P_portfolio) hosted by [Prof. Punit Rathore](https://scholar.google.com/citations?user=2clQgooAAAAJ&hl=en). [[slides](docs/vista_lab_july_2026_talk.pdf)]
+
 * Egocentric Videos for Procedure Learning @ [Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP 2022)](https://events.iitgn.ac.in/2022/icvgip/index.html) ([Vision India](https://events.iitgn.ac.in/2022/icvgip/vision_india.html)). [[slides](https://iiitaphyd-my.sharepoint.com/:p:/g/personal/siddhant_bansal_research_iiit_ac_in/EbxapAwL-hxCjJyEMYa8aXgBHeKsYTbhqonfQzT0hUIltg?e=W9z8Ki); [tweet](https://twitter.com/Sid__Bansal/status/1602165700424273920?s=20&t=BOQDMb1dCMppgcCjHaA9KA); [linkedin](https://www.linkedin.com/posts/siddhant-bansal_icvgip2022-eccv2022-activity-7007934958484746240-wBva?utm_source=share&utm_medium=member_desktop)]
 
 * Egocentric Videos for Procedure Learning @ [IPLAB, University of Catania](https://iplab.dmi.unict.it/fpv/) [[slides](https://iiitaphyd-my.sharepoint.com/:p:/g/personal/siddhant_bansal_research_iiit_ac_in/ERc_foZHgKZEnG9xhQKvXS8BWeQOgosXJCpnhM1YBad98Q?e=C4eyS4); [tweet](https://twitter.com/Sid__Bansal/status/1588149526459736064?s=20&t=CTjlbGTkjcmHUS8tbbJ0Qw)]
