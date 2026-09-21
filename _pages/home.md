@@ -35,16 +35,6 @@ My ultimate goal is to contribute to the development of systems capable of under
   <a href="https://orcid.org/0000-0003-2636-0066">ORCID</a>
 </p>
 
-### @ ECCV 2026, Malmö
-****
-I am presenting <a href="https://sid2697.github.io/epic-contact/">Towards in-the-wild Egocentric 3D Hand-Object Pose Estimation</a> at <a href="https://eccv.ecva.net/Conferences/2026">ECCV 2026</a> across three poster sessions:
-
-* **8 September** &middot; <a href="https://sites.google.com/view/3d-humans-eccv2026">3D Human Understanding Workshop</a> &middot; Malmömässan B &middot; workshop 13:50&ndash;17:30 CEST (exact poster time to be confirmed)
-* **9 September** &middot; <a href="https://sites.google.com/view/mustcv-2026/">MUSTCV Workshop</a> &middot; Malmö Arena, Skybox 506&ndash;507 &middot; 15:00&ndash;16:00 CEST
-* **10 September** &middot; Main conference poster session &middot; ExHall #70 &middot; 16:30&ndash;18:30 CEST
-
-Come and say hi if you would like to talk about egocentric vision, 3D hand-object interaction, contact-based annotation or pose estimation.
-
 ### News
 ****
 {% for article in site.data.news limit:7 %}
