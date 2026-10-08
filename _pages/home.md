@@ -125,6 +125,20 @@ My ultimate goal is to contribute to the development of systems capable of under
  <a href="{{ publi.link5.url }}">{{ publi.link5.display }}</a></p>
  {% endif %}
 
+ {% if publi.number_link == 6 %}
+ <p><a href="{{ publi.link1.url }}">{{ publi.link1.display }}</a>
+ /
+ <a href="{{ publi.link2.url }}">{{ publi.link2.display }}</a>
+ /
+ <a href="{{ publi.link3.url }}">{{ publi.link3.display }}</a>
+ /
+ <a href="{{ publi.link4.url }}">{{ publi.link4.display }}</a>
+ /
+ <a href="{{ publi.link5.url }}">{{ publi.link5.display }}</a>
+ /
+ <a href="{{ publi.link6.url }}">{{ publi.link6.display }}</a></p>
+ {% endif %}
+
  </div>
 </div>
 
@@ -140,6 +154,13 @@ My ultimate goal is to contribute to the development of systems capable of under
 
 ### Miscellaneous
 ****
+#### Awards
+
+* [EgoVis Distinguished Paper Award (2024/2025)](https://egovis.github.io/awards/2024_2025/): HD-EPIC, Ego-Exo4D
+* [EgoVis Distinguished Paper Award (2022/2023)](https://egovis.github.io/awards/2022_2023/): Ego4D
+* [CVPR 2022 Best Paper Finalist](https://twitter.com/CVPR/status/1539258447752994816): Ego4D
+* [ICCV 2025 Outstanding Reviewer](https://iccv.thecvf.com/Conferences/2025/ProgramCommittee#all-outstanding-reviewer)
+
 #### Invited Talks
 
 * Understanding Hand-Object Interactions in Egocentric Video @ [VISTA Lab, Indian Institute of Science (IISc), Bengaluru](https://www.vistalabiisc.com/P_portfolio) hosted by [Prof. Punit Rathore](https://scholar.google.com/citations?user=2clQgooAAAAJ&hl=en). [[slides](docs/vista_lab_july_2026_talk.pdf)]

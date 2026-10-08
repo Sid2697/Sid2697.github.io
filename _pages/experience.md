@@ -9,6 +9,12 @@ permalink: /experience
 <h3>Research Experience</h3>
 
 <ul>
+<li><strong>Max Planck Institute for Intelligent Systems (MPI-IS), Tübingen</strong></li>
+<ul>
+	<li><a href='https://is.mpg.de/ps/person/sbansal'>Guest Scientist</a> <em>(September&rsquo;25 &ndash; September&rsquo;26); Host: <a href='https://is.mpg.de/ps/person/black'>Michael J. Black</a></em></li>
+	<li> Collaborated on <a href='https://sid2697.github.io/epic-contact/'>EPIC-Contact and HOPformer</a> (ECCV 2026), focusing on <b>in-the-wild 3D hand&ndash;object pose estimation</b> with hand-prior-conditioned object reasoning. </li>
+</ul>
+
 <li><strong>CVIT, IIIT-Hyderabad</strong></li>
 <ul>
 	<li>Research Fellow <em>(August&rsquo;19 &ndash; January&rsquo;20); Guide: <a href="https://faculty.iiit.ac.in/~jawahar/index.html">Prof. C.V. Jawahar</a></em></li>

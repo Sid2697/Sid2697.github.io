@@ -67,6 +67,20 @@ permalink: /publications/
  <a href="{{ publi.link5.url }}">{{ publi.link5.display }}</a></p>
  {% endif %}
 
+ {% if publi.number_link == 6 %}
+ <p><a href="{{ publi.link1.url }}">{{ publi.link1.display }}</a>
+ /
+ <a href="{{ publi.link2.url }}">{{ publi.link2.display }}</a>
+ /
+ <a href="{{ publi.link3.url }}">{{ publi.link3.display }}</a>
+ /
+ <a href="{{ publi.link4.url }}">{{ publi.link4.display }}</a>
+ /
+ <a href="{{ publi.link5.url }}">{{ publi.link5.display }}</a>
+ /
+ <a href="{{ publi.link6.url }}">{{ publi.link6.display }}</a></p>
+ {% endif %}
+
  </div>
 </div>
 
